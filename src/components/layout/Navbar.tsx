@@ -109,12 +109,19 @@ export function Navbar() {
                             )}
                         </div>
                     ))}
-                    <Button
-                        variant="cta"
-                        className="ml-4 font-bold tracking-wide bg-cyan text-slate-900 hover:bg-cyan-hover shadow-[0_0_20px_rgba(6,182,212,0.3)] hover:shadow-[0_0_30px_rgba(6,182,212,0.5)] transition-all duration-300 border border-white/10"
+                    <a
+                        href="https://wa.me/523335071061?text=Hola%20Caycer,%20me%20gustar%C3%ADa%20solicitar%20cotizaci%C3%B3n."
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="ml-4"
                     >
-                        COTIZAR AHORA
-                    </Button>
+                        <Button
+                            variant="cta"
+                            className="font-bold tracking-wide bg-cyan text-slate-900 hover:bg-cyan-hover shadow-[0_0_20px_rgba(6,182,212,0.3)] hover:shadow-[0_0_30px_rgba(6,182,212,0.5)] transition-all duration-300 border border-white/10"
+                        >
+                            COTIZAR AHORA
+                        </Button>
+                    </a>
                 </nav>
 
                 {/* Mobile Menu Toggle */}
@@ -160,9 +167,16 @@ export function Navbar() {
                         )}
                     </div>
                 ))}
-                <Button variant="cta" className="w-full text-lg py-7 mt-4 bg-cyan text-slate-900 font-bold rounded-xl shadow-lg shadow-cyan/20">
-                    SOLICITAR COTIZACIÓN
-                </Button>
+                <a
+                    href="https://wa.me/523335071061?text=Hola%20Caycer,%20me%20gustar%C3%ADa%20solicitar%20cotizaci%C3%B3n."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full mt-4"
+                >
+                    <Button variant="cta" className="w-full text-lg py-7 bg-cyan text-slate-900 font-bold rounded-xl shadow-lg shadow-cyan/20">
+                        SOLICITAR COTIZACIÓN
+                    </Button>
+                </a>
             </div>
         </header>
     )
