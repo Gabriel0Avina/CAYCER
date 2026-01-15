@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- Hand silhouette -->
+  <path d="M16 28 C12 28, 8 25, 8 20 C8 15, 12 14, 14 12 L16 8 L18 12 C20 14, 24 15, 24 20 C24 25, 20 28, 16 28 Z" fill="#1e293b" />
+  
+  <!-- Orbitals -->
+  <g fill="none" stroke="#06b6d4" stroke-width="0.5" opacity="0.8">
+    <ellipse cx="16" cy="12" rx="6" ry="2" transform="rotate(0 16 12)" />
+    <ellipse cx="16" cy="12" rx="6" ry="2" transform="rotate(60 16 12)" />
+    <ellipse cx="16" cy="12" rx="6" ry="2" transform="rotate(-60 16 12)" />
+  </g>
+  
+  <!-- Center dot -->
+  <circle cx="16" cy="12" r="1.5" fill="#f97316" />
+</svg>
