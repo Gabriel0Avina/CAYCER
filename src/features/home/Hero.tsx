@@ -67,8 +67,8 @@ export function Hero() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.3, duration: 0.6 }}
                     >
-                        <span className="inline-block text-xs font-bold tracking-[0.25em] uppercase text-cyan-300 bg-white/5 border border-white/10 rounded-full px-6 py-2 backdrop-blur-md">
-                            Laboratorio Acreditado EMA T-225
+                        <span className="inline-block text-[10px] md:text-xs font-bold tracking-[0.25em] uppercase text-cyan-300 bg-white/5 border border-white/10 rounded-full px-6 py-2 backdrop-blur-md">
+                            Acreditado EMA: T-225 | H-98 | ME-57
                         </span>
                     </motion.div>
 
@@ -145,7 +145,7 @@ export function Hero() {
                             <svg className="w-5 h-5 text-cyan" fill="currentColor" viewBox="0 0 20 20">
                                 <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                             </svg>
-                            <span>+15 años de experiencia</span>
+                            <span>+8 años de experiencia</span>
                         </div>
                         <div className="flex items-center gap-2">
                             <svg className="w-5 h-5 text-cyan" fill="currentColor" viewBox="0 0 20 20">

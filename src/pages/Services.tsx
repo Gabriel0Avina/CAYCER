@@ -3,168 +3,111 @@ import { Footer } from "@/components/layout/Footer"
 import { Button } from "@/components/ui/button"
 import { Link } from "react-router-dom"
 import { motion } from "framer-motion"
-import { Settings, ShieldCheck, ClipboardCheck, Thermometer, Droplets, Gauge, Wind, Microscope, Factory, FlaskConical, Snowflake, CheckCircle } from "lucide-react"
+import { Settings, ShieldCheck, ClipboardCheck, Thermometer, Droplets, Gauge, Wind, Factory, Warehouse, Monitor, Laptop } from "lucide-react"
 import servicesHeroImg from "@/assets/services_hero.png"
 import { SEO } from "@/components/SEO"
 
 const comprehensiveServices = [
     {
-        category: "Calibración de Instrumentos de Medición",
+        category: "Calibración de Instrumentos (Metrología)",
         icon: Settings,
-        description: "Servicios de calibración con trazabilidad al CENAM y acreditación EMA (T-225), bajo la norma NMX-EC-17025-IMNC-2018.",
+        description: "Servicios acreditados ante la EMA (T-225 y H-98) para Temperatura y Humedad, con trazabilidad nacional.",
         color: "from-blue-600 to-cyan-500",
         services: [
             {
                 name: "Temperatura",
                 icon: Thermometer,
                 details: [
-                    "Servicio Acreditado ante la EMA",
-                    "Alcance: -34 a 150 °C",
-                    "Resolución: 0.001 °C",
-                    "Termómetros (Directa, Digital, Análogo)",
-                    "Sondas, Termopares y Vidrio"
+                    "Acreditación EMA T-225",
+                    "Alcance: -33 ⁰C a 150 ⁰C",
+                    "Termómetros digitales y líquido",
+                    "Termopares, RTD, PT100",
+                    "Dataloggers y Graficadores"
                 ]
             },
             {
                 name: "Humedad Relativa",
                 icon: Droplets,
                 details: [
-                    "Servicio Acreditado ante la EMA",
-                    "Alcance: 20 a 80 % H.R.",
-                    "Resolución: 0.01 % H.R.",
-                    "Termohigrómetros de lectura directa",
-                    "Dataloggers e Higrómetros"
+                    "Acreditación EMA H-98",
+                    "Alcance: 20% a 80% H.R.",
+                    "Termohigrómetros e Higrómetros",
+                    "Sensores y Dataloggers de humedad"
                 ]
             },
             {
-                name: "Presión",
+                name: "Presión y Masa",
                 icon: Gauge,
                 details: [
-                    "Trazabilidad al CENAM",
-                    "Alcance: 0-30 PSI | 0-2 bar | 0-206 kPa",
                     "Manómetros y Vacuómetros",
-                    "Presión Diferencial y Barómetros"
-                ]
-            },
-            {
-                name: "Mediciones Especiales",
-                icon: Microscope,
-                details: [
-                    "Balanzas analíticas",
-                    "Micropipetas y volumetría",
-                    "Cronómetros y temporizadores",
-                    "Instrumentos dimensionales"
+                    "Presión diferencial en salas",
+                    "Pesas, Balanzas y Básculas",
+                    "Trazabilidad nacional CENAM"
                 ]
             }
         ]
     },
     {
-        category: "Calificación de Equipos e Instalaciones",
+        category: "Calificación (Acreditación ME-57)",
         icon: ShieldCheck,
-        description: "Evidencia documentada del cumplimiento de especificaciones técnicas y regulatorias.",
+        description: "Servicio acreditado por EMA para equipos, sistemas e instalaciones vigente desde 2025-02-26.",
         color: "from-brand to-brand-light",
         services: [
             {
-                name: "Calificación de Diseño (DQ)",
-                icon: CheckCircle,
+                name: "Equipos y Sistemas",
+                icon: Monitor,
                 details: [
-                    "Revisión de especificaciones de usuario (URS)",
-                    "Análisis de riesgos de calidad (QRM)",
-                    "Verificación de cumplimiento normativo",
-                    "Evaluación de proveedores"
+                    "Refrigeración y Congelación",
+                    "Incubadoras y Cámaras climáticas",
+                    "Muflas, Hornos y Estufas",
+                    "Campanas de flujo laminar"
                 ]
             },
             {
-                name: "Calificación de Instalación (IQ)",
-                icon: CheckCircle,
+                name: "Almacenes y Recintos",
+                icon: Warehouse,
                 details: [
-                    "Verificación de instalación conforme a diseño",
-                    "Inspección de servicios auxiliares",
-                    "Revisión de documentación técnica",
-                    "Pruebas de integración inicial"
+                    "Mapeo ambiental (T y HR)",
+                    "Mapeo térmico en habitaciones",
+                    "Monitoreo de 7 días continuos"
                 ]
             },
             {
-                name: "Calificación de Operación (OQ)",
-                icon: CheckCircle,
+                name: "Cuartos Limpios",
+                icon: Wind,
                 details: [
-                    "Pruebas funcionales del equipo",
-                    "Verificación de alarmas y controles",
-                    "Mapeo de temperatura/humedad",
-                    "Pruebas en condiciones límite"
-                ]
-            },
-            {
-                name: "Calificación de Desempeño (PQ)",
-                icon: CheckCircle,
-                details: [
-                    "Verificación en condiciones reales de proceso",
-                    "Validación de ciclos de operación",
-                    "Estudios de reproducibilidad",
-                    "Capacitación de personal"
+                    "Conteo de partículas",
+                    "Velocidad y volumen de aire",
+                    "Patrones de flujo y presión"
                 ]
             }
         ]
     },
     {
-        category: "Validación de Procesos y Sistemas",
+        category: "Validación y Documentación",
         icon: ClipboardCheck,
-        description: "Evaluación científica que demuestra que un proceso produce resultados consistentes y predecibles.",
+        description: "Cumplimiento integral con GAMP 5, NOM-059 y gestión de riesgos de calidad.",
         color: "from-cyan-600 to-teal-500",
         services: [
             {
-                name: "Procesos de Esterilización",
-                icon: FlaskConical,
+                name: "Sistemas Computarizados",
+                icon: Laptop,
                 details: [
-                    "Autoclave (vapor saturado)",
-                    "Calor seco (horno)",
-                    "Óxido de etileno (ETO)",
-                    "Radiación gamma",
-                    "Estudios de carga biológica"
+                    "Validación CRM, ERP e Informáticos",
+                    "Administradores de sistemas",
+                    "Cumplimiento GAMP 5",
+                    "Integridad de Datos"
                 ]
             },
             {
-                name: "Sistemas HVAC y Áreas Clasificadas",
-                icon: Wind,
-                details: [
-                    "Cumplimiento ISO 14644 (Salas limpias)",
-                    "Conteo de partículas",
-                    "Pruebas de integridad de filtros HEPA",
-                    "Estudios de flujo de aire",
-                    "Presión diferencial y recuperación"
-                ]
-            },
-            {
-                name: "Procesos de Fabricación",
+                name: "Servicios Críticos y Logística",
                 icon: Factory,
                 details: [
-                    "Validación prospectiva",
-                    "Validación concurrente",
-                    "Revalidación periódica",
-                    "Estudios de peor caso",
-                    "Validación de limpieza"
-                ]
-            },
-            {
-                name: "Cadena de Frío",
-                icon: Snowflake,
-                details: [
-                    "Calificación de cuartos fríos",
-                    "Refrigeradores y congeladores",
-                    "Unidades de transporte",
-                    "Estudios de apertura de puertas",
-                    "Mapeo térmico 3D"
-                ]
-            },
-            {
-                name: "Sistemas Computarizados",
-                icon: CheckCircle,
-                details: [
-                    "Cumplimiento GAMP 5",
-                    "21 CFR Part 11 (FDA)",
-                    "Validación de software",
-                    "Gestión de riesgos (ICH Q9)",
-                    "Trazabilidad de requisitos"
+                    "Sistema de aire comprimido",
+                    "Procesos de esterilización (Autoclaves)",
+                    "Red de frío (Unidades de reparto)",
+                    "Embalaje y Distribución",
+                    "Gestión de riesgos de calidad"
                 ]
             }
         ]

@@ -33,6 +33,7 @@ export function Navbar() {
                 { name: "Validación", href: "/servicios/validacion", icon: FlaskConical, description: "Procesos y sistemas" },
             ]
         },
+        { name: "Catálogo", href: "/catalogo" },
         { name: "Contacto", href: "/contacto" },
     ]
 
@@ -44,7 +45,7 @@ export function Navbar() {
             className={cn(
                 "fixed top-0 w-full z-50 transition-all duration-500 border-b border-transparent",
                 (!isTransparent && !isOpen) && "bg-slate-900/60 backdrop-blur-xl shadow-lg border-white/10 text-white supports-[backdrop-filter]:bg-slate-900/40",
-                isOpen && "bg-[#0f172a]", // Solid background when menu is open
+                isOpen && "bg-[#0f172a] transition-none", // Solid background applied immediately when menu is open
                 scrolled && "h-16" // Slightly smaller on scroll
             )}
         >

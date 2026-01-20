@@ -8,25 +8,25 @@ import imgValidation from "@/assets/services/validation.png"
 
 const services = [
     {
-        title: "Calificación de sistemas, equipos e instalaciones",
-        description: "Demostramos que tus equipos cumplen con requerimientos de usuario, fabricante y regulación sanitaria.",
-        bullets: ["Análisis de riesgos (AR)", "Diseño (DQ)", "Instalación (IQ)", "Operación (OQ)", "Desempeño (PQ)"],
+        title: "Calificación EMA (Acreditación ME-57)",
+        description: "Servicio acreditado para equipos, sistemas e instalaciones con vigencia a partir de 2025-02-26.",
+        bullets: ["Cámaras climáticas y Muflas", "Equipos de refrigeración", "Campanas de flujo laminar", "Mapeo térmico de almacenes"],
         image: imgQualification,
         icon: ShieldCheck,
         link: "/servicios/calificacion"
     },
     {
-        title: "Calibración de instrumentos de medición",
-        description: "Trazabilidad garantizada ante el CENAM sobre un intervalo de medición establecido.",
-        bullets: ["Temperatura", "Humedad", "Presión"],
+        title: "Calibración Acreditada (T-225 / H-98)",
+        description: "Garantizamos la exactitud en temperatura (-33°C a 150°C) y humedad relativa (20% a 80%).",
+        bullets: ["Termómetros y Dataloggers", "Higrómetros y Sensores", "Manómetros y Presión", "Balanzas y Pesas Patrón"],
         image: imgCalibration,
         icon: Settings,
         link: "/servicios/metrologia"
     },
     {
-        title: "Validación de procesos",
-        description: "Evidencia documental generada a través de la evaluación científica del ciclo de vida del producto.",
-        bullets: ["Procesos de Fabricación", "Sistemas Computarizados", "Procesos de Esterilización", "Cadena Fría"],
+        title: "Validación y GAMP 5",
+        description: "Aseguramos el cumplimiento de sistemas computarizados, aire comprimido y cadena fría.",
+        bullets: ["Sistemas ERP, CRM e Informáticos", "Aire comprimido y Esterilización", "Red de frío y Unidades de reparto", "Gestión de Riesgos de Calidad"],
         image: imgValidation,
         icon: ClipboardCheck,
         link: "/servicios/validacion"

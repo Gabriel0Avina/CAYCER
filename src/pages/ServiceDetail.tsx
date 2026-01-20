@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom"
 import { Navbar } from "@/components/layout/Navbar"
 import { Footer } from "@/components/layout/Footer"
 import { Button } from "@/components/ui/button"
-import { CheckCircle2, Activity, Thermometer, Gauge, Layout, Home, Droplets, FlaskConical, Settings, Factory, Snowflake, Wind, Truck, Warehouse, CloudSun, Waves, Flame } from "lucide-react"
+import { CheckCircle2, Activity, Thermometer, Droplets, Wind, Truck, Warehouse, Factory, Laptop, ClipboardCheck, ShieldCheck, Settings, Snowflake, Gauge } from "lucide-react"
 import { SEO } from "@/components/SEO"
 
 import imgQualification from "@/assets/services/qualification.png"
@@ -27,250 +27,261 @@ interface ServiceInfo {
     description: string;
     image: string;
     detailedSections: ServiceSection[];
+    considerations?: string[];
 }
 
 const serviceData: Record<string, ServiceInfo> = {
     "calificacion": {
         title: "Calificación de sistemas, equipos e instalaciones",
-        subtitle: "Aseguramiento técnico y cumplimiento normativo integral.",
-        description: "La calificación es el proceso de aseguramiento de que un instrumento, equipo, sistema o instalación es apropiado para el uso propuesto y que su funcionamiento está de acuerdo a las especificaciones establecidas por el usuario y el proveedor.",
+        subtitle: "Servicio acreditado por EMA (ME-57) para máxima confiabilidad.",
+        description: "La calificación es el proceso de aseguramiento de que un instrumento, equipo, sistema o instalación es apropiado para el uso propuesto y que su funcionamiento está de acuerdo a las especificaciones. Este servicio consta de cuatro etapas esenciales: Calificación de Diseño (CD; DQ), Calificación de Instalación (CI; IQ), Calificación de Operación (CO; OQ) y Calificación de Desempeño (CE; PQ).",
         image: imgQualification,
+        considerations: [
+            "Recomendaciones del fabricante (manual y ficha técnica)",
+            "Requisitos de la instalación Eléctrica",
+            "Protección contra perturbaciones Eléctricas",
+            "PNO's de operación, mantenimiento y limpieza",
+            "Plano de ubicación de los equipos",
+            "Verificación operativa y programa de mantenimiento",
+            "Criterios de aceptación definidos"
+        ],
         detailedSections: [
             {
-                title: "Congelación y Ultracongelación",
-                description: "Validación de equipos de almacenamiento crítico a bajas temperaturas.",
+                title: "Equipos de Frío y Ultra-frío",
+                description: "Calificación técnica en rangos críticos de refrigeración y congelación.",
                 icon: Snowflake,
                 items: [
-                    "Congelación: -25°C a -10°C",
-                    "Ultracongelación: -86°C a -50°C",
-                    "Mapeo de distribución de temperatura",
-                    "Pruebas de apertura de puerta y falla de energía"
-                ]
-            },
-            {
-                title: "Esterilización (Autoclaves)",
-                description: "Calificación de ciclos de esterilización para laboratorios e industria.",
-                icon: Flame,
-                gridItems: [
-                    { label: "Laboratorio", value: "121°C", icon: FlaskConical },
-                    { label: "Industrial", value: "134°C", icon: Factory },
-                    { label: "Temp. Rango", value: "110°C a 134°C", icon: Thermometer },
-                    { label: "Presión", value: "100 a 200 kPa", icon: Gauge },
-                    { label: "Tiempo", value: "3 a 30 min", icon: Activity }
-                ]
-            },
-            {
-                title: "Refrigeración",
-                description: "Cadena de frío segura entre 2°C y 8°C.",
-                icon: Thermometer,
-                items: [
-                    "Rango: 2°C a 8°C",
+                    "Congelación (-25°C a -10°C)",
+                    "Ultracongelación (-86°C a -50°C)",
+                    "Refrigeración (2°C a 8°C)",
                     "Pruebas de apertura de puerta",
                     "Pruebas de hermeticidad",
-                    "Mapeo térmico en carga y vacío"
+                    "Mapeo térmico dinámico"
+                ],
+                gridItems: [
+                    { label: "Acreditación", value: "EMA ME-57", icon: ShieldCheck },
+                    { label: "Vigencia", value: "Desde 2025-02-26", icon: Activity }
                 ]
             },
             {
-                title: "Áreas Limpias y HVAC",
-                description: "Certificación de aire según ISO 14644-1.",
+                title: "Áreas Limpias y Flujo Laminar",
+                description: "Clasificación de áreas desde Clase ISO 1 hasta Clase ISO 9 según ISO 14644-1.",
                 icon: Wind,
                 items: [
-                    "Clasificación ISO 1 a ISO 9",
-                    "Conteo de partículas",
-                    "Renovaciones de aire por hora",
-                    "Diferenciales de presión"
+                    "Conteo de partículas viables",
+                    "Velocidad y volumen de aire",
+                    "Presión diferencial de salas",
+                    "Determinación de patrón de flujo",
+                    "Medición de temperatura y humedad",
+                    "Campanas de flujo laminar"
                 ]
             },
             {
-                title: "Almacenes",
-                description: "Mapeo térmico y de humedad para áreas de almacenamiento.",
-                icon: Warehouse,
-                gridItems: [
-                    { label: "Acondicionado", value: "18°C a 25°C", icon: Home },
-                    { label: "Ambiente", value: "<30°C / <65% HR", icon: Layout },
-                    { label: "Monitoreo", value: "7 días continuos", icon: Activity }
-                ]
-            },
-            {
-                title: "Cámaras Climáticas e Incubadoras",
-                description: "Estudios de estabilidad y uniformidad.",
-                icon: CloudSun,
+                title: "Esterilización y Alta Temperatura",
+                description: "Validación de autoclaves industriales y de laboratorio con parámetros precisos.",
+                icon: Gauge,
                 items: [
-                    "Cámara Climática: -200°C a 600°C / 10% a 90% HR",
-                    "Incubadora: 5°C a 75°C",
-                    "Estudios de estabilidad y uniformidad"
+                    "Autoclave Industrial (134°C)",
+                    "Autoclave Laboratorio (121°C)",
+                    "Presión: 100 a 200 kPa",
+                    "Tiempo: 3 a 30 minutos",
+                    "Horno/Mufla (50°C a 1800°C)",
+                    "Lecho fluidizado (50°C a 800°C)"
                 ]
             },
             {
-                title: "Medios Térmicos",
-                description: "Baños líquidos, hornos y muflas.",
-                icon: Waves,
-                gridItems: [
-                    { label: "Baño Líquido", value: "-80°C a 300°C", icon: Droplets },
-                    { label: "Horno/Mufla", value: "50°C a 1800°C", icon: Thermometer },
-                    { label: "Lecho Fluidizado", value: "50°C a 800°C", icon: Settings }
+                title: "Almacenes y Mapeo Ambiental",
+                description: "Servicio acreditado para el control de condiciones en recintos de almacenamiento.",
+                icon: Warehouse,
+                items: [
+                    "Monitoreo recomendado (7 días)",
+                    "Acondicionamiento (18°C a 25°C)",
+                    "Temp. Ambiente (<30°C / <65% HR)",
+                    "Mapeo ambiental (Temp. y HR)",
+                    "Mapeo térmico en recintos",
+                    "Determinación de puntos críticos"
                 ]
             },
             {
-                title: "Unidades de Transporte",
-                description: "Calificación de transporte para cadena de distribución.",
+                title: "Simulación de Condiciones",
+                description: "Calificación de cámaras climáticas e incubadoras para estudios de estabilidad.",
+                icon: Thermometer,
+                items: [
+                    "Cámara climática (-200 a 600°C)",
+                    "Humedad relativa (10% a 90%)",
+                    "Incubadora (5°C a 75°C)",
+                    "Estudios de estabilidad de fármacos",
+                    "Baño líquido (-80°C a 300°C)",
+                    "Baños agitados y sales"
+                ]
+            },
+            {
+                title: "Logística y Unidades Móviles",
+                description: "Garantizamos la integridad del producto durante su distribución y transporte.",
                 icon: Truck,
                 items: [
-                    "Ambiente: <30°C ; <65% HR",
-                    "Controlada: 18°C a 25°C",
-                    "Refrigerada: 2°C a 8°C",
-                    "Congelación: -25°C a -10°C"
+                    "Unidad Refrigerada (2°C a 8°C)",
+                    "Unidad de congelación (-25 a -10°C)",
+                    "Temperatura ambiente (<30°C)",
+                    "Temperatura controlada (18-25°C)",
+                    "Mapeo en ruta dinámica",
+                    "Sensores de impacto y apertura"
                 ]
             }
         ]
     },
-    // ... kept other services same ...
-
     "metrologia": {
         title: "Calibración de instrumentos de medición",
         subtitle: "Certificamos la exactitud de sus instrumentos con trazabilidad comprobable.",
-        description: "La calibración es un proceso que certifica si la medida obtenida por un instrumento es compatible con lo esperado y que es apto para su uso. Contamos con acreditación EMA y trazabilidad al CENAM para asegurar la máxima confiabilidad en sus mediciones.",
+        description: "Contamos con acreditaciones EMA específicas para asegurar la máxima confiabilidad en sus mediciones bajo la norma NMX-EC-17025.",
         image: imgCalibration,
         detailedSections: [
             {
-                title: "Temperatura",
-                description: "Servicio Acreditado ante la EMA. Garantizamos mediciones precisas para el control térmico de sus procesos.",
+                title: "Temperatura (EMA T-225)",
+                description: "Servicio acreditado vigente a partir de 2024-12-04.",
                 icon: Thermometer,
                 items: [
-                    "Alcance: -34 a 150 °C", // Highlighting Scope
-                    "Resolución: 0.001 °C", // Highlighting Resolution
-                    "Calibración de termómetros de lectura directa, digital y análogo",
-                    "Termómetro con sonda",
-                    "Termómetro tipo termopar",
-                    "Termómetro de líquido en vidrio"
+                    "Alcance: -33 ⁰C a 150 ⁰C",
+                    "Calibración de Termómetros (Digital/Líquido)",
+                    "Termopares, Termopares y RTD/PT100",
+                    "Dataloggers y Sondas de temperatura",
+                    "Graficadores y Controladores"
                 ],
                 gridItems: [
-                    { label: "Alcance", value: "-34 a 150 °C", icon: Thermometer },
-                    { label: "Resolución", value: "0,001 °C", icon: Activity }
+                    { label: "Alcance", value: "-33 a 150 ⁰C", icon: Thermometer },
+                    { label: "Código", value: "EMA T-225", icon: ShieldCheck }
                 ]
             },
             {
-                title: "Humedad",
-                description: "Servicio Acreditado ante la EMA. Soluciones para el monitoreo ambiental y de almacenamiento.",
+                title: "Humedad Relativa (EMA H-98)",
+                description: "Servicio acreditado vigente a partir de 2024-12-04.",
                 icon: Droplets,
                 items: [
-                    "Alcance: 20 a 80 % H.R.",
-                    "Resolución: 0,01 % H.R.",
-                    "Calibración de termohigrómetros de lectura directa",
-                    "Termohigrómetros dataloggers",
-                    "Higrómetro"
+                    "Alcance: 20% a 80% H.R.",
+                    "Termohigrómetros e Higrómetros",
+                    "Sensores de humedad y Dataloggers",
+                    "Registradores de humedad"
                 ],
                 gridItems: [
-                    { label: "Alcance", value: "20 a 80 % H.R.", icon: Droplets },
-                    { label: "Resolución", value: "0,01 % H.R.", icon: Activity }
+                    { label: "Alcance", value: "20% a 80% H.R.", icon: Droplets },
+                    { label: "Código", value: "EMA H-98", icon: ShieldCheck }
                 ]
             },
             {
-                title: "Presión",
-                description: "Servicio con trazabilidad al CENAM. Cobertura amplia para diversos instrumentos de presión.",
-                icon: Gauge,
+                title: "Otras Magnitudes",
+                description: "Calibración con trazabilidad nacional para diversos procesos.",
+                icon: Settings,
                 items: [
-                    "Alcance: 0 a 30 PSI",
-                    "Alcance: 0 a 2 bar",
-                    "Alcance: 0 a 206 kPa",
-                    "Alcance: 0 a 830 inH2O",
-                    "Calibración de manómetro",
-                    "Vacuómetro y Manovacuómetro",
-                    "Presión diferencial",
-                    "Barómetro"
-                ],
-                gridItems: [
-                    { label: "Alcance", value: "0 a 30 PSI / 2 bar", icon: Gauge },
-                    { label: "Unidades", value: "kPa, inH2O, PSI, bar", icon: Settings }
-                ]
-            },
-            {
-                title: "Beneficios de Nuestro Servicio",
-                icon: CheckCircle2,
-                items: [
-                    "Asegurar la calidad en los procesos analíticos",
-                    "Reducir costos y aumentar productividad",
-                    "Cumplir con requisitos de regulación sanitaria (COFEPRIS)",
-                    "Mantener el funcionamiento adecuado",
-                    "Incrementar la vida útil de los equipos"
+                    "Presión: Manómetros, sensores y diferencial",
+                    "Masa: Balanzas, básculas y pesas patrón",
+                    "Instalación de presión en salas limpias"
                 ]
             }
         ]
     },
     "validacion": {
-        title: "Validación de procesos",
-        subtitle: "Evidencia científica y robustez operativa del ciclo de vida.",
-        description: "Evaluación integral del ciclo de vida del producto para demostrar funcionalidad, consistencia y robustez en la calidad del producto.",
+        title: "Validación de procesos y sistemas",
+        subtitle: "Evaluación integral del ciclo de vida para garantizar consistencia.",
+        description: "Implementamos estrategias científicas para demostrar que sus procesos y sistemas cumplen con la calidad requerida de forma robusta.",
         image: imgValidation,
         detailedSections: [
             {
-                title: "¿Qué se debe tener en cuenta?",
-                description: "Requisitos previos para una validación exitosa:",
-                icon: Activity,
-                items: [
-                    "Soporte documental adecuado y sistema de documentación controlado",
-                    "Áreas y Equipos Calificados y Calibrados (vigentes)",
-                    "Responsables de actividad bien definidos en PNO's",
-                    "Plan Maestro de Validación definido y autorizado",
-                    "Capacitación de personal en GxP",
-                    "Tiempos de proceso definidos y estabilizados"
-                ]
-            },
-            {
-                title: "Fabricación y Acondicionamiento",
-                description: "Validación por tres corridas continuas para garantizar consistencia.",
+                title: "Procesos de fabricación",
+                description: "Recopilación de datos por tres corridas continuas para garantizar la consistencia del producto.",
                 icon: Factory,
                 items: [
-                    "Evaluación de riesgos para definir número de lotes",
-                    "Criterios de aceptación aplicables",
-                    "Monitoreo de parámetros críticos de proceso",
-                    "Evaluación estadística de datos"
+                    "Validación basada en evaluación de riesgos",
+                    "Definición de tipo de prueba/monitoreo",
+                    "Criterios de aceptación normativos",
+                    "Evaluación de datos y acciones",
+                    "Tres corridas continuas de validación",
+                    "Cumplimiento de atributos de calidad"
                 ]
             },
             {
-                title: "Esterilización y Autoclaves",
-                description: "Perfiles térmicos con 12 termopares en cámara vacía y con carga.",
-                icon: Flame,
+                title: "Esterilización",
+                description: "Validación de ciclos para garantizar la eliminación de microorganismos según normativa.",
+                icon: Activity,
                 items: [
-                    "Definición de patrones de carga",
-                    "Validación de parámetros: 110-134°C | 100-200 kPa",
-                    "Pruebas por triplicado para validación de ciclos",
-                    "Cumplimiento con normativa vigente y requerimientos de usuario"
+                    "Patrones de carga definidos",
+                    "Perfil térmico (12 termopares)",
+                    "Validación en cámara vacía y con carga",
+                    "Tres corridas continuas",
+                    "Control de temperatura, tiempo y presión",
+                    "Cumplimiento de requerimientos de usuario"
                 ]
             },
             {
-                title: "Sistemas Computarizados",
-                description: "Aseguramos la integridad de datos bajo GAMP 5 y CFR 21 Part 11.",
-                icon: Settings,
+                title: "Sistemas Computacionales",
+                description: "Pruebas de integridad y seguridad bajo el cumplimiento GxP y GAMP 5.",
+                icon: Laptop,
                 items: [
-                    "Inventario de componentes de software y hardware",
-                    "Definición de perfiles de usuario y seguridad",
-                    "PNO's de respaldo, restauración y seguridad de la información",
-                    "Pruebas de funcionalidad con cada perfil de usuario"
+                    "Componentes Software y Hardware",
+                    "Definición de perfiles de usuario",
+                    "Seguridad y respaldo de datos",
+                    "Restauración y almacenamiento",
+                    "Programas de capacitación y auditoría",
+                    "Pruebas de funcionamiento por usuario"
                 ]
             },
             {
-                title: "Sistemas HVAC y Aire Comprimido",
-                description: "Clasificación de salas limpias según ISO 14644-1 y calidad de aire ISO 8573.",
+                title: "Sistemas HVAC",
+                description: "Aseguramiento de la calidad de aire y niveles de limpieza según ISO 14644-1.",
                 icon: Wind,
                 items: [
-                    "Conteo de partículas viables y no viables",
-                    "Mediciones de flujo, renovaciones de aire y presión diferencial",
-                    "Detección de puntos de rocío, hidrocarburos y contaminantes en aire",
-                    "Cálculo de cambios de aire por hora y pruebas de fuga"
+                    "Clase ISO y nivel de limpieza",
+                    "Dimensiones de salas limpias",
+                    "Caídas de presión diferencial",
+                    "Conteo de partículas viables/no viables",
+                    "Mediciones de flujo y volumen aire",
+                    "Cambios de aire por hora"
                 ]
             },
             {
-                title: "Cadena Fría y Logística",
-                description: "Validación de trayectos críticos por triplicado (Locales y Foráneos).",
+                title: "Sistema de aire comprimido",
+                description: "Calificación de generación, almacenamiento y distribución según ISO 8573.",
+                icon: Gauge,
+                items: [
+                    "Diseño y puntos de uso",
+                    "Clasificación de limpieza ISO 8573",
+                    "Partículas viables y totales",
+                    "Punto de rocío e hidrocarburos",
+                    "Gases contaminantes y fugas",
+                    "Medición de caídas de presión"
+                ]
+            },
+            {
+                title: "Cadena Fría",
+                description: "Mantenimiento de rango 2-8 ºC en envíos locales y foráneos por triplicado.",
                 icon: Truck,
                 items: [
-                    "Pruebas en trayectos reales (terrestre, aéreo, marítimo)",
-                    "Validación de embalaje y materiales aislantes",
-                    "Mantenimiento de rango (2 a 8 ºC) hasta el cliente final",
-                    "Evaluación de hieleras y configuraciones de refrigerantes"
+                    "Tiempo de recorrido (Local/Foráneo)",
+                    "Calidad de hieleras y refrigerantes",
+                    "Material de embalaje optimizado",
+                    "Logística (Terrestre, Aérea, etc.)",
+                    "Envío por triplicado (Trayecto largo)",
+                    "Mantenimiento de 2 a 8 ºC garantizado"
+                ]
+            },
+            {
+                title: "Gestión de riesgos de calidad",
+                description: "Control preventivo basado en el análisis de puntos críticos.",
+                icon: ShieldCheck,
+                items: [
+                    "Análisis de riesgo detallado",
+                    "Estrategias de mitigación",
+                    "Monitoreo continuo de riesgos",
+                    "Capacitación de personal operativo"
                 ]
             }
+        ],
+        considerations: [
+            "Soporte documental adecuado (procedimientos, formatos, protocolos)",
+            "Áreas y Equipos Calificados y Calibrados (vigentes)",
+            "Responsables de actividad bien definidos en PNO's",
+            "Plan Maestro de Validación definido y autorizado",
+            "Capacitación de personal",
+            "Tiempos de proceso definidos"
         ]
     }
 }
@@ -348,11 +359,37 @@ export function ServiceDetail() {
                     </div>
                 </section>
 
+                {/* General Considerations Section */}
+                {service.considerations && (
+                    <section className="py-16 bg-slate-50 border-y border-slate-100">
+                        <div className="container mx-auto px-6">
+                            <div className="max-w-4xl mx-auto">
+                                <div className="flex items-center gap-3 mb-8">
+                                    <div className="w-10 h-10 bg-brand/10 rounded-lg flex items-center justify-center text-brand">
+                                        <ClipboardCheck size={24} />
+                                    </div>
+                                    <h2 className="text-2xl font-bold text-slate-900">¿Qué se debe tener en cuenta?</h2>
+                                </div>
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    {service.considerations.map((point: string, idx: number) => (
+                                        <div key={idx} className="flex items-center gap-3 p-4 bg-white rounded-xl shadow-sm border border-slate-200/50">
+                                            <div className="flex-shrink-0 w-6 h-6 bg-cyan/10 rounded-full flex items-center justify-center text-cyan text-xs font-bold">
+                                                {idx + 1}
+                                            </div>
+                                            <span className="text-slate-700 font-medium">{point}</span>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                )}
+
                 {/* Detailed Sections (Grid Layout) */}
                 <section className="py-20 bg-gradient-to-br from-slate-50 via-white to-blue-50/20">
                     <div className="container mx-auto px-6">
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                            {service.detailedSections.map((section, index) => {
+                            {service.detailedSections.map((section: ServiceSection, index: number) => {
                                 const SectionIcon = section.icon
                                 return (
                                     <div key={index} className="bg-white rounded-2xl p-8 shadow-lg border border-slate-100 hover:shadow-xl transition-shadow duration-300 flex flex-col h-full">
@@ -374,7 +411,7 @@ export function ServiceDetail() {
 
                                         {section.items && (
                                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
-                                                {section.items.map((item, idx) => (
+                                                {section.items.map((item: string, idx: number) => (
                                                     <div key={idx} className="flex items-start gap-3 p-3 bg-slate-50 rounded-xl border border-slate-100 hover:border-cyan/20 transition-colors">
                                                         <CheckCircle2 className="w-5 h-5 text-cyan mt-0.5 flex-shrink-0" />
                                                         <span className="text-sm font-medium text-slate-700 leading-tight">{item}</span>
@@ -385,7 +422,7 @@ export function ServiceDetail() {
 
                                         {section.gridItems && (
                                             <div className="space-y-3 mt-auto pt-6 border-t border-slate-100">
-                                                {section.gridItems.map((gridItem, idx) => {
+                                                {section.gridItems.map((gridItem: any, idx: number) => {
                                                     const Icon = gridItem.icon
                                                     return (
                                                         <div key={idx} className="flex items-center gap-3 p-3 bg-slate-50 rounded-lg">
