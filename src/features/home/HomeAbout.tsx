@@ -1,4 +1,4 @@
-import { Target, Eye, ShieldCheck, Star, Users, Lightbulb } from "lucide-react"
+import { Target, Eye, ShieldCheck, Star, Users, Lightbulb, Scale } from "lucide-react"
 import { motion } from "framer-motion"
 
 const values = [
@@ -7,7 +7,7 @@ const values = [
     { name: "Responsabilidad", icon: Target },
     { name: "Confianza", icon: ShieldCheck },
     { name: "Innovación", icon: Lightbulb },
-    { name: "Excelencia", icon: Star }
+    { name: "Imparcialidad", icon: Scale }
 ]
 
 export function HomeAbout() {
@@ -50,7 +50,7 @@ export function HomeAbout() {
                         transition={{ duration: 0.6, delay: 0.2 }}
                         className="text-xl text-slate-600 leading-relaxed max-w-3xl"
                     >
-                        Somos una empresa dedicada a la mejora de la calidad, ofrecemos soluciones con alta tecnología y conocimiento a través de calibración de instrumentos de medición, calificación de equipos e instalaciones, validación de procesos, sistemas críticos, sistemas computacionales, Cadena Fría, y Manetnimientos preventivos y correctivos.
+                        Somos una empresa dedicada a la mejora de la calidad, ofrecemos soluciones con alta tecnología y conocimiento a través de calibración de instrumentos de medición, calificación de equipos e instalaciones, validación de procesos, sistemas críticos, sistemas computacionales, Cadena Fría, y Mantenimientos preventivos y correctivos.
                         Nuestro Sistema de Gestión está establecido con base a la{" "}
                         <span className="text-brand font-bold border-b-2 border-brand/20">NMX-EC-17025-IMNC-2018</span>.
                     </motion.p>

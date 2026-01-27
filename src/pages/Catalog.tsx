@@ -17,11 +17,11 @@ export function Catalog() {
         <div className="flex flex-col min-h-screen bg-white">
             <SEO
                 title="Catálogo de Instrumentación"
-                description="Explore nuestro catálogo de equipos de precisión para metrología y validación industrial."
+                description="Explore nuestro catálogo de equipos de precisión para calibración y validación industrial."
                 schema={catalogSchema}
             />
             <Navbar />
-            <main className="flex-grow">
+            <main className="grow">
                 <CatalogHero />
                 <ProductGrid />
             </main>

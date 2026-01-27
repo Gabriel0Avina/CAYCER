@@ -29,7 +29,7 @@ export function Navbar() {
             hasDropdown: true,
             dropdownItems: [
                 { name: "Calificación", href: "/servicios/calificacion", icon: CheckCircle2, description: "Equipos e instalaciones" },
-                { name: "Metrología", href: "/servicios/metrologia", icon: Thermometer, description: "Calibración certificada" },
+                { name: "Calibración", href: "/servicios/calibracion", icon: Thermometer, description: "Calibración certificada" },
                 { name: "Validación", href: "/servicios/validacion", icon: FlaskConical, description: "Procesos y sistemas" },
             ]
         },

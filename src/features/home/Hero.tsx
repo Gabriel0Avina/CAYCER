@@ -86,7 +86,7 @@ export function Hero() {
                                 animate={{ opacity: 1, scale: 1 }}
                                 transition={{ delay: 0.7, duration: 0.8 }}
                             >
-                                CAYCER INGENIERÍA Y METROLOGÍA
+                                CAYCER INGENIERÍA Y CALIBRACIÓN
                             </motion.span>
                             <motion.span
                                 className="block text-5xl md:text-7xl lg:text-8xl font-black bg-gradient-to-r from-white via-cyan-100 to-cyan-300 bg-clip-text text-transparent leading-tight"
@@ -94,7 +94,7 @@ export function Hero() {
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ delay: 0.9, duration: 0.6 }}
                             >
-                                Excelencia en <br /> Metrología Industrial
+                                Excelencia en <br /> Calibración Industrial
                             </motion.span>
                         </h1>
                     </motion.div>
@@ -106,7 +106,7 @@ export function Hero() {
                         transition={{ delay: 1.1, duration: 0.6 }}
                         className="text-xl lg:text-2xl text-slate-200 leading-relaxed max-w-3xl mx-auto font-light"
                     >
-                        Garantizamos la precisión de sus procesos con servicios de{" "}
+                        Excelencia técnica en servicios de{" "}
                         <span className="text-cyan-300 font-medium">calibración</span>,{" "}
                         <span className="text-cyan-300 font-medium">calificación</span> y{" "}
                         <span className="text-cyan-300 font-medium">validación</span> bajo normativa nacional.

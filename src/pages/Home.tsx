@@ -54,7 +54,7 @@ export function Home() {
     return (
         <div className="flex flex-col min-h-screen bg-white">
             <SEO
-                title="Especialistas en Metrología y Validación"
+                title="Especialistas en Calibración y Validación"
                 description="Servicios de calibración de instrumentos, calificación de equipos y validación de procesos industriales con trazabilidad EMA y CENAM."
                 schema={homeSchema}
             />

@@ -65,7 +65,7 @@ export function WhyChooseUs() {
                         >
                             {/* Icon - Centered */}
                             <div className="flex justify-center mb-6">
-                                <div className={`w-20 h-20 bg-gradient-to-br ${reason.color} rounded-2xl flex items-center justify-center text-white group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
+                                <div className={`w-20 h-20 bg-linear-to-br ${reason.color} rounded-2xl flex items-center justify-center text-white group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
                                     <reason.icon size={40} strokeWidth={2.5} />
                                 </div>
                             </div>
@@ -79,7 +79,7 @@ export function WhyChooseUs() {
                             </p>
 
                             {/* Decorative Gradient */}
-                            <div className={`absolute -bottom-2 -right-2 w-24 h-24 bg-gradient-to-br ${reason.color} opacity-10 rounded-full blur-2xl group-hover:opacity-20 transition-opacity`}></div>
+                            <div className={`absolute -bottom-2 -right-2 w-24 h-24 bg-linear-to-br ${reason.color} opacity-10 rounded-full blur-2xl group-hover:opacity-20 transition-opacity`}></div>
                         </motion.div>
                     ))}
                 </div>

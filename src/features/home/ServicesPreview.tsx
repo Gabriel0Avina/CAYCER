@@ -8,23 +8,23 @@ import imgValidation from "@/assets/services/validation.png"
 
 const services = [
     {
-        title: "Calificación EMA (Acreditación ME-57)",
-        description: "Servicio acreditado para equipos, sistemas e instalaciones con vigencia a partir de 2025-02-26.",
-        bullets: ["Cámaras climáticas y Muflas", "Equipos de refrigeración", "Campanas de flujo laminar", "Mapeo térmico de almacenes"],
+        title: "Calificación de Equipos e Instalaciones",
+        description: "Servicio acreditado para equipos, sistemas e instalaciones",
+        bullets: ["Cámaras climáticas", "Equipos de refrigeración", "Campanas de flujo laminar", "Mapeo térmico de almacenes", "Equipos de congelacion", "ultracongeladoras", "incubadoras", "hornos"],
         image: imgQualification,
         icon: ShieldCheck,
         link: "/servicios/calificacion"
     },
     {
-        title: "Calibración Acreditada (T-225 / H-98)",
-        description: "Garantizamos la exactitud en temperatura (-33°C a 150°C) y humedad relativa (20% a 80%).",
-        bullets: ["Termómetros y Dataloggers", "Higrómetros y Sensores", "Manómetros y Presión", "Balanzas y Pesas Patrón"],
+        title: "Calibración de Instrumentos de Medición",
+        description: " En temperatura (-33°C a 150°C) y humedad relativa (20% a 80%).",
+        bullets: ["Termómetros y Dataloggers", "Higrómetros y Sensores"],
         image: imgCalibration,
         icon: Settings,
-        link: "/servicios/metrologia"
+        link: "/servicios/calibracion"
     },
     {
-        title: "Validación y GAMP 5",
+        title: "Validación de Sistemas Criticos",
         description: "Aseguramos el cumplimiento de sistemas computarizados, aire comprimido y cadena fría.",
         bullets: ["Sistemas ERP, CRM e Informáticos", "Aire comprimido y Esterilización", "Red de frío y Unidades de reparto", "Gestión de Riesgos de Calidad"],
         image: imgValidation,
@@ -45,7 +45,7 @@ export function ServicesPreview() {
                         Soluciones con <span className="text-brand">Alta Tecnología</span> y Conocimiento
                     </h2>
                     <p className="text-slate-600 text-lg">
-                        Servicios técnicos especializados diseñados para superar las auditorías más exigentes de regulación sanitaria.
+                        Servicios técnicos especializados enfocados en el cumplimiento de estándares normativos, brindando soporte técnico para fortalecer la integridad y calidad de sus procesos operativos.
                     </p>
                 </div>
 

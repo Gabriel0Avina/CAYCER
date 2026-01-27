@@ -21,7 +21,7 @@ export function Certifications() {
                 <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
                     <h3 className="text-3xl md:text-4xl font-bold text-slate-900 font-display">Acreditación EMA</h3>
                     <p className="text-slate-600 text-lg leading-relaxed">
-                        Contamos con acreditación por la Entidad Mexicana de Acreditación (EMA) en áreas críticas para garantizar la máxima precisión y cumplimiento normativo.
+                        Contamos con acreditación por la Entidad Mexicana de Acreditación (EMA)
                     </p>
                 </div>
 

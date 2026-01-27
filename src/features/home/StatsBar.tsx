@@ -4,7 +4,7 @@ import { useRef, useState, useEffect } from "react"
 const stats = [
     { value: 8, suffix: "+", label: "Años de Experiencia" },
     { value: 200, suffix: "+", label: "Clientes Satisfechos" },
-    { value: 100, suffix: "%", label: "Cumplimiento Normativo" },
+    { value: 3, suffix: "", label: "Acreditaciones EMA" },
     { value: 24, suffix: "h", label: "Soporte Técnico" }
 ]
 
@@ -59,7 +59,7 @@ export function StatsBar() {
                             whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.1, duration: 0.5 }}
-                            className="flex flex-col items-center lg:items-start lg:px-8 text-center lg:text-left"
+                            className="flex flex-col items-center px-8 text-center"
                         >
                             <div className="text-5xl lg:text-6xl font-bold text-brand mb-2">
                                 <AnimatedCounter value={stat.value} suffix={stat.suffix} />

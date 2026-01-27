@@ -15,7 +15,7 @@ export function Footer() {
                             </div>
                         </Link>
                         <p className="text-sm leading-relaxed text-slate-400">
-                            Expertos en Metrología, Calificación y Validación. Laboratorio acreditado bajo la norma <span className="text-cyan font-medium">NMX-EC-17025-IMNC-2018</span>.
+                            Expertos en Calibración, Calificación y Validación. Laboratorio acreditado bajo la norma <span className="text-cyan font-medium">NMX-EC-17025-IMNC-2018</span>.
                         </p>
                         <div className="flex gap-4 pt-4">
                             {/* Social Icons */}

@@ -12,15 +12,15 @@ interface SEOProps {
 
 export function SEO({
     title,
-    description = "CAYCER - Servicios profesionales de Metrología, Calificación de Equipos y Validación de Procesos. Expertos en cumplimiento normativo y precisión industrial.",
-    keywords = "metrología, calibración, validación, calificación de equipos, ema, cenam, farmacéutica, ingeniería, construcción, caycer",
+    description = "CAYCER - Servicios profesionales de Calibración, Calificación de Equipos y Validación de Procesos. Expertos en cumplimiento normativo y precisión industrial.",
+    keywords = "calibración, validación, calificación de equipos, ema, cenam, farmacéutica, ingeniería, construcción, caycer",
     image = "/og-image.png",
     url = "https://caycer.com.mx",
     type = "website",
     schema
 }: SEOProps) {
     const siteName = "CAYCER";
-    const fullTitle = title ? `${title} | ${siteName}` : `${siteName} | Metrología y Validación`;
+    const fullTitle = title ? `${title} | ${siteName}` : `${siteName} | Calibración y Validación`;
 
     return (
         <Helmet>
