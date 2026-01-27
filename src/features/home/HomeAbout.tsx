@@ -1,4 +1,4 @@
-import { Target, Eye, ShieldCheck, Star, Users, Lightbulb, Scale } from "lucide-react"
+import { Target, Eye, ShieldCheck, Users, Lightbulb, Scale } from "lucide-react"
 import { motion } from "framer-motion"
 
 const values = [
