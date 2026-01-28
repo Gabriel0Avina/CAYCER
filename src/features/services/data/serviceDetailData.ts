@@ -28,7 +28,7 @@ export const serviceDetailData: Record<string, ServiceInfo> = {
                 items: [
                     "Congelación (-34°C a -10°C)",
                     "Ultracongelación (-80°C a -30°C)",
-                    "Refrigeración (2°C a 8°C)",
+                    "Refrigerador (-10°C a 15°C)",
                     "Mapeo térmico dinámico"
                 ],
                 gridItems: [
@@ -59,8 +59,9 @@ export const serviceDetailData: Record<string, ServiceInfo> = {
                 items: [
                     "Autoclave  (100°C a 150°C )",
                     "refirgarador (-10°C a 15°C) ",
-                    "Incubadoras y Hornos (20 a 150°C)",
-                    "Lecho fluidizado (50°C a 800°C)"
+                    "Incubadoras y Hornos (20°C a 150°C)",
+                    "baños con recirculado, de lecho fluidizado (-30°C a 150°C)",
+                    "baño maria (-30°C a 150°C)"
                 ],
                 gridItems: [
                     { label: "Acreditación", value: "EMA ME-57 - EMA T-225 - EMA H-98", icon: ShieldCheck },
@@ -94,8 +95,8 @@ export const serviceDetailData: Record<string, ServiceInfo> = {
                     "Humedad relativa (20% a 80%)",
                     "Incubadora (20°C a 150°C)",
                     "Baño con recirculado (-30°C a 150°C)",
-                    "Baño maria",
-                    "Baño de lecho fluidizado "
+                    "Baño maria (-30°C a 150°C)",
+                    "Baño de lecho fluidizado (-30°C a 150°C) "
                 ],
                 gridItems: [
                     { label: "Acreditación", value: "EMA ME-57 - EMA T-225 - EMA H-98", icon: ShieldCheck },
@@ -123,7 +124,7 @@ export const serviceDetailData: Record<string, ServiceInfo> = {
         detailedSections: [
             {
                 title: "Temperatura (EMA T-225)",
-                description: "Servicio acreditado vigente a partir de 2024-12-04.",
+                description: "Servicio acreditado.",
                 icon: Thermometer,
                 items: [
                     "Temperatura de contacto (-33.7 ⁰C a 150 ⁰C)",
@@ -139,7 +140,7 @@ export const serviceDetailData: Record<string, ServiceInfo> = {
             },
             {
                 title: "Humedad Relativa (EMA H-98)",
-                description: "Servicio acreditado vigente a partir de 2024-12-04.",
+                description: "Servicio acreditado.",
                 icon: Droplets,
                 items: [
                     "Alcance: 20% a 80% H.R.",
@@ -179,7 +180,7 @@ export const serviceDetailData: Record<string, ServiceInfo> = {
                 icon: Activity,
                 items: [
                     "Patrones de carga definidos",
-                    "Perfil térmico (12 termopares)",
+                    "Perfil térmico",
                     "Validación en cámara vacía y con carga",
                     "Tres corridas continuas",
                     "Control de temperatura, tiempo y presión",
@@ -227,7 +228,7 @@ export const serviceDetailData: Record<string, ServiceInfo> = {
             },
             {
                 title: "Cadena Fría",
-                description: "Mantenimiento de rango 2-8 ºC en envíos locales y foráneos por triplicado.",
+                description: "Mantenimiento de rango 2-8 ºC en envíos locales y foráneos.",
                 icon: Truck,
                 items: [
                     "Tiempo de recorrido (Local/Foráneo)",
@@ -235,7 +236,7 @@ export const serviceDetailData: Record<string, ServiceInfo> = {
                     "Material de embalaje optimizado",
                     "Logística (Terrestre, Aérea, etc.)",
                     "Envío por triplicado (Trayecto largo)",
-                    "Mantenimiento de 2 a 8 ºC garantizado"
+                    "Mantenimiento de 2ºC a 8 ºC "
                 ]
             },
             {

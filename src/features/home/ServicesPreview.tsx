@@ -10,14 +10,14 @@ const services = [
     {
         title: "Calificación de Equipos e Instalaciones",
         description: "Servicio acreditado para equipos, sistemas e instalaciones",
-        bullets: ["Cámaras climáticas", "Equipos de refrigeración", "Campanas de flujo laminar", "Mapeo térmico de almacenes", "Equipos de congelacion", "ultracongeladoras", "incubadoras", "hornos"],
+        bullets: ["Cámaras climáticas", "autoclaves", "Equipos de refrigeración", "Campanas de flujo laminar", "Mapeo térmico de almacenes", "Equipos de congelacion", "ultracongeladoras", "incubadoras", "hornos"],
         image: imgQualification,
         icon: ShieldCheck,
         link: "/servicios/calificacion"
     },
     {
         title: "Calibración de Instrumentos de Medición",
-        description: " En temperatura (-33°C a 150°C) y humedad relativa (20% a 80%).",
+        description: " En temperatura (-33.7°C a 150°C) y humedad relativa (20% a 80%).",
         bullets: ["Termómetros y Dataloggers", "Higrómetros y Sensores"],
         image: imgCalibration,
         icon: Settings,

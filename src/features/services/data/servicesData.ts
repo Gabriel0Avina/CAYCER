@@ -5,7 +5,7 @@ export const comprehensiveServices: ComprehensiveService[] = [
     {
         category: "Calibración de Instrumentos",
         icon: Settings,
-        description: "Servicios acreditados ante la EMA (T-225 y H-98) para Temperatura y Humedad, con trazabilidad nacional.",
+        description: "Servicios acreditados ante la EMA (T-225 y H-98) para Temperatura y Humedad.",
         color: "from-blue-600 to-cyan-500",
         services: [
             {
@@ -13,7 +13,7 @@ export const comprehensiveServices: ComprehensiveService[] = [
                 icon: Thermometer,
                 details: [
                     "Acreditación EMA T-225",
-                    "Alcance: -33 ⁰C a 150 ⁰C",
+                    "Alcance: -33.7 ⁰C a 150 ⁰C",
                     "Termómetros digitales y líquido",
                     "Termopares, RTD, PT100",
                     "Dataloggers y Graficadores"
@@ -35,7 +35,7 @@ export const comprehensiveServices: ComprehensiveService[] = [
     {
         category: "Calificación (Acreditación ME-57)",
         icon: ShieldCheck,
-        description: "Servicio acreditado por EMA para equipos, sistemas e instalaciones vigente desde 2025-02-26.",
+        description: "Servicio acreditado por EMA para equipos, sistemas e instalaciones.",
         color: "from-brand to-brand-light",
         services: [
             {

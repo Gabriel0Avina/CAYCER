@@ -73,7 +73,7 @@ export function HomeAbout() {
                         </div>
                         <h3 className="text-3xl font-bold text-slate-900 mb-6 font-display">Misión</h3>
                         <p className="text-slate-600 text-lg leading-relaxed">
-                            Nuestra misión es transformar los desafíos técnicos de nuestros clientes en casos de éxito, garantizando el cumplimiento normativo y la seguridad sanitaria a través de servicios metrológicos de precisión absoluta.
+                            Nuestra misión es transformar los desafíos técnicos de nuestros clientes en casos de éxito, con el cumplimiento normativo y la seguridad sanitaria a través de servicios metrológicos acreditados ante la EMA.
                         </p>
                     </motion.div>
 

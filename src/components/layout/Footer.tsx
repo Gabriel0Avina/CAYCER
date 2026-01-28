@@ -21,7 +21,7 @@ export function Footer() {
                             {/* Social Icons */}
                             <a href="#" className="p-2 bg-slate-800 rounded-full hover:bg-cyan hover:text-white transition-all text-slate-400"><Facebook size={18} /></a>
                             <a href="#" className="p-2 bg-slate-800 rounded-full hover:bg-cyan hover:text-white transition-all text-slate-400"><Linkedin size={18} /></a>
-                            <a href="#" className="p-2 bg-slate-800 rounded-full hover:bg-cyan hover:text-white transition-all text-slate-400"><Instagram size={18} /></a>
+                            <a href="https://www.instagram.com/_caycer/" target="_blank" className="p-2 bg-slate-800 rounded-full hover:bg-cyan hover:text-white transition-all text-slate-400"><Instagram size={18} /></a>
                         </div>
                     </div>
 
