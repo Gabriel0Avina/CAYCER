@@ -38,7 +38,7 @@ export const serviceDetailData: Record<string, ServiceInfo> = {
             },
             {
                 title: "Áreas Limpias y Flujo Laminar",
-                description: "Clasificación de áreas desde Clase ISO 1 hasta Clase ISO 9 según ISO 14644-1.",
+                description: "Clasificación y monitoreo de áreas controladas bajo norma ISO.",
                 icon: Wind,
                 items: [
                     "Conteo de partículas totales (>=0.5 μm)  ",
@@ -54,7 +54,7 @@ export const serviceDetailData: Record<string, ServiceInfo> = {
             },
             {
                 title: "Esterilización y Alta Temperatura",
-                description: "Validación de autoclaves industriales y de laboratorio con parámetros precisos.",
+                description: "Validación de autoclaves industriales y de laboratorio.",
                 icon: Gauge,
                 items: [
                     "Autoclave  (100°C a 150°C )",
@@ -105,20 +105,24 @@ export const serviceDetailData: Record<string, ServiceInfo> = {
             },
             {
                 title: "Logística y Unidades Móviles",
-                description: "Garantizamos la integridad del producto durante su distribución y transporte.",
+                description: "Calificación y validación del desempeño térmico en unidades de transporte para la verificación de condiciones de operación.",
                 icon: Truck,
                 items: [
                     "Unidad Refrigerada (-10°C a 15°C)",
                     "Unidad de congelación (-34 a -10°C)",
                     "Temperatura controlada (-34 a 50°C)",
                     "Mapeo en ruta dinámica",
+                ],
+                gridItems: [
+                    { label: "Acreditación", value: "EMA T-225 - EMA H-98", icon: ShieldCheck },
+
                 ]
             }
         ]
     },
     "calibracion": {
         title: "Calibración de instrumentos de medición",
-        subtitle: "Certificamos la exactitud de sus instrumentos con trazabilidad comprobable.",
+        subtitle: "Calibración realizada con patrones acreditados para garantizar la trazabilidad de sus mediciones.",
         description: "Contamos con acreditaciones EMA específicas para asegurar la máxima confiabilidad en sus mediciones bajo la norma NMX-EC-17025.",
         image: imgCalibration,
         detailedSections: [
