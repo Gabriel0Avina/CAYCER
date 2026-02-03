@@ -10,7 +10,7 @@ import { cn } from "@/lib/utils"
 export function Certifications() {
     const areas = [
         { name: "Temperatura", description: "Calibración de termómetros, dataloggers y más.", pdf: pdfTemperatura, icon: emaLogo },
-        { name: "Humedad", description: "Medición precisa de humedad relativa y ambiental.", pdf: pdfHumedad, icon: emaH98 },
+        { name: "Humedad", description: "Medición de humedad relativa y ambiental.", pdf: pdfHumedad, icon: emaH98 },
         { name: "Mediciones Especiales", description: "Calificación de equipos y áreas críticas.", pdf: pdfMediciones, icon: emaME57 },
     ]
 
