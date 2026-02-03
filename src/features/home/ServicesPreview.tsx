@@ -10,7 +10,7 @@ const services = [
     {
         title: "Calificación de Equipos e Instalaciones",
         description: "Servicio acreditado para equipos, sistemas e instalaciones",
-        bullets: ["Cámaras climáticas", "autoclaves", "Equipos de refrigeración", "Campanas de flujo laminar", "Mapeo térmico de almacenes", "Equipos de congelacion", "ultracongeladoras", "incubadoras", "hornos"],
+        bullets: ["Cámaras climáticas", "autoclaves", "Equipos de refrigeración", "Campanas de flujo laminar", "Mapeo térmico de almacenes", "Equipos de congelacion", "Ultracongeladoras", "Incubadoras", "Hornos"],
         image: imgQualification,
         icon: ShieldCheck,
         link: "/servicios/calificacion"
