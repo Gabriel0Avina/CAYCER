@@ -112,7 +112,7 @@ export const serviceDetailData: Record<string, ServiceInfo> = {
                     "Temperatura controlada (-34 a 50°C)",
                     "Mapeo en ruta dinámica",
                     "Hieleras (2°C a 8°C)",
-                    "Cavales (2°C a 8°C)",
+                    "Cavas (2°C a 8°C)",
 
                 ],
                 gridItems: [
