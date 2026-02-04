@@ -180,7 +180,7 @@ export const serviceDetailData: Record<string, ServiceInfo> = {
             },
             {
                 title: "Esterilización",
-                description: "Validación de ciclos para garantizar la eliminación de microorganismos según normativa.",
+                description: "Validacion de la letalidad térmica para asegurar la repetibilidad del proceso.",
                 icon: Activity,
                 items: [
                     "Patrones de carga definidos",
@@ -232,7 +232,7 @@ export const serviceDetailData: Record<string, ServiceInfo> = {
             },
             {
                 title: "Cadena Fría",
-                description: "Mantenimiento de rango 2-8 ºC en envíos locales y foráneos.",
+                description: "Validación de procesos de transporte para asegurar el cumplimiento de las condiciones requeridas.",
                 icon: Truck,
                 items: [
                     "Tiempo de recorrido (Local/Foráneo)",
