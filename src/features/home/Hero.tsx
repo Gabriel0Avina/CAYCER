@@ -86,7 +86,7 @@ export function Hero() {
                                 animate={{ opacity: 1, scale: 1 }}
                                 transition={{ delay: 0.7, duration: 0.8 }}
                             >
-                                CAYCER INGENIERÍA Y CALIBRACIÓN
+                                CAYCER INGENIERÍA Y METROLOGÍA
                             </motion.span>
                             <motion.span
                                 className="block text-5xl md:text-7xl lg:text-8xl font-black bg-gradient-to-r from-white via-cyan-100 to-cyan-300 bg-clip-text text-transparent leading-tight"

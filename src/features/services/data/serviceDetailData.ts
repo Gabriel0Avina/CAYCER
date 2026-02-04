@@ -32,7 +32,7 @@ export const serviceDetailData: Record<string, ServiceInfo> = {
                     "Mapeo térmico dinámico"
                 ],
                 gridItems: [
-                    { label: "Acreditación", value: "EMA ME-57 - EMA T-225 - EMA H-98", icon: ShieldCheck },
+                    { label: "Acreditación", value: "EMA ME-57 ", icon: ShieldCheck },
 
                 ]
             },
@@ -58,13 +58,12 @@ export const serviceDetailData: Record<string, ServiceInfo> = {
                 icon: Gauge,
                 items: [
                     "Autoclave  (100°C a 150°C )",
-                    "refirgarador (-10°C a 15°C) ",
                     "Incubadoras y Hornos (20°C a 150°C)",
                     "baños con recirculado, de lecho fluidizado (-30°C a 150°C)",
                     "baño maria (-30°C a 150°C)"
                 ],
                 gridItems: [
-                    { label: "Acreditación", value: "EMA ME-57 - EMA T-225 - EMA H-98", icon: ShieldCheck },
+                    { label: "Acreditación", value: "EMA ME-57 ", icon: ShieldCheck },
 
                 ]
             },
@@ -82,7 +81,7 @@ export const serviceDetailData: Record<string, ServiceInfo> = {
                 ]
                 ,
                 gridItems: [
-                    { label: "Acreditación", value: "EMA ME-57 - EMA T-225 - EMA H-98", icon: ShieldCheck },
+                    { label: "Acreditación", value: "EMA ME-57", icon: ShieldCheck },
 
                 ]
             },
@@ -99,7 +98,7 @@ export const serviceDetailData: Record<string, ServiceInfo> = {
                     "Baño de lecho fluidizado (-30°C a 150°C) "
                 ],
                 gridItems: [
-                    { label: "Acreditación", value: "EMA ME-57 - EMA T-225 - EMA H-98", icon: ShieldCheck },
+                    { label: "Acreditación", value: "EMA ME-57 ", icon: ShieldCheck },
 
                 ]
             },
@@ -112,9 +111,12 @@ export const serviceDetailData: Record<string, ServiceInfo> = {
                     "Unidad de congelación (-34 a -10°C)",
                     "Temperatura controlada (-34 a 50°C)",
                     "Mapeo en ruta dinámica",
+                    "Hieleras (2°C a 8°C)",
+                    "Cavales (2°C a 8°C)",
+
                 ],
                 gridItems: [
-                    { label: "Acreditación", value: "EMA T-225 - EMA H-98", icon: ShieldCheck },
+                    { label: "Acreditación", value: "EMA ME-57", icon: ShieldCheck },
 
                 ]
             }
@@ -133,7 +135,7 @@ export const serviceDetailData: Record<string, ServiceInfo> = {
                 items: [
                     "Temperatura de contacto (-33.7 ⁰C a 150 ⁰C)",
                     "Temperatura en gases (-29 ⁰C a 80 ⁰C)",
-                    "Calibración de Termómetros (Digital/Líquido)",
+                    "Calibración de Termómetros (Analógico)",
                     "Dataloggers y Sondas de temperatura",
                     "Graficadores y Controladores"
                 ],

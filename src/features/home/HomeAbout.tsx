@@ -73,7 +73,7 @@ export function HomeAbout() {
                         </div>
                         <h3 className="text-3xl font-bold text-slate-900 mb-6 font-display">Misión</h3>
                         <p className="text-slate-600 text-lg leading-relaxed">
-                            Nuestra misión es transformar los desafíos técnicos de nuestros clientes en casos de éxito, con el cumplimiento normativo y la seguridad sanitaria a través de servicios metrológicos acreditados ante la EMA.
+                            Satisfacer necesidades específicas de nuestros clientes evidenciando el cumplimiento y el apego a las normas de regulación sanitaria, con servicios de calibración, calificación, validación, asesoría y mantenimiento a través de la innovación, tecnológica en métodos, procedimientos y equipos, con personal altamente calificado.
                         </p>
                     </motion.div>
 
@@ -92,7 +92,7 @@ export function HomeAbout() {
                         </div>
                         <h3 className="text-3xl font-bold mb-6 text-white font-display">Visión</h3>
                         <p className="text-blue-50 leading-relaxed text-lg">
-                            Consolidarnos como el referente indiscutible en innovación y confiabilidad metrológica en México, forjando alianzas estratégicas que impulsen la competitividad global de nuestros socios comerciales.
+                            Ser una empresa Innovadora, Líder, Sólida y Confiable. Además de construir y mantener alianzas que nos permitan brindar servicios a nivel nacional.
                         </p>
                     </motion.div>
                 </div>

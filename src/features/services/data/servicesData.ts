@@ -14,8 +14,8 @@ export const comprehensiveServices: ComprehensiveService[] = [
                 details: [
                     "Acreditación EMA T-225",
                     "Alcance: -33.7 ⁰C a 150 ⁰C",
-                    "Termómetros digitales y líquido",
-                    "Termopares, RTD, PT100",
+                    "Termómetros analógicos",
+                    "Termopares",
                     "Dataloggers y Graficadores"
                 ]
             },
@@ -44,7 +44,7 @@ export const comprehensiveServices: ComprehensiveService[] = [
                 details: [
                     "Refrigeración y Congelación",
                     "Incubadoras y Cámaras climáticas",
-                    " Hornos y Estufas",
+                    "Hornos y Estufas",
                     "Campanas de flujo laminar"
                 ]
             },

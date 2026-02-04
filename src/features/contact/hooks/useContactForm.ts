@@ -4,6 +4,7 @@ import emailjs from "@emailjs/browser";
 export interface ContactFormState {
     name: string;
     email: string;
+    phone: string;
     company: string;
     service: string;
     urgency: string;
@@ -18,6 +19,7 @@ export interface ContactFormStatus {
 const initialFormState: ContactFormState = {
     name: "",
     email: "",
+    phone: "",
     company: "",
     service: "",
     urgency: "normal",

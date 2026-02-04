@@ -51,16 +51,30 @@ export function ContactForm() {
                     </div>
                 </div>
 
-                <div className="space-y-2">
-                    <label className="text-sm font-medium text-slate-700">Empresa / Razón Social</label>
-                    <input
-                        required
-                        name="empresa"
-                        className="w-full px-4 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-brand focus:border-brand transition-all focus:outline-none"
-                        placeholder="Farmacéutica S.A. de C.V."
-                        value={formState.company}
-                        onChange={e => updateField('company', e.target.value)}
-                    />
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="space-y-2">
+                        <label className="text-sm font-medium text-slate-700">Empresa / Razón Social</label>
+                        <input
+                            required
+                            name="empresa"
+                            className="w-full px-4 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-brand focus:border-brand transition-all focus:outline-none"
+                            placeholder="Farmacéutica S.A. de C.V."
+                            value={formState.company}
+                            onChange={e => updateField('company', e.target.value)}
+                        />
+                    </div>
+                    <div className="space-y-2">
+                        <label className="text-sm font-medium text-slate-700">Teléfono de Contacto</label>
+                        <input
+                            required
+                            type="tel"
+                            name="user_phone"
+                            className="w-full px-4 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-brand focus:border-brand transition-all focus:outline-none"
+                            placeholder="55 1234 5678"
+                            value={formState.phone}
+                            onChange={e => updateField('phone', e.target.value)}
+                        />
+                    </div>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
