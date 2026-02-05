@@ -17,13 +17,13 @@ export function CatalogHero() {
                     className="max-w-3xl mx-auto"
                 >
                     <span className="inline-block text-cyan text-xs font-bold tracking-[0.3em] uppercase mb-4 border-b border-cyan/30 pb-2">
-                        Equipamiento de Precisión
+                        Equipamientos de Temperatura y Humedad
                     </span>
                     <h1 className="text-4xl md:text-6xl font-black text-white mb-6 font-display">
                         Catálogo de <br /> <span className="text-cyan">Instrumentación</span>
                     </h1>
                     <p className="text-slate-300 text-lg md:text-xl font-light leading-relaxed mb-8">
-                        Seleccionamos los mejores equipos para garantizar la trazabilidad y exactitud de sus mediciones industriales.
+                        Contamos con una amplia gama de termómetros y termohigrómetros de marcas líderes para sus procesos de medición.
                     </p>
                 </motion.div>
             </div>

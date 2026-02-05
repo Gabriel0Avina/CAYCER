@@ -1,11 +1,13 @@
 import { useState } from "react";
 import { products, categories } from "./catalogData";
 import { ProductCard } from "./ProductCard";
+import { ImageModal } from "./components/ImageModal";
 import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils";
 
 export function ProductGrid() {
     const [activeCategory, setActiveCategory] = useState<string | null>(null);
+    const [selectedImage, setSelectedImage] = useState<{ src: string; alt: string } | null>(null);
 
     const filteredProducts = activeCategory
         ? products.filter((p) => p.category === activeCategory)
@@ -50,18 +52,30 @@ export function ProductGrid() {
                 >
                     <AnimatePresence mode="popLayout">
                         {filteredProducts.map((product) => (
-                            <ProductCard key={product.id} product={product} />
+                            <ProductCard
+                                key={product.id}
+                                product={product}
+                                onImageClick={(img) => setSelectedImage({ src: img, alt: product.name })}
+                            />
                         ))}
                     </AnimatePresence>
                 </motion.div>
 
-                {/* Empty State */}
+                {/* Validar qué producto no se encontró */}
                 {filteredProducts.length === 0 && (
                     <div className="text-center py-20">
                         <p className="text-slate-400 font-light">No se encontraron productos en esta categoría.</p>
                     </div>
                 )}
             </div>
+
+            {/* Image Modal */}
+            <ImageModal
+                imageSrc={selectedImage?.src || null}
+                altText={selectedImage?.alt || ""}
+                onClose={() => setSelectedImage(null)}
+            />
         </section>
     );
 }
+

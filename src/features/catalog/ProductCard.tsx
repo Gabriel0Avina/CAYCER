@@ -5,9 +5,10 @@ import { MessageCircle, ArrowUpRight } from "lucide-react";
 
 interface ProductCardProps {
     product: Product;
+    onImageClick: (image: string) => void;
 }
 
-export function ProductCard({ product }: ProductCardProps) {
+export function ProductCard({ product, onImageClick }: ProductCardProps) {
     const whatsappUrl = `https://wa.me/523335071061?text=Hola%20Caycer,%20me%20gustar%C3%ADa%20solicitar%20cotizaci%C3%B3n%20para%20el%20producto:%20${encodeURIComponent(product.name)}`;
 
     return (
@@ -19,11 +20,14 @@ export function ProductCard({ product }: ProductCardProps) {
             className="group bg-white rounded-3xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-2xl transition-all duration-500 flex flex-col"
         >
             {/* Image Container */}
-            <div className="relative h-64 overflow-hidden">
+            <div
+                className="relative h-64 overflow-hidden cursor-pointer"
+                onClick={() => onImageClick(product.image)}
+            >
                 <img
                     src={product.image}
                     alt={product.name}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    className="w-full h-full object-contain p-4 transition-transform duration-700 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
@@ -58,7 +62,7 @@ export function ProductCard({ product }: ProductCardProps) {
                 {/* Specs Table Snippet */}
                 {product.specs && (
                     <div className="mt-auto pt-6 border-t border-slate-50 space-y-2">
-                        {Object.entries(product.specs).slice(0, 2).map(([key, value]) => (
+                        {Object.entries(product.specs).slice(0, 6).map(([key, value]) => (
                             <div key={key} className="flex justify-between text-[11px]">
                                 <span className="text-slate-400 uppercase tracking-tight">{key}</span>
                                 <span className="text-slate-700 font-medium">{value}</span>

@@ -1,3 +1,21 @@
+// TERMÓMETROS
+import term1 from "@/assets/termometros/Marca Avaly  Modelo VA-EDT-1-54.webp";
+import term2 from "@/assets/termometros/Marca Elitech Modelo RC-5.webp";
+import term3 from "@/assets/termometros/Marca Extech Modelo TH-10.webp";
+import term4 from "@/assets/termometros/Marca Extech Modelo TM-20.png";
+import term5 from "@/assets/termometros/Marca Taylor Modelo 9940N.jpg";
+
+// TERMOHIGROMETROS
+import higro1 from "@/assets/termohigrometros/Marca Avaly Modelo VA-EDT-1-55.jpg";
+import higro2 from "@/assets/termohigrometros/Marca Elitech Modelo GSP-6.webp";
+import higro3 from "@/assets/termohigrometros/Marca Elitech Modelo RCW-600.jpg";
+import higro4 from "@/assets/termohigrometros/Marca Elitech Modelo RCW-800.webp";
+import higro5 from "@/assets/termohigrometros/Marca Extech Modelo 445702.jpg";
+import higro6 from "@/assets/termohigrometros/Marca Extech Modelo 445703.jpg";
+import higro7 from "@/assets/termohigrometros/Marca Extech Modelo RHT-20.jpg";
+import higro8 from "@/assets/termohigrometros/Marca Extech Modelo RTH-10.jpg";
+import higro9 from "@/assets/termohigrometros/Marca Taylor Modelo  1732.jpg";
+
 export interface Product {
     id: string;
     name: string;
@@ -9,84 +27,134 @@ export interface Product {
 }
 
 export const products: Product[] = [
-    // TERMOMETROS
+    // TERMÓMETROS
     {
-        id: "termometro-digital-lab",
-        name: "Termómetro Digital",
+        id: "avaly-va-edt-1-54",
+        name: "Avaly VA-EDT-1-54",
         category: "Termómetros",
-        description: "Termómetro digital de alta precisión para laboratorios y procesos críticos.",
-        image: "https://images.unsplash.com/photo-1584036561566-baf8f5f1b144?auto=format&fit=crop&q=80&w=800",
-        features: ["Lectura directa", "Pantalla Clara", "Alta Estabilidad"],
-        specs: { "Rango": "-50 a 300 °C", "Uso": "Laboratorio / Industrial" }
+        description: "Termómetro digital tipo pluma de respuesta rápida, ideal para servicios de monitoreo puntual.",
+        image: term1,
+        features: ["Resistente al agua", "Diseño compacto", "Lectura rápida"],
+        specs: { "Marca": "Avaly", "Temp. Ext": "-50°C a 70°C", "Temp. Int": "-5°C a 50°C" }
     },
     {
-        id: "datalogger-temperatura",
-        name: "Data Logger de Temperatura",
+        id: "elitech-rc-5",
+        name: "Elitech RC-5",
         category: "Termómetros",
-        description: "Registrador de datos continuo para monitoreo de áreas y transporte.",
-        image: "https://images.unsplash.com/photo-1590523277543-a94d2e4eb00b?auto=format&fit=crop&q=80&w=800",
-        features: ["Memoria interna", "Conexión USB", "Software de reporte"],
-        specs: { "Precisión": "±0.5 °C", "Batería": "Larga duración" }
+        description: "Data logger USB de temperatura, perfecto para el registro continuo en cadena de frío.",
+        image: term2,
+        features: ["Memoria de 32,000 puntos", "Plug & Play", "Software de reportes"],
+        specs: { "Marca": "Elitech", "Rango Temp": "-30°C a 70°C" }
+    },
+    {
+        id: "extech-th-10",
+        name: "Extech TH-10",
+        category: "Termómetros",
+        description: "Registrador de datos de temperatura compacto con interfaz USB integrada.",
+        image: term3,
+        features: ["Diseño robusto", "Larga duración de batería", "Indicador LED"],
+        specs: { "Marca": "Extech", "Modelo": "TH-10", "Rango Temp": "-40°C a 70°C" }
+    },
+    {
+        id: "extech-tm-20",
+        name: "Extech TM-20",
+        category: "Termómetros",
+        description: "Termómetro con sonda externa, ideal para aplicaciones industriales y de laboratorio.",
+        image: term4,
+        features: ["Sonda de penetración", "Pantalla de fácil lectura", "Montaje en pared"],
+        specs: { "Marca": "Extech", "Modelo": "TM-20", "Rango Temp": "-40°C a 70°C" }
+    },
+    {
+        id: "taylor-9940n",
+        name: "Taylor 9940N",
+        category: "Termómetros",
+        description: "Termómetro digital con pantalla retroiluminada y sonda plegable.",
+        image: term5,
+        features: ["Auto-apagado", "Hold function", "Higiénico"],
+        specs: { "Marca": "Taylor", "Modelo": "9940N", "Rango Temp": "-40°C a 150°C" }
     },
 
-    // HUMEDAD RELATIVA
+    // TERMOHIGROMETROS
     {
-        id: "termohigrometro-digital",
-        name: "Termohigrómetro Digital",
-        category: "Humedad Relativa",
-        description: "Medición simultánea de temperatura y humedad relativa ambiental.",
-        image: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&q=80&w=800",
-        features: ["Dual display", "Función Min/Max", "Certificable H-98"],
-        specs: { "Rango HR": "10% a 95%", "Rango Temp": "0 a 50 °C" }
+        id: "avaly-va-edt-1-55",
+        name: "Avaly VA-EDT-1-55",
+        category: "Termohigrómetros",
+        description: "Termohigrómetro digital de pared para monitoreo ambiental básico de temperatura y humedad.",
+        image: higro1,
+        features: ["Pantalla dual", "Función Min/Max", "Soporte integrado"],
+        specs: { "Marca": "Avaly", "Modelo": "VA-EDT-1-55", "Temp. Ext": "-50°C a 70°C", "Temp. Int": "0°C a 50°C", "Humedad": "5% a 85% HR" }
     },
     {
-        id: "deshumidificador-industrial",
-        name: "Deshumidificador",
-        category: "Humedad Relativa",
-        description: "Control de humedad en recintos y almacenes industriales.",
-        image: "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&q=80&w=800",
-        features: ["Alta capacidad", "Operación silenciosa", "Filtro lavable"],
-        specs: { "Control": "Electrónico", "Capacidad": "Variable segun modelo" }
-    },
-
-    // PRESIÓN
-    {
-        id: "manometro-proceso",
-        name: "Manómetro de Presión",
-        category: "Presión",
-        description: "Instrumento robusto para medición de presión en tuberías y recipientes.",
-        image: "https://images.unsplash.com/photo-1581092162384-8987c1d64718?auto=format&fit=crop&q=80&w=800",
-        features: ["Carcasa de acero", "Conexión inferior/posterior", "Glicerina opcional"],
-        specs: { "Rango": "0 a 10,000 PSI", "Material": "Acero Inoxidable" }
+        id: "elitech-gsp-6",
+        name: "Elitech GSP-6",
+        category: "Termohigrómetros",
+        description: "Data logger avanzado de temperatura y humedad con pantalla LCD y sensores externos.",
+        image: higro2,
+        features: ["Sensores duales", "Alarma visual", "Alta capacidad de memoria"],
+        specs: { "Marca": "Elitech", "Modelo": "GSP-6", "Rango Temp": "-40°C a 85°C", "Humedad": "10% a 99% HR" }
     },
     {
-        id: "presion-diferencial-sala",
-        name: "Sensor de Presión Diferencial",
-        category: "Presión",
-        description: "Ideal para monitoreo de diferenciales en salas limpias y ductos HVAC.",
-        image: "https://images.unsplash.com/photo-1581092434413-ae6016cc9092?auto=format&fit=crop&q=80&w=800",
-        features: ["Alta sensibilidad", "Salida 4-20mA", "Fácil instalación"],
-        specs: { "Rango": "±50 Pa", "Aplicación": "Cuartos Limpios" }
-    },
-
-    // MASA
-    {
-        id: "balanza-analitica",
-        name: "Balanza Analítica",
-        category: "Masa",
-        description: "Balanza de alta precisión para pesaje de muestras en laboratorio.",
-        image: "https://images.unsplash.com/photo-1576086213369-97a306d36557?auto=format&fit=crop&q=80&w=800",
-        features: ["Calibración interna", "Protector de aire", "Múltiples unidades"],
-        specs: { "Lectura": "0.1 mg", "Capacidad": "220 g" }
+        id: "elitech-rcw-600",
+        name: "Elitech RCW-600",
+        category: "Termohigrómetros",
+        description: "Sistema de monitoreo de temperatura via WiFi para supervisión remota en tiempo real.",
+        image: higro3,
+        features: ["Conectividad WiFi", "Acceso vía App/Cloud", "Alertas SMS/Email"],
+        specs: { "Marca": "Elitech", "Modelo": "RCW-600", "Rango Temp": "-40°C a 80°C" }
     },
     {
-        id: "pesas-patron",
-        name: "Kit de Pesas Patrón",
-        category: "Masa",
-        description: "Pesas de referencia para verificación y ajuste de instrumentos para pesar.",
-        image: "https://images.unsplash.com/photo-1590233465376-403c99f4999b?auto=format&fit=crop&q=80&w=800",
-        features: ["Clase E2/F1/M1", "Caja protectora", "Acabado pulido"],
-        specs: { "Material": "Acero inoxidable", "Normativa": "OIML R111" }
+        id: "elitech-rcw-800",
+        name: "Elitech RCW-800",
+        category: "Termohigrómetros",
+        description: "Registrador de datos inalámbrico premium para almacenes y áreas logísticas críticas.",
+        image: higro4,
+        features: ["Pantalla gráfica", "Exportación directa", "Multi-zona"],
+        specs: { "Marca": "Elitech", "Modelo": "RCW-800", "Rango Temp": "-40°C a 80°C", "Humedad": "0% a 100% HR" }
+    },
+    {
+        id: "extech-445702",
+        name: "Extech 445702",
+        category: "Termohigrómetros",
+        description: "Termohigrómetro con dígitos grandes para monitoreo visible a distancia en almacenes.",
+        image: higro5,
+        features: ["Dígitos de 1 pulgada", "Calibrable", "Memoria Min/Max"],
+        specs: { "Marca": "Extech", "Modelo": "445702", "Rango Temp": "-10°C a 60°C", "Humedad": "10% a 85% HR" }
+    },
+    {
+        id: "extech-445703",
+        name: "Extech 445703",
+        category: "Termohigrómetros",
+        description: "Termohigrometro de montaje en pared, digitos de 1, humedad: 10 a 99 %, temperatura: -10 a 60 ºc.",
+        image: higro6,
+        features: ["Sonda externa flexible", "Display grande", "Alta precisión"],
+        specs: { "Marca": "Extech", "Modelo": "445703", "Rango Temp": "-10°C a 60°C", "Humedad": "10% a 99% HR" }
+    },
+    {
+        id: "extech-rht-20",
+        name: "Extech RHT-20",
+        category: "Termohigrómetros",
+        description: "Data logger de humedad y temperatura con capacidad de registro masivo de datos.",
+        image: higro7,
+        features: ["Intervalos programables", "USB directo", "Software incluido"],
+        specs: { "Marca": "Extech", "Modelo": "RHT-20", "Rango Temp": "-40°C a 70°C", "Humedad": "0% a 100% HR" }
+    },
+    {
+        id: "extech-rth-10",
+        name: "Extech RTH-10",
+        category: "Termohigrómetros",
+        description: "Registrador de datos ambiental compacto para oficina y laboratorios.",
+        image: higro8,
+        features: ["Compacto", "Fácil de usar", "Indicador de estado"],
+        specs: { "Marca": "Extech", "Modelo": "RTH-10", "Rango Temp": "-40°C a 70°C", "Humedad": "0% a 100% HR" }
+    },
+    {
+        id: "taylor-1732",
+        name: "Taylor 1732",
+        category: "Termohigrómetros",
+        description: "Termohigrómetro digital de precisión con sensor remoto inalámbrico.",
+        image: higro9,
+        features: ["Sensor inalámbrico", "Alertas de zona", "Diseño elegante"],
+        specs: { "Marca": "Taylor", "Modelo": "1732", "Rango Temp": "-10°C a 50°C", "Humedad": "20% a 90% HR" }
     }
 ];
 
