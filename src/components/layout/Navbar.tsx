@@ -33,7 +33,7 @@ export function Navbar() {
                 { name: "Validación", href: "/servicios/validacion", icon: FlaskConical, description: "Procesos y sistemas" },
             ]
         },
-        { name: "Catálogo", href: "/catalogo" },
+        { name: "Productos", href: "/catalogo" },
         { name: "Contacto", href: "/contacto" },
     ]
 
