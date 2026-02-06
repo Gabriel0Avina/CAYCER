@@ -4,6 +4,7 @@ import { ProductCard } from "./ProductCard";
 import { ImageModal } from "./components/ImageModal";
 import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils";
+import { AlertCircle } from "lucide-react";
 
 export function ProductGrid() {
     const [activeCategory, setActiveCategory] = useState<string | null>(null);
@@ -16,6 +17,21 @@ export function ProductGrid() {
     return (
         <section className="py-20 bg-white min-h-[600px]">
             <div className="container mx-auto px-6">
+                {/* Calibration Disclaimer */}
+                <motion.div
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    className="max-w-4xl mx-auto mb-12 bg-amber-50 border border-amber-200 rounded-2xl p-4 md:p-6 flex items-start gap-4"
+                >
+                    <AlertCircle className="text-amber-600 shrink-0 mt-0.5" size={20} />
+                    <div className="space-y-1">
+                        <p className="text-amber-900 font-semibold text-sm">Aviso de Calibración</p>
+                        <p className="text-amber-800/80 text-sm leading-relaxed">
+                            Los equipos se suministran con calibración de fábrica. El servicio de calibración bajo nuestro alcance de acreditación ante la <span className="font-bold">EMA</span> tiene un costo adicional al precio del producto.
+                        </p>
+                    </div>
+                </motion.div>
+
                 {/* Category Filters */}
                 <div className="flex flex-wrap justify-center gap-3 mb-16">
                     <button
