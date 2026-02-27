@@ -1,5 +1,4 @@
-import { motion, useInView } from "framer-motion"
-import { useRef, useState, useEffect } from "react"
+import { motion, animate, useMotionValue, useTransform } from "framer-motion"
 
 const stats = [
     { value: 8, suffix: "+", label: "Años de Experiencia" },
@@ -9,35 +8,25 @@ const stats = [
 ]
 
 function AnimatedCounter({ value, suffix }: { value: number; suffix: string }) {
-    const [count, setCount] = useState(0)
-    const ref = useRef(null)
-    const isInView = useInView(ref, { once: true })
-
-    useEffect(() => {
-        if (isInView) {
-            let start = 0
-            const end = value
-            const duration = 2000
-            const increment = end / (duration / 16)
-
-            const timer = setInterval(() => {
-                start += increment
-                if (start >= end) {
-                    setCount(end)
-                    clearInterval(timer)
-                } else {
-                    setCount(Math.floor(start))
-                }
-            }, 16)
-
-            return () => clearInterval(timer)
-        }
-    }, [isInView, value])
+    const count = useMotionValue(0)
+    const rounded = useTransform(count, (latest) => Math.floor(latest))
 
     return (
-        <span ref={ref} className="tabular-nums">
-            {count}{suffix}
-        </span>
+        <motion.span
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true, amount: 0.1 }}
+            onViewportEnter={() => {
+                animate(count, value, {
+                    duration: 2,
+                    ease: "easeOut",
+                })
+            }}
+            className="tabular-nums"
+        >
+            <motion.span>{rounded}</motion.span>
+            {suffix}
+        </motion.span>
     )
 }
 
