@@ -1,7 +1,7 @@
 // TERMÓMETROS
 import term1 from "@/assets/termometros/Marca Avaly  Modelo VA-EDT-1-54.webp";
 import term2 from "@/assets/termometros/Marca Elitech Modelo RC-5.webp";
-import term3 from "@/assets/termometros/Marca Extech Modelo TH-10.webp";
+import term3 from "@/assets/termometros/Marca Extech Modelo TH10.webp";
 import term4 from "@/assets/termometros/Marca Extech Modelo TM-20.png";
 import term5 from "@/assets/termometros/Marca Taylor Modelo 9940N.jpg";
 
@@ -13,7 +13,7 @@ import higro4 from "@/assets/termohigrometros/Marca Elitech Modelo RCW-800.webp"
 import higro5 from "@/assets/termohigrometros/Marca Extech Modelo 445702.jpg";
 import higro6 from "@/assets/termohigrometros/Marca Extech Modelo 445703.jpg";
 import higro7 from "@/assets/termohigrometros/Marca Extech Modelo RHT-20.jpg";
-import higro8 from "@/assets/termohigrometros/Marca Extech Modelo RTH-10.jpg";
+import higro8 from "@/assets/termohigrometros/Marca Extech Modelo RTH10.jpg";
 import higro9 from "@/assets/termohigrometros/Marca Taylor Modelo  1732.jpg";
 
 export interface Product {
@@ -38,22 +38,22 @@ export const products: Product[] = [
         specs: { "Marca": "Avaly", "Temp. Ext": "-50°C a 70°C", "Temp. Int": "-5°C a 50°C" }
     },
     {
-        id: "elitech-rc-5",
-        name: "Elitech RC-5",
+        id: "elitech-rc-5-plus",
+        name: "Elitech RC-5+",
         category: "Termómetros",
         description: "Data logger USB de temperatura, perfecto para el registro continuo en cadena de frío.",
         image: term2,
         features: ["Memoria de 32,000 puntos", "Plug & Play", "Software de reportes"],
-        specs: { "Marca": "Elitech", "Rango Temp": "-30°C a 70°C" }
+        specs: { "Marca": "Elitech", "Modelo": "RC-5+", "Rango Temp": "-30°C a 70°C" }
     },
     {
-        id: "extech-th-10",
-        name: "Extech TH-10",
+        id: "extech-th10",
+        name: "Extech TH10",
         category: "Termómetros",
         description: "Registrador de datos de temperatura compacto con interfaz USB integrada.",
         image: term3,
         features: ["Diseño robusto", "Larga duración de batería", "Indicador LED"],
-        specs: { "Marca": "Extech", "Modelo": "TH-10", "Rango Temp": "-40°C a 70°C" }
+        specs: { "Marca": "Extech", "Modelo": "TH10", "Rango Temp": "-40°C a 70°C" }
     },
     {
         id: "extech-tm-20",
@@ -139,13 +139,13 @@ export const products: Product[] = [
         specs: { "Marca": "Extech", "Modelo": "RHT-20", "Rango Temp": "-40°C a 70°C", "Humedad": "0% a 100% HR" }
     },
     {
-        id: "extech-rth-10",
-        name: "Extech RTH-10",
+        id: "extech-rth10",
+        name: "Extech RTH10",
         category: "Termohigrómetros",
         description: "Registrador de datos ambiental compacto para oficina y laboratorios.",
         image: higro8,
         features: ["Compacto", "Fácil de usar", "Indicador de estado"],
-        specs: { "Marca": "Extech", "Modelo": "RTH-10", "Rango Temp": "-40°C a 70°C", "Humedad": "0% a 100% HR" }
+        specs: { "Marca": "Extech", "Modelo": "RTH10", "Rango Temp": "-40°C a 70°C", "Humedad": "0% a 100% HR" }
     },
     {
         id: "taylor-1732",
