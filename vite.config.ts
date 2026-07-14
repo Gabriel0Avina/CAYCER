@@ -14,4 +14,9 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  ssr: {
+    // react-helmet-async es CommonJS; empaquetarlo en el bundle SSR evita
+    // errores de named exports al importarlo desde Node (prerender.mjs).
+    noExternal: ['react-helmet-async'],
+  },
 })

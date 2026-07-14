@@ -11,6 +11,8 @@ interface SEOProps {
     path?: string;
     type?: string;
     schema?: object;
+    /** Excluye la página del índice de buscadores (404, páginas legales de bajo valor). */
+    noindex?: boolean;
 }
 
 export function SEO({
@@ -20,7 +22,8 @@ export function SEO({
     image = "/og-image.png",
     path = "/",
     type = "website",
-    schema
+    schema,
+    noindex = false
 }: SEOProps) {
     const siteName = "CAYCER";
     const fullTitle = title ? `${title} | ${siteName}` : `${siteName} | Calibración y Validación`;
@@ -36,6 +39,7 @@ export function SEO({
             <title>{fullTitle}</title>
             <meta name="description" content={description} />
             <meta name="keywords" content={keywords} />
+            {noindex && <meta name="robots" content="noindex" />}
             <link rel="canonical" href={url} />
 
             {/* Open Graph / Facebook */}
