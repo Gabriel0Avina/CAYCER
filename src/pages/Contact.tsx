@@ -9,6 +9,7 @@ export function Contact() {
             <SEO
                 title="Contacto y Asesoría"
                 description="Contáctenos para recibir asesoría experta en calibración y validación. Solicite una cotización para sus equipos e instalaciones."
+                path="/contacto"
             />
             <Navbar />
             <main className="flex-grow pt-24 pb-12 bg-slate-50">

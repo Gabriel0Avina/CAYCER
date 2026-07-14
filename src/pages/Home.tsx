@@ -14,23 +14,31 @@ import { SEO } from "@/components/SEO"
 const homeSchema = {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
-    "name": "CAYCER",
-    "image": "https://caycer.com.mx/logo.png",
-    "@id": "https://caycer.com.mx",
-    "url": "https://caycer.com.mx",
-    "telephone": "+524422264627",
+    "name": "CAYCER Ingeniería y Metrología",
+    "alternateName": "CAYCER",
+    "description": "Laboratorio de calibración, calificación de equipos y validación de procesos acreditado por EMA (T-225, H-98, ME-57) bajo la norma NMX-EC-17025-IMNC-2018.",
+    "image": "https://caycer.ing/logo.png",
+    "logo": "https://caycer.ing/logo.png",
+    "@id": "https://caycer.ing/#organization",
+    "url": "https://caycer.ing",
+    "telephone": "+523332601657",
+    "email": "ventas@caycer.com.mx",
     "address": {
         "@type": "PostalAddress",
-        "streetAddress": "Av. de la Luz",
-        "addressLocality": "Querétaro",
-        "addressRegion": "QRO",
-        "postalCode": "76116",
+        "streetAddress": "Batalla de Puebla 3643, Col. El Tapatío",
+        "addressLocality": "San Pedro Tlaquepaque",
+        "addressRegion": "JAL",
+        "postalCode": "45588",
         "addressCountry": "MX"
     },
     "geo": {
         "@type": "GeoCoordinates",
-        "latitude": 20.6441,
-        "longitude": -100.4442
+        "latitude": 20.6101,
+        "longitude": -103.3101
+    },
+    "areaServed": {
+        "@type": "Country",
+        "name": "México"
     },
     "openingHoursSpecification": {
         "@type": "OpeningHoursSpecification",
@@ -45,8 +53,7 @@ const homeSchema = {
         "closes": "18:00"
     },
     "sameAs": [
-        "https://www.facebook.com/caycer",
-        "https://www.linkedin.com/company/caycer"
+        "https://www.instagram.com/_caycer/"
     ]
 };
 
@@ -56,6 +63,7 @@ export function Home() {
             <SEO
                 title="Especialistas en Calibración y Validación"
                 description="Servicios de calibración de instrumentos, calificación de equipos y validación de procesos industriales con trazabilidad EMA y CENAM."
+                path="/"
                 schema={homeSchema}
             />
             <Navbar />

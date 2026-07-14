@@ -13,6 +13,7 @@ export function Services() {
             <SEO
                 title="Catálogo de Servicios Industriales"
                 description="Explore nuestro portafolio completo de servicios: Calibración, Calificación de Equipos y Validación de Procesos bajo normas internacionales."
+                path="/servicios"
             />
             <Navbar />
             <main className="grow">
