@@ -28,7 +28,10 @@ export function SEO({
     const fullImage = image.startsWith('http') ? image : `${SITE_URL}${image}`;
 
     return (
-        <Helmet>
+        // defer={false} aplica los tags de forma síncrona; el defer por defecto
+        // espera un requestAnimationFrame que nunca llega en pestañas ocultas
+        // (crawlers headless, tabs en segundo plano) y los meta tags no se emiten.
+        <Helmet defer={false}>
             {/* Basic Meta Tags */}
             <title>{fullTitle}</title>
             <meta name="description" content={description} />
