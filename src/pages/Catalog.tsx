@@ -9,7 +9,7 @@ const catalogSchema = {
     "@type": "CollectionPage",
     "name": "Catálogo de Instrumentación - CAYCER",
     "description": "Catálogo de equipos de medición y calibración industrial. Termómetros, manómetros y multímetros con trazabilidad EMA.",
-    "url": "https://caycer.com.mx/catalogo",
+    "url": "https://caycer.ing/catalogo",
 };
 
 export function Catalog() {
@@ -18,6 +18,7 @@ export function Catalog() {
             <SEO
                 title="Catálogo de Instrumentación"
                 description="Explore nuestro catálogo de equipos de precisión para calibración y validación industrial."
+                path="/catalogo"
                 schema={catalogSchema}
             />
             <Navbar />

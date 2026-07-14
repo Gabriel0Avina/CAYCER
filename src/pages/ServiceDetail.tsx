@@ -34,6 +34,7 @@ export function ServiceDetail() {
             <SEO
                 title={service.title}
                 description={service.subtitle + " " + service.description.substring(0, 150) + "..."}
+                path={`/servicios/${slug}`}
                 type="article"
             />
             <Navbar />
