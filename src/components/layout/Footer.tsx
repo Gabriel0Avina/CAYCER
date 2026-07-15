@@ -30,6 +30,9 @@ export function Footer() {
                         <h4 className="text-lg font-semibold text-white">Navegación</h4>
                         <ul className="space-y-2 text-sm">
                             <li><Link to="/servicios" className="hover:text-cyan transition-colors">Servicios</Link></li>
+                            <li><Link to="/sectores/farmaceutico" className="hover:text-cyan transition-colors">Sectores</Link></li>
+                            <li><Link to="/catalogo" className="hover:text-cyan transition-colors">Productos</Link></li>
+                            <li><Link to="/preguntas-frecuentes" className="hover:text-cyan transition-colors">Preguntas frecuentes</Link></li>
                             <li><Link to="/contacto" className="hover:text-cyan transition-colors">Cotizar</Link></li>
                         </ul>
                     </div>

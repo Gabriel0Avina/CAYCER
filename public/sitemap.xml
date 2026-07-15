@@ -35,4 +35,29 @@
     <lastmod>2026-07-14</lastmod>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://caycer.ing/sectores/farmaceutico</loc>
+    <lastmod>2026-07-14</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://caycer.ing/sectores/alimenticio</loc>
+    <lastmod>2026-07-14</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://caycer.ing/sectores/quimico</loc>
+    <lastmod>2026-07-14</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://caycer.ing/sectores/hospitalario</loc>
+    <lastmod>2026-07-14</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://caycer.ing/preguntas-frecuentes</loc>
+    <lastmod>2026-07-14</lastmod>
+    <priority>0.6</priority>
+  </url>
 </urlset>

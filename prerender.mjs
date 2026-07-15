@@ -19,6 +19,11 @@ const routes = [
   '/servicios/calificacion',
   '/servicios/calibracion',
   '/servicios/validacion',
+  '/sectores/farmaceutico',
+  '/sectores/alimenticio',
+  '/sectores/quimico',
+  '/sectores/hospitalario',
+  '/preguntas-frecuentes',
   '/terminos',
   '/cookies',
   '/404', // sin ruta propia: cae en el catch-all NotFound → dist/client/404.html

@@ -2,7 +2,7 @@ import { Link, useLocation } from "react-router-dom"
 import { useScroll } from "@/hooks/use-scroll"
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
-import { Menu, X, ChevronDown, Thermometer, FlaskConical, CheckCircle2 } from "lucide-react"
+import { Menu, X, ChevronDown, Thermometer, FlaskConical, CheckCircle2, Pill, Apple, HeartPulse } from "lucide-react"
 import { useState, useEffect } from "react"
 import logo from "@/assets/logo.png"
 
@@ -33,7 +33,19 @@ export function Navbar() {
                 { name: "Validación", href: "/servicios/validacion", icon: FlaskConical, description: "Procesos y sistemas" },
             ]
         },
+        {
+            name: "Sectores",
+            href: "/sectores/farmaceutico",
+            hasDropdown: true,
+            dropdownItems: [
+                { name: "Farmacéutico", href: "/sectores/farmaceutico", icon: Pill, description: "Cadena de frío y validación" },
+                { name: "Alimenticio", href: "/sectores/alimenticio", icon: Apple, description: "Inocuidad y control térmico" },
+                { name: "Químico", href: "/sectores/quimico", icon: FlaskConical, description: "Precisión de proceso" },
+                { name: "Hospitalario", href: "/sectores/hospitalario", icon: HeartPulse, description: "Equipos clínicos" },
+            ]
+        },
         { name: "Productos", href: "/catalogo" },
+        { name: "FAQ", href: "/preguntas-frecuentes" },
         { name: "Contacto", href: "/contacto" },
     ]
 

@@ -10,3 +10,4 @@ export { ServiceCTA } from "./components/ServiceCTA";
 export { ServiceSectionCard } from "./components/ServiceSectionCard";
 export { ServiceDetailHero } from "./components/ServiceDetailHero";
 export { ServiceConsiderations } from "./components/ServiceConsiderations";
+export { AccreditationTable } from "./components/AccreditationTable";
