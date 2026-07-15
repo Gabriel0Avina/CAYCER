@@ -26,7 +26,7 @@ export function FAQ() {
                         <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-white/10 border border-white/20 mb-6">
                             <HelpCircle size={32} className="text-cyan" />
                         </div>
-                        <h1 className="text-4xl md:text-5xl font-bold font-display mb-5">
+                        <h1 className="text-4xl md:text-5xl font-bold font-display mb-5 text-white">
                             Preguntas Frecuentes
                         </h1>
                         <p className="text-lg text-blue-100/90 leading-relaxed">

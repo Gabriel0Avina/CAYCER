@@ -56,7 +56,7 @@ export function About() {
                         <span className="inline-block text-xs font-bold tracking-[0.25em] uppercase text-cyan-300 bg-white/5 border border-white/10 rounded-full px-5 py-2 mb-6">
                             Ingeniería y Metrología
                         </span>
-                        <h1 className="text-4xl md:text-5xl font-bold font-display mb-6">
+                        <h1 className="text-4xl md:text-5xl font-bold font-display mb-6 text-white">
                             Precisión que respalda decisiones críticas
                         </h1>
                         <p className="text-lg md:text-xl text-blue-100/90 leading-relaxed max-w-3xl">

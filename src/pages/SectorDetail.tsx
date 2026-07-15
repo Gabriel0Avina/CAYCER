@@ -52,7 +52,7 @@ export function SectorDetail() {
                         <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-white/10 border border-white/20 mb-6">
                             <Icon size={32} className="text-cyan" />
                         </div>
-                        <h1 className="text-4xl md:text-5xl font-bold font-display mb-6">{sector.name}</h1>
+                        <h1 className="text-4xl md:text-5xl font-bold font-display mb-6 text-white">{sector.name}</h1>
                         <p className="text-lg md:text-xl text-blue-100/90 leading-relaxed max-w-3xl">
                             {sector.intro}
                         </p>
