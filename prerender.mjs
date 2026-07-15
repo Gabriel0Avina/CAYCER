@@ -15,6 +15,7 @@ const routes = [
   '/',
   '/servicios',
   '/catalogo',
+  '/nosotros',
   '/contacto',
   '/servicios/calificacion',
   '/servicios/calibracion',

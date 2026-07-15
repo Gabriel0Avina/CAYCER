@@ -4,6 +4,7 @@ import { Contact } from '@/pages/Contact';
 import { ServiceDetail } from '@/pages/ServiceDetail';
 import { Services } from '@/pages/Services';
 import { Catalog } from '@/pages/Catalog';
+import { About } from '@/pages/About';
 import { FAQ } from '@/pages/FAQ';
 import { SectorDetail } from '@/pages/SectorDetail';
 import { Terms } from '@/pages/Terms';
@@ -24,6 +25,7 @@ export function AppRoutes() {
         <Route path="/" element={<Home />} />
         <Route path="/servicios" element={<Services />} />
         <Route path="/catalogo" element={<Catalog />} />
+        <Route path="/nosotros" element={<About />} />
         <Route path="/contacto" element={<Contact />} />
         <Route path="/servicios/:slug" element={<ServiceDetail />} />
         <Route path="/sectores/:slug" element={<SectorDetail />} />
