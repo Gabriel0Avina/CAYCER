@@ -7,7 +7,8 @@ import {
     ServiceDetailHero,
     ServiceConsiderations,
     ServiceSectionCard,
-    ServiceCTA
+    ServiceCTA,
+    AccreditationTable
 } from "@/features/services";
 
 export function ServiceDetail() {
@@ -56,6 +57,9 @@ export function ServiceDetail() {
                         </div>
                     </div>
                 </section>
+
+                {/* Accredited scopes table */}
+                <AccreditationTable />
 
                 {/* Considerations Section */}
                 {service.considerations && (
