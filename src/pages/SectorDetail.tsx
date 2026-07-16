@@ -27,13 +27,26 @@ export function SectorDetail() {
     }
 
     const Icon = sector.icon;
+    // Service + migas de pan. Las migas son de dos niveles porque no existe una
+    // página índice /sectores; solo se enlazan URLs reales.
     const sectorSchema = {
         "@context": "https://schema.org",
-        "@type": "Service",
-        "serviceType": `Metrología y validación para ${sector.name}`,
-        "provider": { "@type": "Organization", "name": "CAYCER Ingeniería y Metrología", "url": "https://caycer.ing" },
-        "areaServed": { "@type": "Country", "name": "México" },
-        "description": sector.intro,
+        "@graph": [
+            {
+                "@type": "Service",
+                "serviceType": `Metrología y validación para ${sector.name}`,
+                "provider": { "@id": "https://caycer.ing/#organization" },
+                "areaServed": { "@type": "Country", "name": "México" },
+                "description": sector.intro,
+            },
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://caycer.ing/" },
+                    { "@type": "ListItem", "position": 2, "name": sector.name, "item": `https://caycer.ing/sectores/${sector.slug}` },
+                ],
+            },
+        ],
     };
 
     return (

@@ -30,6 +30,18 @@ export function ServiceDetail() {
         );
     }
 
+    // Migas de pan: ayudan a Google a entender la jerarquía y a mostrar la ruta
+    // en los resultados de búsqueda. Todas las URLs apuntan a páginas reales.
+    const breadcrumbSchema = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://caycer.ing/" },
+            { "@type": "ListItem", "position": 2, "name": "Servicios", "item": "https://caycer.ing/servicios" },
+            { "@type": "ListItem", "position": 3, "name": service.title, "item": `https://caycer.ing/servicios/${slug}` },
+        ],
+    };
+
     return (
         <div className="flex flex-col min-h-screen bg-white">
             <SEO
@@ -37,6 +49,7 @@ export function ServiceDetail() {
                 description={service.subtitle + " " + service.description.substring(0, 150) + "..."}
                 path={`/servicios/${slug}`}
                 type="article"
+                schema={breadcrumbSchema}
             />
             <Navbar />
             <main className="grow">
