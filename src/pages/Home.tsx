@@ -11,49 +11,64 @@ import { ArrowRight } from "lucide-react"
 import { Link } from "react-router-dom"
 import { SEO } from "@/components/SEO"
 
+// @graph permite declarar varias entidades enlazadas entre sí. WebSite le indica
+// a Google el nombre del sitio que debe mostrar en los resultados de búsqueda.
 const homeSchema = {
     "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "name": "CAYCER Ingeniería y Metrología",
-    "alternateName": "CAYCER",
-    "description": "Laboratorio de calibración, calificación de equipos y validación de procesos acreditado por EMA (T-225, H-98, ME-57) bajo la norma NMX-EC-17025-IMNC-2018.",
-    "image": "https://caycer.ing/logo.png",
-    "logo": "https://caycer.ing/logo.png",
-    "@id": "https://caycer.ing/#organization",
-    "url": "https://caycer.ing",
-    "telephone": "+523332601657",
-    "email": "ventas@caycer.com.mx",
-    "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Batalla de Puebla 3643, Col. El Tapatío",
-        "addressLocality": "San Pedro Tlaquepaque",
-        "addressRegion": "JAL",
-        "postalCode": "45588",
-        "addressCountry": "MX"
-    },
-    "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 20.6101,
-        "longitude": -103.3101
-    },
-    "areaServed": {
-        "@type": "Country",
-        "name": "México"
-    },
-    "openingHoursSpecification": {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": [
-            "Monday",
-            "Tuesday",
-            "Wednesday",
-            "Thursday",
-            "Friday"
-        ],
-        "opens": "08:00",
-        "closes": "18:00"
-    },
-    "sameAs": [
-        "https://www.instagram.com/_caycer/"
+    "@graph": [
+        {
+            "@type": "WebSite",
+            "@id": "https://caycer.ing/#website",
+            "url": "https://caycer.ing",
+            "name": "CAYCER Ingeniería y Metrología",
+            "alternateName": ["CAYCER", "CAYCER Metrología"],
+            "inLanguage": "es-MX",
+            "publisher": { "@id": "https://caycer.ing/#organization" },
+        },
+        {
+            "@type": "ProfessionalService",
+            "@id": "https://caycer.ing/#organization",
+            "name": "CAYCER Ingeniería y Metrología",
+            "alternateName": "CAYCER",
+            "description": "Laboratorio de calibración, calificación de equipos y validación de procesos acreditado por EMA (T-225, H-98, ME-57) bajo la norma NMX-EC-17025-IMNC-2018.",
+            "image": "https://caycer.ing/logo.png",
+            "logo": "https://caycer.ing/logo.png",
+            "url": "https://caycer.ing",
+            "telephone": "+523332601657",
+            "email": "ventas@caycer.com.mx",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Batalla de Puebla 3643, Col. El Tapatío",
+                "addressLocality": "San Pedro Tlaquepaque",
+                "addressRegion": "JAL",
+                "postalCode": "45588",
+                "addressCountry": "MX"
+            },
+            "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 20.6101,
+                "longitude": -103.3101
+            },
+            "areaServed": {
+                "@type": "Country",
+                "name": "México"
+            },
+            "openingHoursSpecification": {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": [
+                    "Monday",
+                    "Tuesday",
+                    "Wednesday",
+                    "Thursday",
+                    "Friday"
+                ],
+                "opens": "08:00",
+                "closes": "18:00"
+            },
+            "sameAs": [
+                "https://www.instagram.com/_caycer/"
+            ]
+        }
     ]
 };
 
