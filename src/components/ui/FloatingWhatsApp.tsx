@@ -5,12 +5,14 @@ export function FloatingWhatsApp() {
     const message = "Hola Caycer, me gustaría solicitar información sobre sus servicios."
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`
 
+    // z-30: por encima del contenido de las páginas (máx. z-20) pero por debajo del
+    // menú móvil y del visor de imágenes del catálogo (z-50), que antes tapaba.
     return (
         <a
             href={whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="fixed bottom-8 right-8 z-[100] group flex items-center justify-center"
+            className="fixed bottom-8 right-8 z-30 group flex items-center justify-center"
             aria-label="Contactar por WhatsApp"
         >
             {/* Tooltip */}

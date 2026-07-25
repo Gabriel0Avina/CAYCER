@@ -9,6 +9,8 @@ import logo from "@/assets/logo.png"
 export function Navbar() {
     const scrolled = useScroll(20)
     const [isOpen, setIsOpen] = useState(false)
+    // Sección desplegada en el menú móvil; solo una a la vez para mantenerlo corto
+    const [openSection, setOpenSection] = useState<string | null>(null)
     const location = useLocation()
     const isHome = location.pathname === "/"
 
@@ -18,6 +20,7 @@ export function Navbar() {
             document.body.style.overflow = "hidden"
         } else {
             document.body.style.overflow = "unset"
+            setOpenSection(null)
         }
         // Libera el bloqueo si el componente se desmonta con el menú abierto
         return () => { document.body.style.overflow = "unset" }
@@ -159,32 +162,58 @@ export function Navbar() {
                 "fixed inset-0 bg-[#0f172a] z-40 transition-transform duration-500 pt-28 px-6 pb-12 md:hidden flex flex-col gap-6 overflow-y-auto overscroll-contain",
                 isOpen ? "translate-x-0" : "translate-x-full"
             )}>
-                {navLinks.map((link) => (
-                    <div key={link.name}>
-                        <Link
-                            to={link.href}
-                            className="text-3xl font-display font-light text-white hover:text-cyan border-b border-white/5 pb-4 tracking-wider flex items-center justify-between"
-                            onClick={() => !link.hasDropdown && setIsOpen(false)}
-                        >
-                            {link.name}
-                            {link.hasDropdown && <ChevronDown size={24} className="opacity-50" />}
-                        </Link>
-                        {link.hasDropdown && (
-                            <div className="pl-4 mt-4 space-y-4 border-l border-white/10 ml-1">
-                                {link.dropdownItems?.map((item) => (
-                                    <Link
-                                        key={item.name}
-                                        to={item.href}
-                                        className="block text-xl font-light text-slate-300 hover:text-cyan transition-colors"
-                                        onClick={() => setIsOpen(false)}
+                {navLinks.map((link) => {
+                    const expandida = openSection === link.name
+                    return (
+                        <div key={link.name}>
+                            {/* El texto navega; la flecha despliega la sección */}
+                            <div className="flex items-center justify-between border-b border-white/5 pb-4">
+                                <Link
+                                    to={link.href}
+                                    className="text-3xl font-display font-light text-white hover:text-cyan tracking-wider"
+                                    onClick={() => setIsOpen(false)}
+                                >
+                                    {link.name}
+                                </Link>
+                                {link.hasDropdown && (
+                                    <button
+                                        type="button"
+                                        onClick={() => setOpenSection(expandida ? null : link.name)}
+                                        aria-expanded={expandida}
+                                        aria-label={`${expandida ? "Contraer" : "Expandir"} ${link.name}`}
+                                        className="p-2 -mr-2 text-white/50 hover:text-cyan transition-colors"
                                     >
-                                        {item.name}
-                                    </Link>
-                                ))}
+                                        <ChevronDown
+                                            size={24}
+                                            className={cn("transition-transform duration-300", expandida && "rotate-180")}
+                                        />
+                                    </button>
+                                )}
                             </div>
-                        )}
-                    </div>
-                ))}
+                            {link.hasDropdown && (
+                                <div className={cn(
+                                    "grid transition-all duration-300 ease-in-out",
+                                    expandida ? "grid-rows-[1fr] opacity-100 mt-4" : "grid-rows-[0fr] opacity-0"
+                                )}>
+                                    <div className="overflow-hidden">
+                                        <div className="pl-4 space-y-4 border-l border-white/10 ml-1">
+                                            {link.dropdownItems?.map((item) => (
+                                                <Link
+                                                    key={item.name}
+                                                    to={item.href}
+                                                    className="block text-xl font-light text-slate-300 hover:text-cyan transition-colors"
+                                                    onClick={() => setIsOpen(false)}
+                                                >
+                                                    {item.name}
+                                                </Link>
+                                            ))}
+                                        </div>
+                                    </div>
+                                </div>
+                            )}
+                        </div>
+                    )
+                })}
                 <a
                     href="https://wa.me/523335071061?text=Hola%20Caycer,%20me%20gustar%C3%ADa%20solicitar%20cotizaci%C3%B3n."
                     target="_blank"
