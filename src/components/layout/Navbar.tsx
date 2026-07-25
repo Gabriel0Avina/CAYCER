@@ -19,6 +19,8 @@ export function Navbar() {
         } else {
             document.body.style.overflow = "unset"
         }
+        // Libera el bloqueo si el componente se desmonta con el menú abierto
+        return () => { document.body.style.overflow = "unset" }
     }, [isOpen])
 
     const navLinks = [
@@ -152,7 +154,9 @@ export function Navbar() {
 
             {/* Mobile Nav Overlay */}
             <div className={cn(
-                "fixed inset-0 bg-[#0f172a] z-40 transition-transform duration-500 pt-28 px-6 md:hidden flex flex-col gap-6",
+                // overflow-y-auto: el menú crece más que la pantalla en móviles y el
+                // body está bloqueado, así que debe poder desplazarse por dentro.
+                "fixed inset-0 bg-[#0f172a] z-40 transition-transform duration-500 pt-28 px-6 pb-12 md:hidden flex flex-col gap-6 overflow-y-auto overscroll-contain",
                 isOpen ? "translate-x-0" : "translate-x-full"
             )}>
                 {navLinks.map((link) => (
