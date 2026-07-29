@@ -1,7 +1,7 @@
 import { Navbar } from "@/components/layout/Navbar"
 import { Footer } from "@/components/layout/Footer"
 import { Hero } from "@/features/home/Hero"
-import { Certifications } from "@/features/home/Certifications"
+import { Credentials } from "@/features/home/Credentials"
 import { ServicesPreview } from "@/features/home/ServicesPreview"
 import { HomeAbout } from "@/features/home/HomeAbout"
 import { StatsBar } from "@/features/home/StatsBar"
@@ -75,16 +75,16 @@ const homeSchema = {
 export function Home() {
     return (
         <div className="flex flex-col min-h-screen bg-white">
+            {/* Sin title: la home usa el formato marca-primero del componente SEO
+                ("CAYCER Ingeniería y Metrología | ...") para el CTR de marca. */}
             <SEO
-                title="Especialistas en Calibración y Validación"
-                description="Servicios de calibración de instrumentos, calificación de equipos y validación de procesos industriales con trazabilidad EMA y CENAM."
                 path="/"
                 schema={homeSchema}
             />
             <Navbar />
             <main className="flex-grow">
                 <Hero />
-                <Certifications />
+                <Credentials />
                 <StatsBar />
                 <ServicesPreview />
                 <HomeAbout />
