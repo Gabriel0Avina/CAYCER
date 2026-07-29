@@ -1,3 +1,20 @@
 {
-  "outputDirectory": "dist/client"
+  "outputDirectory": "dist/client",
+  "redirects": [
+    {
+      "source": "/assets/Acreditación Temperatura-:hash.pdf",
+      "destination": "/acreditacion-temperatura.pdf",
+      "permanent": true
+    },
+    {
+      "source": "/assets/Acreditación Humedad-:hash.pdf",
+      "destination": "/acreditacion-humedad.pdf",
+      "permanent": true
+    },
+    {
+      "source": "/assets/Acreditación Mediciones Especiales-:hash.pdf",
+      "destination": "/acreditacion-mediciones-especiales.pdf",
+      "permanent": true
+    }
+  ]
 }

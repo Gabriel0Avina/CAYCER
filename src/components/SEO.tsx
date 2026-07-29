@@ -17,16 +17,19 @@ interface SEOProps {
 
 export function SEO({
     title,
-    description = "CAYCER - Servicios profesionales de Calibración, Calificación de Equipos y Validación de Procesos. Expertos en cumplimiento normativo y precisión industrial.",
-    keywords = "calibración, validación, calificación de equipos, ema, cenam, farmacéutica, ingeniería, construcción, caycer",
+    description = "Laboratorio acreditado por EMA (T-225, H-98, ME-57): calibración, calificación de equipos y validación de procesos con trazabilidad CENAM. Cotice hoy.",
+    keywords = "calibración, validación, calificación de equipos, ema, cenam, farmacéutica, ingeniería, metrología, caycer, caycer ingeniería y metrología",
     image = "/og-image.png",
     path = "/",
     type = "website",
     schema,
     noindex = false
 }: SEOProps) {
-    const siteName = "CAYCER";
-    const fullTitle = title ? `${title} | ${siteName}` : `${siteName} | Calibración y Validación`;
+    // Marca completa siempre: "CAYCER" a secas lo domina otra empresa
+    // (Distribuidora Hospitalaria CAYCER, Mérida); el nombre largo diferencia
+    // el resultado en Google y sostiene la entidad propia.
+    const siteName = "CAYCER Ingeniería y Metrología";
+    const fullTitle = title ? `${title} | ${siteName}` : `${siteName} | Calibración Acreditada EMA`;
     const url = `${SITE_URL}${path}`;
     const fullImage = image.startsWith('http') ? image : `${SITE_URL}${image}`;
 
