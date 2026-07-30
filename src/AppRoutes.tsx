@@ -7,6 +7,8 @@ import { Catalog } from '@/pages/Catalog';
 import { About } from '@/pages/About';
 import { FAQ } from '@/pages/FAQ';
 import { SectorDetail } from '@/pages/SectorDetail';
+import { Blog } from '@/pages/Blog';
+import { BlogPost } from '@/pages/BlogPost';
 import { Terms } from '@/pages/Terms';
 import { Cookies } from '@/pages/Cookies';
 import { NotFound } from '@/pages/NotFound';
@@ -29,6 +31,8 @@ export function AppRoutes() {
         <Route path="/contacto" element={<Contact />} />
         <Route path="/servicios/:slug" element={<ServiceDetail />} />
         <Route path="/sectores/:slug" element={<SectorDetail />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/blog/:slug" element={<BlogPost />} />
         <Route path="/preguntas-frecuentes" element={<FAQ />} />
         <Route path="/terminos" element={<Terms />} />
         <Route path="/cookies" element={<Cookies />} />

@@ -10,6 +10,7 @@ import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
 import { Link } from "react-router-dom"
 import { SEO } from "@/components/SEO"
+import { socialUrls } from "@/lib/social"
 
 // @graph permite declarar varias entidades enlazadas entre sí. WebSite le indica
 // a Google el nombre del sitio que debe mostrar en los resultados de búsqueda.
@@ -65,9 +66,10 @@ const homeSchema = {
                 "opens": "08:00",
                 "closes": "18:00"
             },
-            "sameAs": [
-                "https://www.instagram.com/_caycer/"
-            ]
+            // sameAs sale de src/lib/social para no divergir de los íconos del
+            // footer: si el schema apunta a una cuenta y el sitio a otra, Google
+            // no puede confirmar que son la misma entidad.
+            "sameAs": socialUrls
         }
     ]
 };

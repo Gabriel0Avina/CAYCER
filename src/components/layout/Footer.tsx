@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom"
-import { MapPin, Phone, Mail, Facebook, Linkedin, Instagram, MessageCircle } from "lucide-react"
+import { MapPin, Phone, Mail, MessageCircle } from "lucide-react"
 import logo from "@/assets/logo.png"
+import { socialProfiles } from "@/lib/social"
 
 export function Footer() {
     return (
@@ -17,11 +18,22 @@ export function Footer() {
                         <p className="text-sm leading-relaxed text-slate-400">
                             Expertos en Calibración, Calificación y Validación. Laboratorio acreditado bajo la norma <span className="text-cyan font-medium">NMX-EC-17025-IMNC-2018</span>.
                         </p>
-                        <div className="flex gap-4 pt-4">
-                            {/* Social Icons */}
-                            <a href="#" className="p-2 bg-slate-800 rounded-full hover:bg-cyan hover:text-white transition-all text-slate-400"><Facebook size={18} /></a>
-                            <a href="#" className="p-2 bg-slate-800 rounded-full hover:bg-cyan hover:text-white transition-all text-slate-400"><Linkedin size={18} /></a>
-                            <a href="https://www.instagram.com/_caycer/" target="_blank" className="p-2 bg-slate-800 rounded-full hover:bg-cyan hover:text-white transition-all text-slate-400"><Instagram size={18} /></a>
+                        {/* Los íconos van solos, sin texto: sin aria-label el
+                            lector de pantalla anuncia un enlace sin nombre. */}
+                        <div className="flex gap-3 pt-4">
+                            {socialProfiles.map(({ name, url, Icon }) => (
+                                <a
+                                    key={name}
+                                    href={url}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    aria-label={`CAYCER en ${name}`}
+                                    title={name}
+                                    className="flex h-10 w-10 items-center justify-center rounded-full bg-slate-800 text-slate-400 transition-all hover:bg-cyan hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan"
+                                >
+                                    <Icon size={18} />
+                                </a>
+                            ))}
                         </div>
                     </div>
 

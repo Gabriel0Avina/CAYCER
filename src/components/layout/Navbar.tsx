@@ -51,6 +51,7 @@ export function Navbar() {
             ]
         },
         { name: "Productos", href: "/catalogo" },
+        { name: "Blog", href: "/blog" },
         { name: "FAQ", href: "/preguntas-frecuentes" },
         { name: "Contacto", href: "/contacto" },
     ]
