@@ -2,97 +2,107 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://caycer.ing/</loc>
-    <lastmod>2026-07-28</lastmod>
+    <lastmod>2026-07-30</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://caycer.ing/acreditacion-temperatura.pdf</loc>
-    <lastmod>2026-07-28</lastmod>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://caycer.ing/acreditacion-humedad.pdf</loc>
-    <lastmod>2026-07-28</lastmod>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://caycer.ing/acreditacion-mediciones-especiales.pdf</loc>
-    <lastmod>2026-07-28</lastmod>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://caycer.ing/aprobacion-temperatura.pdf</loc>
-    <lastmod>2026-07-28</lastmod>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://caycer.ing/aprobacion-humedad.pdf</loc>
-    <lastmod>2026-07-28</lastmod>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://caycer.ing/aprobacion-mediciones-especiales.pdf</loc>
-    <lastmod>2026-07-28</lastmod>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://caycer.ing/servicios</loc>
-    <lastmod>2026-07-14</lastmod>
+    <lastmod>2026-07-30</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://caycer.ing/catalogo</loc>
-    <lastmod>2026-07-14</lastmod>
+    <lastmod>2026-07-30</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://caycer.ing/nosotros</loc>
-    <lastmod>2026-07-14</lastmod>
+    <lastmod>2026-07-30</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://caycer.ing/contacto</loc>
-    <lastmod>2026-07-14</lastmod>
+    <lastmod>2026-07-30</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://caycer.ing/servicios/calificacion</loc>
-    <lastmod>2026-07-14</lastmod>
+    <lastmod>2026-07-30</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://caycer.ing/servicios/calibracion</loc>
-    <lastmod>2026-07-14</lastmod>
+    <lastmod>2026-07-30</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://caycer.ing/servicios/validacion</loc>
-    <lastmod>2026-07-14</lastmod>
+    <lastmod>2026-07-30</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://caycer.ing/sectores/farmaceutico</loc>
-    <lastmod>2026-07-14</lastmod>
+    <lastmod>2026-07-30</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://caycer.ing/sectores/alimenticio</loc>
-    <lastmod>2026-07-14</lastmod>
+    <lastmod>2026-07-30</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://caycer.ing/sectores/quimico</loc>
-    <lastmod>2026-07-14</lastmod>
+    <lastmod>2026-07-30</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://caycer.ing/sectores/hospitalario</loc>
-    <lastmod>2026-07-14</lastmod>
+    <lastmod>2026-07-30</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://caycer.ing/blog</loc>
+    <lastmod>2026-07-30</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://caycer.ing/blog/mapeo-termico</loc>
+    <lastmod>2026-07-30</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://caycer.ing/preguntas-frecuentes</loc>
-    <lastmod>2026-07-14</lastmod>
+    <lastmod>2026-07-30</lastmod>
     <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://caycer.ing/acreditacion-temperatura.pdf</loc>
+    <lastmod>2026-07-30</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://caycer.ing/acreditacion-humedad.pdf</loc>
+    <lastmod>2026-07-30</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://caycer.ing/acreditacion-mediciones-especiales.pdf</loc>
+    <lastmod>2026-07-30</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://caycer.ing/aprobacion-temperatura.pdf</loc>
+    <lastmod>2026-07-30</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://caycer.ing/aprobacion-humedad.pdf</loc>
+    <lastmod>2026-07-30</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://caycer.ing/aprobacion-mediciones-especiales.pdf</loc>
+    <lastmod>2026-07-30</lastmod>
+    <priority>0.5</priority>
   </url>
 </urlset>

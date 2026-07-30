@@ -1,39 +1,26 @@
 /**
- * Prerender: genera HTML estático por ruta después del build.
+ * Prerender: genera HTML estático por ruta después del build, y con él
+ * el sitemap.xml.
  *
  * Corre como último paso de `npm run build`:
  *   1. vite build --outDir dist/client   → assets + template
  *   2. vite build --ssr ...              → dist/server/entry-server.js
  *   3. node prerender.mjs                → un index.html por ruta con su
  *      contenido y meta tags (title, canonical, OG, JSON-LD) ya en el HTML,
- *      visible para crawlers que no ejecutan JavaScript.
+ *      visible para crawlers que no ejecutan JavaScript, más el sitemap.
+ *
+ * La lista de rutas vive en src/entry-server.tsx, junto con los artículos del
+ * blog: publicar uno nuevo no requiere tocar este archivo ni el sitemap.
  */
 import fs from 'node:fs';
 import path from 'node:path';
 
-const routes = [
-  '/',
-  '/servicios',
-  '/catalogo',
-  '/nosotros',
-  '/contacto',
-  '/servicios/calificacion',
-  '/servicios/calibracion',
-  '/servicios/validacion',
-  '/sectores/farmaceutico',
-  '/sectores/alimenticio',
-  '/sectores/quimico',
-  '/sectores/hospitalario',
-  '/preguntas-frecuentes',
-  '/terminos',
-  '/cookies',
-  '/404', // sin ruta propia: cae en el catch-all NotFound → dist/client/404.html
-];
+const SITE = 'https://caycer.ing';
 
 const template = fs.readFileSync('dist/client/index.html', 'utf-8');
-const { render } = await import('./dist/server/entry-server.js');
+const { render, routes, extraSitemapUrls } = await import('./dist/server/entry-server.js');
 
-for (const url of routes) {
+for (const { path: url } of routes) {
   const { html, head } = render(url);
 
   const page = template
@@ -50,4 +37,32 @@ for (const url of routes) {
   console.log(`✓ ${url} → ${file} (${Math.round(page.length / 1024)} KB)`);
 }
 
+// Sitemap: rutas indexables + los PDFs oficiales.
+const sitemapEntries = [
+  ...routes
+    .filter((r) => r.sitemap)
+    .map((r) => ({ path: r.path, ...r.sitemap })),
+  ...extraSitemapUrls,
+];
+
+const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${sitemapEntries
+  .map(
+    ({ path: p, lastmod, priority }) => `  <url>
+    <loc>${SITE}${p === '/' ? '/' : p}</loc>
+    <lastmod>${lastmod}</lastmod>
+    <priority>${priority.toFixed(1)}</priority>
+  </url>`
+  )
+  .join('\n')}
+</urlset>
+`;
+
+// Se escribe en dist/client (lo que se sirve) y en public/ para que el archivo
+// versionado en git refleje siempre lo último generado.
+fs.writeFileSync('dist/client/sitemap.xml', sitemap);
+fs.writeFileSync('public/sitemap.xml', sitemap);
+
 console.log(`\nPrerender completo: ${routes.length} rutas.`);
+console.log(`Sitemap generado: ${sitemapEntries.length} URLs.`);
