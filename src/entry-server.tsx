@@ -69,7 +69,18 @@ export const routes: PrerenderRoute[] = [
   { path: '/sectores/alimenticio', sitemap: { lastmod: STATIC_LASTMOD, priority: 0.7 } },
   { path: '/sectores/quimico', sitemap: { lastmod: STATIC_LASTMOD, priority: 0.7 } },
   { path: '/sectores/hospitalario', sitemap: { lastmod: STATIC_LASTMOD, priority: 0.7 } },
-  { path: '/blog', sitemap: { lastmod: STATIC_LASTMOD, priority: 0.8 } },
+  // El índice cambia cada vez que se publica un artículo, así que su lastmod
+  // sale del más reciente en vez de la fecha fija de las páginas estáticas.
+  {
+    path: '/blog',
+    sitemap: {
+      lastmod: blogPosts.reduce(
+        (latest, p) => (p.dateModified > latest ? p.dateModified : latest),
+        STATIC_LASTMOD
+      ),
+      priority: 0.8,
+    },
+  },
   ...blogPosts.map(
     (post): PrerenderRoute => ({
       path: `/blog/${post.slug}`,

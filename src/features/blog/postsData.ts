@@ -28,6 +28,11 @@ export interface BlogPost {
     pillar: Pillar;
     /** Minutos de lectura, calculados a mano al escribir. */
     readingMinutes: number;
+    /**
+     * Foto de fondo del encabezado, servida desde /public. Opcional: sin ella
+     * el encabezado usa solo el degradado de marca.
+     */
+    heroImage?: string;
     /** ID de YouTube (no la URL completa). Si está, se embebe el video. */
     youtubeId?: string;
     /** Título del video, obligatorio para el VideoObject schema. */
@@ -37,6 +42,23 @@ export interface BlogPost {
 }
 
 export const blogPosts: BlogPost[] = [
+    {
+        slug: "cadena-de-frio",
+        title: "Cadena de frío: dónde se rompe y cómo se demuestra que se mantuvo",
+        description:
+            "Qué es la cadena de frío, en qué eslabones falla, qué rangos aplican a cada equipo y qué evidencia pide una auditoría para dar por buena la conservación.",
+        datePublished: "2026-08-03",
+        dateModified: "2026-08-03",
+        author: "CAYCER Ingeniería y Metrología",
+        pillar: "Cadena de frío",
+        readingMinutes: 8,
+        heroImage: "/cadena-frio-hero.webp",
+        related: [
+            { label: "Validación de procesos y sistemas", href: "/servicios/validacion" },
+            { label: "Mapeo térmico: qué es y qué evidencia genera", href: "/blog/mapeo-termico" },
+            { label: "Sector farmacéutico", href: "/sectores/farmaceutico" },
+        ],
+    },
     {
         slug: "mapeo-termico",
         title: "Mapeo térmico: qué es, cuándo se necesita y qué evidencia genera",
@@ -54,8 +76,8 @@ export const blogPosts: BlogPost[] = [
         youtubeTitle: "Mapeo térmico en almacenes farmacéuticos",
         related: [
             { label: "Calificación de equipos e instalaciones", href: "/servicios/calificacion" },
+            { label: "Cadena de frío: dónde se rompe y cómo se demuestra", href: "/blog/cadena-de-frio" },
             { label: "Sector farmacéutico", href: "/sectores/farmaceutico" },
-            { label: "Preguntas frecuentes", href: "/preguntas-frecuentes" },
         ],
     },
 ];
