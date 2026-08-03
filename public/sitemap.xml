@@ -62,8 +62,13 @@
   </url>
   <url>
     <loc>https://caycer.ing/blog</loc>
-    <lastmod>2026-07-30</lastmod>
+    <lastmod>2026-08-03</lastmod>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://caycer.ing/blog/cadena-de-frio</loc>
+    <lastmod>2026-08-03</lastmod>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://caycer.ing/blog/mapeo-termico</loc>

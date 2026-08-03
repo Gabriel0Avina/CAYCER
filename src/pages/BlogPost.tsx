@@ -95,16 +95,34 @@ export function BlogPost() {
             />
             <Navbar />
             <main className="grow">
-                {/* Encabezado */}
-                <header className="pt-36 pb-12 bg-linear-to-br from-brand-dark via-slate-900 to-brand text-white">
-                    <div className="container mx-auto px-6 max-w-3xl">
+                {/* Encabezado. Con heroImage la foto va detrás de un velo de
+                    marca; sin ella queda el degradado sólido de siempre. El velo
+                    llega al 85 % en su punto más claro, que es donde se midió el
+                    contraste del texto en el peor caso. */}
+                <header className="relative pt-36 pb-12 bg-linear-to-br from-brand-dark via-slate-900 to-brand text-white overflow-hidden">
+                    {post.heroImage && (
+                        <div className="absolute inset-0 z-0">
+                            <img
+                                src={post.heroImage}
+                                alt=""
+                                className="h-full w-full object-cover object-center"
+                            />
+                            <div className="absolute inset-0 bg-linear-to-br from-brand-dark/95 via-brand-dark/90 to-brand/85" />
+                            <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-10 mix-blend-overlay" />
+                        </div>
+                    )}
+
+                    <div className="container mx-auto px-6 max-w-3xl relative z-10">
                         <Link
                             to="/blog"
                             className="inline-flex items-center gap-2 text-sm font-semibold text-blue-100 hover:text-white mb-8"
                         >
                             <ArrowLeft size={16} /> Volver al blog
                         </Link>
-                        <p className="text-sm font-bold uppercase tracking-[0.2em] text-cyan mb-4">
+                        {/* cyan-300 y no el cian de marca: sobre la foto del
+                            encabezado el cian original cae a 3.4:1 y a 14 px en
+                            negritas el mínimo es 4.5:1. */}
+                        <p className="text-sm font-bold uppercase tracking-[0.2em] text-cyan-300 mb-4">
                             {post.pillar}
                         </p>
                         <h1 className="text-3xl md:text-5xl font-bold font-display text-white text-balance mb-6">
