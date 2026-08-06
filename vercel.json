@@ -2,17 +2,18 @@
   "outputDirectory": "dist/client",
   "redirects": [
     {
-      "source": "/assets/Acreditación Temperatura-:hash.pdf",
+      "//": "Los PDFs de acreditación vivían en /assets con hash de Vite, así que su URL cambiaba en cada build. Estos 301 recogen cualquier hash viejo que Google aún tenga indexado. El patrón se ancla en la palabra distintiva —ASCII— en vez del nombre completo: el nombre traía acento y espacio, y la petición llega codificada (Acreditaci%C3%B3n%20Temperatura), por lo que el literal nunca empataba y devolvía 404.",
+      "source": "/assets/(.*)Temperatura(.*).pdf",
       "destination": "/acreditacion-temperatura.pdf",
       "permanent": true
     },
     {
-      "source": "/assets/Acreditación Humedad-:hash.pdf",
+      "source": "/assets/(.*)Humedad(.*).pdf",
       "destination": "/acreditacion-humedad.pdf",
       "permanent": true
     },
     {
-      "source": "/assets/Acreditación Mediciones Especiales-:hash.pdf",
+      "source": "/assets/(.*)Especiales(.*).pdf",
       "destination": "/acreditacion-mediciones-especiales.pdf",
       "permanent": true
     }
