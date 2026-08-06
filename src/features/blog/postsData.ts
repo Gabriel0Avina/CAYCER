@@ -104,3 +104,15 @@ const bodies = import.meta.glob("./posts/*.md", {
 export function getPostBody(slug: string): string {
     return bodies[`./posts/${slug}.md`] ?? "";
 }
+
+/**
+ * Convierte "2026-07-30" en "2026-07-30T09:00:00-06:00".
+ *
+ * El schema guarda solo la fecha porque es lo que se muestra y lo que necesita
+ * el sitemap, pero Google exige ISO 8601 con hora y zona horaria en el
+ * `uploadDate` de VideoObject y lo marca como advertencia si falta. El desfase
+ * es -06:00 fijo: Jalisco no aplica horario de verano desde 2022.
+ */
+export function toSchemaDateTime(date: string): string {
+    return `${date}T09:00:00-06:00`;
+}

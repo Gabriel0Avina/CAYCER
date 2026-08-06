@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 import { Navbar } from "@/components/layout/Navbar"
 import { Footer } from "@/components/layout/Footer"
 import { SEO } from "@/components/SEO"
-import { postsByDate } from "@/features/blog/postsData"
+import { postsByDate, toSchemaDateTime } from "@/features/blog/postsData"
 import { ArrowRight, CalendarDays, Clock, PlayCircle } from "lucide-react"
 // WebP a 1600 px: el PNG original pesa 735 KB y esta versión 123 KB. Al ir
 // detrás de un velo al 85-95 % el detalle fino no se percibe, y es una imagen
@@ -33,8 +33,8 @@ const blogSchema = {
         "@type": "BlogPosting",
         headline: p.title,
         description: p.description,
-        datePublished: p.datePublished,
-        dateModified: p.dateModified,
+        datePublished: toSchemaDateTime(p.datePublished),
+        dateModified: toSchemaDateTime(p.dateModified),
         url: `${SITE}/blog/${p.slug}`,
     })),
 }

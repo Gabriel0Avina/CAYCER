@@ -5,7 +5,7 @@ import { SEO } from "@/components/SEO"
 import { VideoEmbed } from "@/components/ui/VideoEmbed"
 import { ServiceCTA } from "@/features/services"
 import { MarkdownBody } from "@/features/blog/MarkdownBody"
-import { getPostBySlug, getPostBody } from "@/features/blog/postsData"
+import { getPostBySlug, getPostBody, toSchemaDateTime } from "@/features/blog/postsData"
 import { ArrowLeft, CalendarDays, Clock } from "lucide-react"
 
 const SITE = "https://caycer.ing"
@@ -56,8 +56,8 @@ export function BlogPost() {
                 "@id": `${url}#article`,
                 headline: post.title,
                 description: post.description,
-                datePublished: post.datePublished,
-                dateModified: post.dateModified,
+                datePublished: toSchemaDateTime(post.datePublished),
+                dateModified: toSchemaDateTime(post.dateModified),
                 inLanguage: "es-MX",
                 mainEntityOfPage: { "@type": "WebPage", "@id": url },
                 author: { "@type": "Organization", name: post.author, url: SITE },
@@ -67,7 +67,7 @@ export function BlogPost() {
                         "@type": "VideoObject",
                         name: post.youtubeTitle ?? post.title,
                         description: post.description,
-                        uploadDate: post.datePublished,
+                        uploadDate: toSchemaDateTime(post.datePublished),
                         thumbnailUrl: `https://i.ytimg.com/vi/${post.youtubeId}/hqdefault.jpg`,
                         embedUrl: `https://www.youtube-nocookie.com/embed/${post.youtubeId}`,
                     },
