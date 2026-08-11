@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button"
 import { Menu, X, ChevronDown, Thermometer, FlaskConical, CheckCircle2, Pill, Apple, HeartPulse } from "lucide-react"
 import { useState, useEffect } from "react"
 import logo from "@/assets/logo.png"
+import { trackConversion } from "@/lib/analytics"
 
 export function Navbar() {
     const scrolled = useScroll(20)
@@ -133,6 +134,7 @@ export function Navbar() {
                         href="https://wa.me/523335071061?text=Hola%20Caycer,%20me%20gustar%C3%ADa%20solicitar%20cotizaci%C3%B3n."
                         target="_blank"
                         rel="noopener noreferrer"
+                        onClick={() => trackConversion("contacto_whatsapp", { origen: "navbar_escritorio" })}
                         className="ml-4"
                     >
                         <Button
@@ -219,6 +221,7 @@ export function Navbar() {
                     href="https://wa.me/523335071061?text=Hola%20Caycer,%20me%20gustar%C3%ADa%20solicitar%20cotizaci%C3%B3n."
                     target="_blank"
                     rel="noopener noreferrer"
+                    onClick={() => trackConversion("contacto_whatsapp", { origen: "navbar_movil" })}
                     className="w-full mt-4"
                 >
                     <Button variant="cta" className="w-full text-lg py-7 bg-cyan text-slate-900 font-bold rounded-xl shadow-lg shadow-cyan/20">

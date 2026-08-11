@@ -1,4 +1,5 @@
 import { MessageCircle } from "lucide-react"
+import { trackConversion } from "@/lib/analytics"
 
 export function FloatingWhatsApp() {
     const phoneNumber = "3335071061"
@@ -12,6 +13,10 @@ export function FloatingWhatsApp() {
             href={whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
+            // Se registra el origen del clic: el botón flotante y el de las
+            // páginas de servicio miden intenciones distintas y conviene
+            // distinguirlas al comparar qué contenido genera contactos.
+            onClick={() => trackConversion("contacto_whatsapp", { origen: "boton_flotante" })}
             className="fixed bottom-8 right-8 z-30 group flex items-center justify-center"
             aria-label="Contactar por WhatsApp"
         >

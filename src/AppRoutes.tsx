@@ -14,6 +14,7 @@ import { Cookies } from '@/pages/Cookies';
 import { NotFound } from '@/pages/NotFound';
 import { FloatingWhatsApp } from '@/components/ui/FloatingWhatsApp';
 import { ScrollToTop } from '@/components/layout/ScrollToTop';
+import { Analytics } from '@/components/Analytics';
 
 /**
  * Árbol de rutas compartido entre el cliente (BrowserRouter en App.tsx)
@@ -23,6 +24,7 @@ export function AppRoutes() {
   return (
     <>
       <ScrollToTop />
+      <Analytics />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/servicios" element={<Services />} />
