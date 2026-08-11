@@ -10,9 +10,23 @@
  * un banner de consentimiento, basta con llamarla cuando la persona acepte.
  */
 
-const META_ID = import.meta.env.VITE_META_PIXEL_ID as string | undefined;
-const GA4_ID = import.meta.env.VITE_GA4_ID as string | undefined;
-const GTM_ID = import.meta.env.VITE_GTM_ID as string | undefined;
+/**
+ * Normaliza un identificador que siempre lleva prefijo fijo.
+ *
+ * Existe porque al capturar las variables en el panel de despliegue es fácil
+ * perder el prefijo, y el fallo resultante es silencioso: el script carga, no
+ * hay error en consola, y simplemente no llega ningún dato. Como "G-" y "GTM-"
+ * son invariables, reponerlos es seguro y no puede enmascarar un ID distinto.
+ */
+function conPrefijo(valor: string | undefined, prefijo: string) {
+    const v = valor?.trim();
+    if (!v) return undefined;
+    return v.startsWith(prefijo) ? v : `${prefijo}${v}`;
+}
+
+const META_ID = (import.meta.env.VITE_META_PIXEL_ID as string | undefined)?.trim() || undefined;
+const GA4_ID = conPrefijo(import.meta.env.VITE_GA4_ID as string | undefined, "G-");
+const GTM_ID = conPrefijo(import.meta.env.VITE_GTM_ID as string | undefined, "GTM-");
 
 interface Fbq {
     (...args: unknown[]): void;
