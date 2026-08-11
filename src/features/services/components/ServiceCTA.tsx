@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { trackConversion } from "@/lib/analytics";
 
 interface ServiceCTAProps {
     title?: string;
@@ -39,6 +40,12 @@ export function ServiceCTA({
                     href={`https://wa.me/523335071061?text=${whatsappMessage}`}
                     target="_blank"
                     rel="noopener noreferrer"
+                    onClick={() =>
+                        trackConversion("contacto_whatsapp", {
+                            origen: "cta_pagina",
+                            pagina: typeof window !== "undefined" ? window.location.pathname : "",
+                        })
+                    }
                     className="inline-block"
                 >
                     <Button

@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { motion, AnimatePresence } from "framer-motion"
+import { trackConversion } from "@/lib/analytics"
 
 import imgCalibration from "@/assets/services/calibration.png"
 import imgQualification from "@/assets/services/qualification.png"
@@ -123,6 +124,7 @@ export function Hero() {
                             href="https://wa.me/523335071061?text=Hola%20Caycer,%20me%20gustar%C3%ADa%20solicitar%20cotizaci%C3%B3n."
                             target="_blank"
                             rel="noopener noreferrer"
+                            onClick={() => trackConversion("contacto_whatsapp", { origen: "hero_inicio" })}
                         >
                             <Button
                                 variant="cta"

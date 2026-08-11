@@ -1,5 +1,6 @@
 import { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
+import { trackConversion } from "@/lib/analytics";
 
 export interface ContactFormState {
     name: string;
@@ -56,6 +57,13 @@ export function useContactForm() {
             );
 
             if (result.text === "OK") {
+                // Solo cuando EmailJS confirma el envío: registrar el intento
+                // contaría como conversión un formulario que nunca llegó.
+                // Se manda el servicio elegido, no los datos personales.
+                trackConversion("formulario_enviado", {
+                    servicio: formState.service || "sin_especificar",
+                    urgencia: formState.urgency,
+                });
                 setStatus({
                     type: "success",
                     message: "¡Gracias por contactar a Caycer! Hemos recibido tu solicitud y te contactaremos pronto."

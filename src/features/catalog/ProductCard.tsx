@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import type { Product } from "./catalogData";
 import { Button } from "@/components/ui/button";
 import { MessageCircle, ArrowUpRight } from "lucide-react";
+import { trackConversion } from "@/lib/analytics";
 
 interface ProductCardProps {
     product: Product;
@@ -77,6 +78,14 @@ export function ProductCard({ product, onImageClick }: ProductCardProps) {
                         href={whatsappUrl}
                         target="_blank"
                         rel="noopener noreferrer"
+                        // Se registra el producto: cruzar catálogo contra
+                        // cotizaciones dice qué instrumentos mueven demanda.
+                        onClick={() =>
+                            trackConversion("contacto_whatsapp", {
+                                origen: "catalogo_producto",
+                                producto: product.name,
+                            })
+                        }
                         className="flex-grow"
                     >
                         <Button
