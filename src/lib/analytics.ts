@@ -1,5 +1,5 @@
 /**
- * Medición: píxel de Meta y Google Analytics 4.
+ * Medición: píxeles de Meta y TikTok, Google Analytics 4 y Tag Manager.
  *
  * Ambos se cargan después de la hidratación, nunca durante el prerender, y
  * cada uno solo si su variable de entorno existe: sin ella el sitio se comporta
@@ -27,6 +27,7 @@ function conPrefijo(valor: string | undefined, prefijo: string) {
 const META_ID = (import.meta.env.VITE_META_PIXEL_ID as string | undefined)?.trim() || undefined;
 const GA4_ID = conPrefijo(import.meta.env.VITE_GA4_ID as string | undefined, "G-");
 const GTM_ID = conPrefijo(import.meta.env.VITE_GTM_ID as string | undefined, "GTM-");
+const TIKTOK_ID = (import.meta.env.VITE_TIKTOK_PIXEL_ID as string | undefined)?.trim() || undefined;
 
 interface Fbq {
     (...args: unknown[]): void;
@@ -37,12 +38,23 @@ interface Fbq {
     version?: string;
 }
 
+interface Ttq {
+    (...args: unknown[]): void;
+    push: (...args: unknown[]) => void;
+    methods?: string[];
+    load?: (id: string) => void;
+    page?: () => void;
+    track?: (evento: string, params?: Record<string, unknown>) => void;
+}
+
 declare global {
     interface Window {
         fbq?: Fbq;
         _fbq?: Fbq;
         dataLayer?: unknown[];
         gtag?: (...args: unknown[]) => void;
+        ttq?: Ttq;
+        TiktokAnalyticsObject?: string;
     }
 }
 
@@ -95,6 +107,34 @@ function initGTM() {
     cargarScript(`https://www.googletagmanager.com/gtm.js?id=${GTM_ID}`);
 }
 
+/**
+ * Píxel de TikTok. Mismo patrón de cola que Meta: los métodos se encolan hasta
+ * que el SDK termina de descargar, así que los eventos disparados antes no se
+ * pierden.
+ */
+function initTikTok() {
+    if (!TIKTOK_ID || window.ttq) return;
+
+    const cola: unknown[][] = [];
+    const ttq = function (...args: unknown[]) {
+        cola.push(args);
+    } as unknown as Ttq;
+    ttq.push = (...args: unknown[]) => {
+        cola.push(args);
+    };
+    // Cada método encola su nombre junto con los argumentos; el SDK vacía la
+    // cola al cargar.
+    for (const m of ["page", "track", "identify", "instances", "debug", "on", "off", "once", "ready", "alias", "group", "enableCookie", "disableCookie"]) {
+        (ttq as unknown as Record<string, unknown>)[m] = (...args: unknown[]) => cola.push([m, ...args]);
+    }
+
+    window.TiktokAnalyticsObject = "ttq";
+    window.ttq = ttq;
+
+    cargarScript(`https://analytics.tiktok.com/i18n/pixel/events.js?sdkid=${TIKTOK_ID}&lib=ttq`);
+    ttq.page?.();
+}
+
 function initGA4() {
     if (!GA4_ID || window.gtag) return;
 
@@ -120,6 +160,7 @@ export function initAnalytics() {
     // contenedor esté cargando antes de que se empujen los primeros eventos.
     initGTM();
     initMeta();
+    initTikTok();
     initGA4();
     trackPageView();
 }
@@ -138,6 +179,7 @@ export function trackPageView() {
 export function trackRouteChange() {
     if (typeof window === "undefined") return;
     window.fbq?.("track", "PageView");
+    window.ttq?.page?.();
     trackPageView();
 }
 
@@ -149,15 +191,16 @@ export function trackRouteChange() {
  */
 type Conversion = "contacto_whatsapp" | "formulario_enviado";
 
-const mapa: Record<Conversion, { meta: string; ga4: string }> = {
-    contacto_whatsapp: { meta: "Contact", ga4: "contact" },
-    formulario_enviado: { meta: "Lead", ga4: "generate_lead" },
+const mapa: Record<Conversion, { meta: string; ga4: string; tiktok: string }> = {
+    contacto_whatsapp: { meta: "Contact", ga4: "contact", tiktok: "Contact" },
+    formulario_enviado: { meta: "Lead", ga4: "generate_lead", tiktok: "SubmitForm" },
 };
 
 export function trackConversion(tipo: Conversion, params: Record<string, unknown> = {}) {
     if (typeof window === "undefined") return;
-    const { meta, ga4 } = mapa[tipo];
+    const { meta, ga4, tiktok } = mapa[tipo];
     window.fbq?.("track", meta, params);
+    window.ttq?.track?.(tiktok, params);
     window.gtag?.("event", ga4, params);
     // Para GTM: el nombre en español es el que se usa como disparador de
     // "evento personalizado" dentro del contenedor.
@@ -169,4 +212,5 @@ export const medicionActiva = {
     meta: Boolean(META_ID),
     ga4: Boolean(GA4_ID),
     gtm: Boolean(GTM_ID),
+    tiktok: Boolean(TIKTOK_ID),
 };
