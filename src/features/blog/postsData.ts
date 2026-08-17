@@ -64,6 +64,7 @@ export const blogPosts: BlogPost[] = [
         author: "CAYCER Ingeniería y Metrología",
         pillar: "Calificación de equipos",
         readingMinutes: 8,
+        heroImage: "/calificacion-hero.webp",
         howTo: {
             name: "Las cuatro etapas de la calificación de equipos",
             steps: [
@@ -118,6 +119,7 @@ export const blogPosts: BlogPost[] = [
         author: "CAYCER Ingeniería y Metrología",
         pillar: "Mapeo térmico",
         readingMinutes: 7,
+        heroImage: "/mapeo-termico-hero.webp",
         youtubeId: "nUeB70vvIUQ",
         // Título propio del sitio, no el de YouTube: aquel atribuye los
         // requisitos a COFEPRIS y la regla de contenido del proyecto es citar
