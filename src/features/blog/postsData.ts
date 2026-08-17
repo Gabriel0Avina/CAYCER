@@ -37,11 +37,61 @@ export interface BlogPost {
     youtubeId?: string;
     /** Título del video, obligatorio para el VideoObject schema. */
     youtubeTitle?: string;
+    /**
+     * Proceso paso a paso descrito en el artículo, para el HowTo schema.
+     *
+     * Nota: Google retiró los resultados enriquecidos de HowTo en 2023, así que
+     * esto ya no produce un fragmento visual en la búsqueda. Sigue valiendo
+     * porque los motores generativos leen la secuencia estructurada y citan el
+     * orden correcto de las etapas.
+     */
+    howTo?: {
+        name: string;
+        steps: { name: string; text: string }[];
+    };
     /** Rutas internas relacionadas, para el bloque de enlaces del pie. */
     related: { label: string; href: string }[];
 }
 
 export const blogPosts: BlogPost[] = [
+    {
+        slug: "calificacion-de-equipos",
+        title: "Calificación de equipos: qué es y cómo son las cuatro etapas",
+        description:
+            "Qué significa calificar un equipo, en qué se diferencia de calibrar y validar, cómo funcionan las etapas DQ, IQ, OQ y PQ, y qué hay que preparar antes.",
+        datePublished: "2026-08-12",
+        dateModified: "2026-08-12",
+        author: "CAYCER Ingeniería y Metrología",
+        pillar: "Calificación de equipos",
+        readingMinutes: 8,
+        heroImage: "/calificacion-hero.webp",
+        howTo: {
+            name: "Las cuatro etapas de la calificación de equipos",
+            steps: [
+                {
+                    name: "Calificación de diseño (DQ)",
+                    text: "Se verifica, antes de comprar o instalar, que las especificaciones del equipo corresponden al uso previsto: rangos de trabajo, requisitos de la instalación eléctrica y condiciones del sitio.",
+                },
+                {
+                    name: "Calificación de instalación (IQ)",
+                    text: "Se comprueba que el equipo llegó completo y quedó instalado según lo previsto: modelo y número de serie, ubicación conforme al plano, servicios conectados y documentación del fabricante entregada.",
+                },
+                {
+                    name: "Calificación de operación (OQ)",
+                    text: "Se somete el equipo a sus condiciones de operación en todo el rango declarado, incluidos los extremos, para comprobar que responde según especificación y que sus alarmas y controles actúan cuando deben.",
+                },
+                {
+                    name: "Calificación de desempeño (PQ)",
+                    text: "Se demuestra que el equipo sostiene las condiciones en uso real y con carga, durante un periodo representativo. Aquí es donde el mapeo térmico aporta la evidencia distribuida.",
+                },
+            ],
+        },
+        related: [
+            { label: "Calificación de equipos e instalaciones", href: "/servicios/calificacion" },
+            { label: "Mapeo térmico: qué es y qué evidencia genera", href: "/blog/mapeo-termico" },
+            { label: "Cadena de frío: dónde se rompe y cómo se demuestra", href: "/blog/cadena-de-frio" },
+        ],
+    },
     {
         slug: "cadena-de-frio",
         title: "Cadena de frío: dónde se rompe y cómo se demuestra que se mantuvo",
@@ -69,6 +119,7 @@ export const blogPosts: BlogPost[] = [
         author: "CAYCER Ingeniería y Metrología",
         pillar: "Mapeo térmico",
         readingMinutes: 7,
+        heroImage: "/mapeo-termico-hero.webp",
         youtubeId: "nUeB70vvIUQ",
         // Título propio del sitio, no el de YouTube: aquel atribuye los
         // requisitos a COFEPRIS y la regla de contenido del proyecto es citar

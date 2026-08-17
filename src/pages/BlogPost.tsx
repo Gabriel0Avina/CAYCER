@@ -81,6 +81,27 @@ export function BlogPost() {
                     { "@type": "ListItem", position: 3, name: post.title, item: url },
                 ],
             },
+            // Secuencia de pasos del artículo, cuando la tiene. Google retiró
+            // los resultados enriquecidos de HowTo en 2023, así que esto ya no
+            // genera un fragmento visual: sirve para que los motores
+            // generativos citen las etapas en el orden correcto.
+            ...(post.howTo
+                ? [
+                      {
+                          "@type": "HowTo",
+                          "@id": `${url}#howto`,
+                          name: post.howTo.name,
+                          inLanguage: "es-MX",
+                          step: post.howTo.steps.map((s, i) => ({
+                              "@type": "HowToStep",
+                              position: i + 1,
+                              name: s.name,
+                              text: s.text,
+                              url: `${url}#paso-${i + 1}`,
+                          })),
+                      },
+                  ]
+                : []),
         ],
     }
 
