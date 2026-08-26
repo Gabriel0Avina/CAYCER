@@ -10,6 +10,7 @@
 
 /** Pilares de contenido. Ordenan el índice y agrupan los artículos. */
 export type Pillar =
+    | "Calibración"
     | "Mapeo térmico"
     | "Cadena de frío"
     | "Calificación de equipos"
@@ -54,6 +55,22 @@ export interface BlogPost {
 }
 
 export const blogPosts: BlogPost[] = [
+    {
+        slug: "informe-de-calibracion",
+        title: "Qué contiene un informe de calibración y cómo se emite",
+        description:
+            "Sección por sección, qué debe traer un informe de calibración acreditado, qué revisar al recibirlo y cómo se produce dentro del laboratorio.",
+        datePublished: "2026-08-26",
+        dateModified: "2026-08-26",
+        author: "CAYCER Ingeniería y Metrología",
+        pillar: "Calibración",
+        readingMinutes: 9,
+        related: [
+            { label: "Calibración de instrumentos de medición", href: "/servicios/calibracion" },
+            { label: "Calificación de equipos: las cuatro etapas", href: "/blog/calificacion-de-equipos" },
+            { label: "Preguntas frecuentes", href: "/preguntas-frecuentes" },
+        ],
+    },
     {
         slug: "calificacion-de-equipos",
         title: "Calificación de equipos: qué es y cómo son las cuatro etapas",
