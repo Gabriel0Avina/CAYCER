@@ -66,6 +66,11 @@ export const blogPosts: BlogPost[] = [
         pillar: "Calibración",
         readingMinutes: 10,
         heroImage: "/certificado-hero.webp",
+        youtubeId: "8c1Si-pW6Gc",
+        // Título limpio para el sitio: el de YouTube repite el nombre de la
+        // empresa y usa separadores por barra, que no leen bien como pie de
+        // video ni dentro del VideoObject.
+        youtubeTitle: "Así elaboramos un certificado de calibración: proceso completo",
         related: [
             { label: "Calibración de instrumentos de medición", href: "/servicios/calibracion" },
             { label: "Calificación de equipos: las cuatro etapas", href: "/blog/calificacion-de-equipos" },
