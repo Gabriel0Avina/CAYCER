@@ -1,4 +1,14 @@
-Un informe de calibración es el documento que registra cuánto se desvía un instrumento respecto de un patrón trazable, y con qué incertidumbre se determinó esa desviación. No dice si el instrumento "pasó": dice cuánto se aparta y qué tan seguros estamos de ese número.
+Un certificado de calibración es el documento que registra cuánto se desvía un instrumento respecto de un patrón trazable, y con qué incertidumbre se determinó esa desviación. No dice si el instrumento "pasó": dice cuánto se aparta y qué tan seguros estamos de ese número.
+
+## ¿Certificado o informe? ¿Cuál es el término correcto?
+
+En la práctica se usan como sinónimos, y en las búsquedas gana "certificado de calibración". Pero el nombre formal del documento es **informe de calibración**, y así lo verá impreso en el papel que reciba de un laboratorio acreditado.
+
+La distinción no es capricho. Un certificado, en sentido estricto, declara conformidad: afirma que algo cumple un requisito. Un informe de calibración no hace eso: reporta un resultado de medición con su incertidumbre, y deja la decisión de conformidad a quien usa el instrumento, que es el único que conoce su tolerancia de uso.
+
+Dicho de otro modo: si su proveedor le entrega un documento que solo dice "aprobado" sin números, no tiene un informe de calibración, tiene una etiqueta.
+
+Aquí usamos ambos términos indistintamente porque así se habla en el día a día, pero es útil saber por qué el documento se llama como se llama.
 
 ## ¿Para qué sirve exactamente?
 
@@ -8,9 +18,9 @@ Es también el cimiento de todo lo demás. Un [mapeo térmico](/blog/mapeo-termi
 
 ## ¿Qué debe contener?
 
-Este es un informe real emitido por CAYCER, con las firmas protegidas. Sirve para recorrer el documento sección por sección:
+Este es un certificado real emitido por CAYCER, con las firmas protegidas. Sirve para recorrer el documento sección por sección:
 
-![Informe de calibración de un termohigrómetro emitido por CAYCER, mostrando datos del instrumento, del patrón, trazabilidad, condiciones ambientales y sello de acreditación EMA](/informe-de-calibracion.webp "Informe de calibración de un termohigrómetro. Las firmas se sustituyeron por bloques; el resto del documento está íntegro.")
+![Informe de calibración de un termohigrómetro emitido por CAYCER, mostrando datos del instrumento, del patrón, trazabilidad, condiciones ambientales y sello de acreditación EMA](/certificado-de-calibracion.webp "Informe de calibración de un termohigrómetro. Las firmas se sustituyeron por bloques; el resto del documento está íntegro.")
 
 **Identificación del informe.** Un número único —aquí `CC-T-2024-0174`— que permite rastrear ese documento en el sistema del laboratorio. Si dos informes comparten número, algo está mal.
 
@@ -61,7 +71,7 @@ Antes de archivarlo, cinco comprobaciones que toman dos minutos:
 - Que el **intervalo calibrado** incluya el rango en que usted realmente usa el instrumento. Un termómetro calibrado de 0 a 50 °C no respalda mediciones a −20 °C.
 - Que el **informe declare si es acreditado o no**, y en qué alcance. Los dos son válidos; conviene saber cuál tiene en la mano.
 
-## Lo que un informe de calibración no le dice
+## Lo que un certificado de calibración no le dice
 
 No le dice si el instrumento sirve o no sirve. Reporta la desviación y la incertidumbre; decidir si eso es aceptable depende de lo que usted necesite medir y con qué tolerancia. Un error de 1 °C puede ser irrelevante en un horno industrial e inaceptable en una cámara de 2 a 8 °C.
 
