@@ -10,6 +10,7 @@
 
 /** Pilares de contenido. Ordenan el índice y agrupan los artículos. */
 export type Pillar =
+    | "Calibración"
     | "Mapeo térmico"
     | "Cadena de frío"
     | "Calificación de equipos"
@@ -54,6 +55,23 @@ export interface BlogPost {
 }
 
 export const blogPosts: BlogPost[] = [
+    {
+        slug: "certificado-de-calibracion",
+        title: "Certificado de calibración: qué es y qué contiene",
+        description:
+            "Qué es un certificado de calibración, qué debe traer sección por sección, en qué se diferencia de un informe y qué revisar al recibirlo.",
+        datePublished: "2026-09-08",
+        dateModified: "2026-09-08",
+        author: "CAYCER Ingeniería y Metrología",
+        pillar: "Calibración",
+        readingMinutes: 10,
+        heroImage: "/certificado-hero.webp",
+        related: [
+            { label: "Calibración de instrumentos de medición", href: "/servicios/calibracion" },
+            { label: "Calificación de equipos: las cuatro etapas", href: "/blog/calificacion-de-equipos" },
+            { label: "Preguntas frecuentes", href: "/preguntas-frecuentes" },
+        ],
+    },
     {
         slug: "calificacion-de-equipos",
         title: "Calificación de equipos: qué es y cómo son las cuatro etapas",
