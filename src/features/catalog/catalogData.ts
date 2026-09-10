@@ -7,7 +7,7 @@ import term5 from "@/assets/termometros/Marca Taylor Modelo 9940N.jpg";
 
 // TERMOHIGROMETROS
 import higro1 from "@/assets/termohigrometros/Marca Avaly Modelo VA-EDT-1-55.jpg";
-import higro2 from "@/assets/termohigrometros/Marca Elitech Modelo GSP6-PRO.webp";
+import higro2 from "@/assets/termohigrometros/Marca Elitech Modelo GSP-6 Pro.webp";
 import higro4 from "@/assets/termohigrometros/Marca Elitech Modelo RCW-800W.webp";
 import higro5 from "@/assets/termohigrometros/Marca Extech Modelo 445702.jpg";
 import higro6 from "@/assets/termohigrometros/Marca Extech Modelo 445703.jpg";
@@ -84,13 +84,13 @@ export const products: Product[] = [
         specs: { "Marca": "Avaly", "Modelo": "VA-EDT-1-55", "Temp. Ext": "-50°C a 70°C", "Temp. Int": "0°C a 50°C", "Humedad": "5% a 85% HR" }
     },
     {
-        id: "elitech-gsp6-pro",
-        name: "Elitech GSP6-PRO",
+        id: "elitech-gsp-6-pro",
+        name: "Elitech GSP-6 Pro",
         category: "Termohigrómetros",
         description: "Data logger avanzado de temperatura y humedad con pantalla LCD y sensores externos.",
         image: higro2,
         features: ["Sensores duales", "Alarma visual", "Alta capacidad de memoria"],
-        specs: { "Marca": "Elitech", "Modelo": "GSP6-PRO", "Rango Temp": "-40°C a 85°C", "Humedad": "10% a 99% HR" }
+        specs: { "Marca": "Elitech", "Modelo": "GSP-6 Pro", "Rango Temp": "-40°C a 85°C", "Humedad": "10% a 99% HR" }
     },
     {
         id: "elitech-rcw-800w",
