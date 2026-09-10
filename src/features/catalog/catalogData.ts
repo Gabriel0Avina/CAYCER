@@ -7,13 +7,12 @@ import term5 from "@/assets/termometros/Marca Taylor Modelo 9940N.jpg";
 
 // TERMOHIGROMETROS
 import higro1 from "@/assets/termohigrometros/Marca Avaly Modelo VA-EDT-1-55.jpg";
-import higro2 from "@/assets/termohigrometros/Marca Elitech Modelo GSP-6.webp";
-import higro3 from "@/assets/termohigrometros/Marca Elitech Modelo RCW-600.jpg";
-import higro4 from "@/assets/termohigrometros/Marca Elitech Modelo RCW-800.webp";
+import higro2 from "@/assets/termohigrometros/Marca Elitech Modelo GSP-6 Pro.webp";
+import higro4 from "@/assets/termohigrometros/Marca Elitech Modelo RCW-800W.webp";
 import higro5 from "@/assets/termohigrometros/Marca Extech Modelo 445702.jpg";
 import higro6 from "@/assets/termohigrometros/Marca Extech Modelo 445703.jpg";
 import higro7 from "@/assets/termohigrometros/Marca Extech Modelo RHT-20.jpg";
-import higro8 from "@/assets/termohigrometros/Marca Extech Modelo RTH10.jpg";
+import higro8 from "@/assets/termohigrometros/Marca Extech Modelo RHT10.jpg";
 import higro9 from "@/assets/termohigrometros/Marca Taylor Modelo  1732.jpg";
 
 export interface Product {
@@ -85,31 +84,22 @@ export const products: Product[] = [
         specs: { "Marca": "Avaly", "Modelo": "VA-EDT-1-55", "Temp. Ext": "-50°C a 70°C", "Temp. Int": "0°C a 50°C", "Humedad": "5% a 85% HR" }
     },
     {
-        id: "elitech-gsp-6",
-        name: "Elitech GSP-6",
+        id: "elitech-gsp-6-pro",
+        name: "Elitech GSP-6 Pro",
         category: "Termohigrómetros",
         description: "Data logger avanzado de temperatura y humedad con pantalla LCD y sensores externos.",
         image: higro2,
         features: ["Sensores duales", "Alarma visual", "Alta capacidad de memoria"],
-        specs: { "Marca": "Elitech", "Modelo": "GSP-6", "Rango Temp": "-40°C a 85°C", "Humedad": "10% a 99% HR" }
+        specs: { "Marca": "Elitech", "Modelo": "GSP-6 Pro", "Rango Temp": "-40°C a 85°C", "Humedad": "10% a 99% HR" }
     },
     {
-        id: "elitech-rcw-600",
-        name: "Elitech RCW-600",
-        category: "Termohigrómetros",
-        description: "Sistema de monitoreo de temperatura via WiFi para supervisión remota en tiempo real.",
-        image: higro3,
-        features: ["Conectividad WiFi", "Acceso vía App/Cloud", "Alertas SMS/Email"],
-        specs: { "Marca": "Elitech", "Modelo": "RCW-600", "Rango Temp": "-40°C a 80°C" }
-    },
-    {
-        id: "elitech-rcw-800",
-        name: "Elitech RCW-800",
+        id: "elitech-rcw-800w",
+        name: "Elitech RCW-800W",
         category: "Termohigrómetros",
         description: "Registrador de datos inalámbrico premium para almacenes y áreas logísticas críticas.",
         image: higro4,
         features: ["Pantalla gráfica", "Exportación directa", "Multi-zona"],
-        specs: { "Marca": "Elitech", "Modelo": "RCW-800", "Rango Temp": "-40°C a 80°C", "Humedad": "0% a 100% HR" }
+        specs: { "Marca": "Elitech", "Modelo": "RCW-800W", "Rango Temp": "-40°C a 80°C", "Humedad": "0% a 100% HR" }
     },
     {
         id: "extech-445702",
@@ -139,13 +129,13 @@ export const products: Product[] = [
         specs: { "Marca": "Extech", "Modelo": "RHT-20", "Rango Temp": "-40°C a 70°C", "Humedad": "0% a 100% HR" }
     },
     {
-        id: "extech-rth10",
-        name: "Extech RTH10",
+        id: "extech-rht10",
+        name: "Extech RHT10",
         category: "Termohigrómetros",
         description: "Registrador de datos ambiental compacto para oficina y laboratorios.",
         image: higro8,
         features: ["Compacto", "Fácil de usar", "Indicador de estado"],
-        specs: { "Marca": "Extech", "Modelo": "RTH10", "Rango Temp": "-40°C a 70°C", "Humedad": "0% a 100% HR" }
+        specs: { "Marca": "Extech", "Modelo": "RHT10", "Rango Temp": "-40°C a 70°C", "Humedad": "0% a 100% HR" }
     },
     {
         id: "taylor-1732",
