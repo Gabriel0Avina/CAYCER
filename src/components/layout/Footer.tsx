@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom"
-import { MapPin, Phone, Mail, MessageCircle } from "lucide-react"
+import { MapPin, Mail, MessageCircle } from "lucide-react"
 import logo from "@/assets/logo.png"
 import { socialProfiles } from "@/lib/social"
-import { direccion, telefonos, whatsapp, correos, telHref, whatsappUrl, MENSAJE_COTIZACION } from "@/lib/contacto"
+import { direccion, whatsapp, correos, whatsappUrl, MENSAJE_COTIZACION } from "@/lib/contacto"
 import { trackConversion } from "@/lib/analytics"
 
 export function Footer() {
@@ -63,19 +63,10 @@ export function Footer() {
                                     {direccion.municipio}, {direccion.estado}, C.P. {direccion.codigoPostal}
                                 </address>
                             </li>
-                            {/* Enlaces tel:, wa.me y mailto: en celular, tocar el
-                                número llama o abre el chat en lugar de obligar a
-                                copiarlo a mano. */}
-                            <li className="flex items-start gap-3 group">
-                                <Phone className="w-5 h-5 text-cyan shrink-0 group-hover:scale-110 transition-transform" />
-                                <div className="flex flex-col gap-1">
-                                    {telefonos.map((tel) => (
-                                        <a key={tel.e164} href={telHref(tel)} className="hover:text-cyan transition-colors">
-                                            {tel.display}
-                                        </a>
-                                    ))}
-                                </div>
-                            </li>
+                            {/* Solo WhatsApp: la línea es la misma que el teléfono
+                                y listarla dos veces se leía como un error. Enlaces
+                                wa.me y mailto: en celular, tocar abre el chat o el
+                                correo en lugar de obligar a copiarlo a mano. */}
                             <li className="flex items-center gap-3 group">
                                 <MessageCircle className="w-5 h-5 text-cyan shrink-0 group-hover:scale-110 transition-transform" />
                                 <a
