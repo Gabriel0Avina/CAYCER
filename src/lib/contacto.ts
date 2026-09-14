@@ -35,14 +35,13 @@ export const direccionCompleta = `${direccion.calle}, ${direccion.colonia}, ${di
 
 /** El primero es el principal: es el que declara el schema. */
 export const telefonos: Telefono[] = [
-    { display: "33 3260 1657", e164: "+523332601657" },
-    { display: "33 3260 1658", e164: "+523332601658" },
+    { display: "33 3460 8464", e164: "+523334608464" },
 ];
 
 export const whatsapp: Telefono = { display: "33 3507 1061", e164: "+523335071061" };
 
 /** El primero es el principal: es el que declara el schema. */
-export const correos = ["ventas@caycer.com.mx", "ventas2@caycer.com.mx"];
+export const correos = ["ventas3@caycer.com.mx"];
 
 export const telefonoPrincipal = telefonos[0];
 export const correoPrincipal = correos[0];

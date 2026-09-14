@@ -16,10 +16,10 @@ El dato canónico es el del footer del sitio y el del schema de la home:
 | Razón social | CAYCER INGENIERÍA Y METROLOGÍA, S.A.S. |
 | Dirección | Batalla de Puebla 3643, Col. El Tapatío |
 | Ciudad | San Pedro Tlaquepaque, Jalisco, C.P. 45588 |
-| Teléfonos | 33 3260 1657 · 33 3260 1658 |
+| Teléfono | 33 3460 8464 |
 | WhatsApp | 33 3507 1061 |
 | Sitio web | https://caycer.ing |
-| Correo | ventas@caycer.com.mx |
+| Correo | ventas3@caycer.com.mx |
 | Categoría | Laboratorio de calibración |
 
 Nota sobre el correo: el dominio del correo (`caycer.com.mx`) no coincide con el del sitio (`caycer.ing`). No es un error a corregir aquí, pero conviene decidir si se unifica, porque un evaluador que compara ambos puede dudar de que sean la misma empresa.
