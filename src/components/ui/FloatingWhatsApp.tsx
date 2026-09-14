@@ -1,10 +1,9 @@
 import { MessageCircle } from "lucide-react"
 import { trackConversion } from "@/lib/analytics"
+import { whatsappUrl as crearWhatsappUrl } from "@/lib/contacto"
 
 export function FloatingWhatsApp() {
-    const phoneNumber = "3335071061"
-    const message = "Hola Caycer, me gustaría solicitar información sobre sus servicios."
-    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`
+    const whatsappUrl = crearWhatsappUrl("Hola Caycer, me gustaría solicitar información sobre sus servicios.")
 
     // z-30: por encima del contenido de las páginas (máx. z-20) pero por debajo del
     // menú móvil y del visor de imágenes del catálogo (z-50), que antes tapaba.

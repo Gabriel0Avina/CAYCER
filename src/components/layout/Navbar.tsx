@@ -6,6 +6,7 @@ import { Menu, X, ChevronDown, Thermometer, FlaskConical, CheckCircle2, Pill, Ap
 import { useState, useEffect } from "react"
 import logo from "@/assets/logo.png"
 import { trackConversion } from "@/lib/analytics"
+import { whatsappUrl, MENSAJE_COTIZACION } from "@/lib/contacto"
 
 export function Navbar() {
     const scrolled = useScroll(20)
@@ -131,7 +132,7 @@ export function Navbar() {
                         </div>
                     ))}
                     <a
-                        href="https://wa.me/523335071061?text=Hola%20Caycer,%20me%20gustar%C3%ADa%20solicitar%20cotizaci%C3%B3n."
+                        href={whatsappUrl(MENSAJE_COTIZACION)}
                         target="_blank"
                         rel="noopener noreferrer"
                         onClick={() => trackConversion("contacto_whatsapp", { origen: "navbar_escritorio" })}
@@ -218,7 +219,7 @@ export function Navbar() {
                     )
                 })}
                 <a
-                    href="https://wa.me/523335071061?text=Hola%20Caycer,%20me%20gustar%C3%ADa%20solicitar%20cotizaci%C3%B3n."
+                    href={whatsappUrl(MENSAJE_COTIZACION)}
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={() => trackConversion("contacto_whatsapp", { origen: "navbar_movil" })}

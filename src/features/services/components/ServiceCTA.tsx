@@ -1,10 +1,12 @@
 import { Button } from "@/components/ui/button";
 import { trackConversion } from "@/lib/analytics";
+import { whatsappUrl } from "@/lib/contacto";
 
 interface ServiceCTAProps {
     title?: string;
     subtitle?: string;
     buttonText?: string;
+    /** Texto plano, sin codificar: whatsappUrl() se encarga. */
     whatsappMessage?: string;
 }
 
@@ -12,7 +14,7 @@ export function ServiceCTA({
     title = "¿Necesita asesoría técnica especializada?",
     subtitle = "Nuestro equipo de expertos en calibración está listo para diseñar la estrategia de cumplimiento perfecta para su industria.",
     buttonText = "Contactar a un Especialista",
-    whatsappMessage = "Hola%20Caycer,%20necesito%20información%20sobre%20servicios."
+    whatsappMessage = "Hola Caycer, necesito información sobre servicios."
 }: ServiceCTAProps) {
     return (
         <section className="relative py-24 overflow-hidden">
@@ -37,7 +39,7 @@ export function ServiceCTA({
                     {subtitle}
                 </p>
                 <a
-                    href={`https://wa.me/523335071061?text=${whatsappMessage}`}
+                    href={whatsappUrl(whatsappMessage)}
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={() =>
@@ -58,7 +60,7 @@ export function ServiceCTA({
                 </a>
 
                 <p className="mt-8 text-sm text-slate-400">
-                    Respuesta garantizada en menos de 24 horas hábiles.
+                    Respondemos en menos de 24 horas hábiles.
                 </p>
             </div>
         </section>

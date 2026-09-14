@@ -1,11 +1,12 @@
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { SEO } from "@/components/SEO";
+import { NOMBRE_NEGOCIO, direccionCompleta, correoPrincipal, telefonoPrincipal } from "@/lib/contacto";
 
 const sections = [
     {
         title: "1. Identidad del prestador",
-        body: "Este sitio web es operado por CAYCER Ingeniería y Metrología, con domicilio en Batalla de Puebla 3643, Col. El Tapatío, San Pedro Tlaquepaque, Jalisco, C.P. 45588, México. Contacto: ventas@caycer.com.mx · Tel. 33 3260 1657."
+        body: `Este sitio web es operado por ${NOMBRE_NEGOCIO}, con domicilio en ${direccionCompleta}. Contacto: ${correoPrincipal} · Tel. ${telefonoPrincipal.display}.`
     },
     {
         title: "2. Objeto del sitio",

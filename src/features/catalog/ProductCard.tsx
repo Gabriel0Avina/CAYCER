@@ -3,6 +3,7 @@ import type { Product } from "./catalogData";
 import { Button } from "@/components/ui/button";
 import { MessageCircle, ArrowUpRight } from "lucide-react";
 import { trackConversion } from "@/lib/analytics";
+import { whatsappUrl as crearWhatsappUrl } from "@/lib/contacto";
 
 interface ProductCardProps {
     product: Product;
@@ -10,7 +11,7 @@ interface ProductCardProps {
 }
 
 export function ProductCard({ product, onImageClick }: ProductCardProps) {
-    const whatsappUrl = `https://wa.me/523335071061?text=Hola%20Caycer,%20me%20gustar%C3%ADa%20solicitar%20cotizaci%C3%B3n%20para%20el%20producto:%20${encodeURIComponent(product.name)}`;
+    const whatsappUrl = crearWhatsappUrl(`Hola Caycer, me gustaría solicitar cotización para el producto: ${product.name}`);
 
     return (
         <motion.div

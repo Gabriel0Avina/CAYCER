@@ -1,3 +1,5 @@
+import { telefonos, whatsapp } from "@/lib/contacto";
+
 export interface FaqItem {
     question: string;
     answer: string;
@@ -102,7 +104,7 @@ export const faqData: FaqCategory[] = [
             },
             {
                 question: "¿Cómo solicito una cotización?",
-                answer: "Puede contactarnos por teléfono al 33 3260 1657 o 33 3260 1658, por WhatsApp al 33 3507 1061, o mediante el formulario de la página de contacto. Indíquenos el tipo de servicio, los equipos o instalaciones involucrados y su ubicación, y le preparamos una cotización sin compromiso.",
+                answer: `Puede contactarnos por teléfono al ${telefonos.map((t) => t.display).join(" o ")}, por WhatsApp al ${whatsapp.display}, o mediante el formulario de la página de contacto. Indíquenos el tipo de servicio, los equipos o instalaciones involucrados y su ubicación, y le preparamos una cotización sin compromiso.`,
             },
         ],
     },
