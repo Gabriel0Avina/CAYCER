@@ -17,7 +17,7 @@ El dato canónico es el del footer del sitio y el del schema de la home:
 | Dirección | Batalla de Puebla 3643, Col. El Tapatío |
 | Ciudad | San Pedro Tlaquepaque, Jalisco, C.P. 45588 |
 | Teléfono | 33 3460 8464 |
-| WhatsApp | 33 3507 1061 |
+| WhatsApp | 33 3460 8464 |
 | Sitio web | https://caycer.ing |
 | Correo | ventas3@caycer.com.mx |
 | Categoría | Laboratorio de calibración |

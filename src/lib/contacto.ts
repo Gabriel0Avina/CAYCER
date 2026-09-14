@@ -38,7 +38,8 @@ export const telefonos: Telefono[] = [
     { display: "33 3460 8464", e164: "+523334608464" },
 ];
 
-export const whatsapp: Telefono = { display: "33 3507 1061", e164: "+523335071061" };
+/** Mismo número que el teléfono principal: la línea atiende llamadas y WhatsApp. */
+export const whatsapp: Telefono = telefonos[0];
 
 /** El primero es el principal: es el que declara el schema. */
 export const correos = ["ventas3@caycer.com.mx"];
