@@ -211,7 +211,9 @@ export function BlogPost() {
                     title="¿Necesita demostrar la conservación de sus recintos?"
                     subtitle="Nuestro equipo técnico puede ayudarle a definir el estudio que corresponde a su operación y a su análisis de riesgos."
                     buttonText="Solicitar asesoría"
-                    whatsappMessage="Hola%20Caycer,%20me%20interesa%20información%20sobre%20mapeo%20térmico."
+                    // Mensaje por artículo: antes decía "mapeo térmico" en
+                    // todos, y quien leía el de certificados escribía confundido.
+                    whatsappMessage={`Hola Caycer, leí su artículo "${post.title}" y me interesa más información.`}
                 />
             </main>
             <Footer />

@@ -1,7 +1,9 @@
 import { Link } from "react-router-dom"
-import { MapPin, Phone, Mail, MessageCircle } from "lucide-react"
+import { MapPin, Mail, MessageCircle } from "lucide-react"
 import logo from "@/assets/logo.png"
 import { socialProfiles } from "@/lib/social"
+import { direccion, whatsapp, correos, whatsappUrl, MENSAJE_COTIZACION } from "@/lib/contacto"
+import { trackConversion } from "@/lib/analytics"
 
 export function Footer() {
     return (
@@ -56,27 +58,35 @@ export function Footer() {
                         <ul className="space-y-4 text-sm">
                             <li className="flex items-start gap-3 group">
                                 <MapPin className="w-5 h-5 text-cyan shrink-0 group-hover:scale-110 transition-transform" />
-                                <span className="group-hover:text-white transition-colors leading-relaxed">
-                                    Batalla de Puebla 3643, Col. El Tapatío,<br />
-                                    San Pedro Tlaquepaque, Jal. CP 45588
-                                </span>
+                                <address className="not-italic group-hover:text-white transition-colors leading-relaxed">
+                                    {direccion.calle}, {direccion.colonia},<br />
+                                    {direccion.municipio}, {direccion.estado}, C.P. {direccion.codigoPostal}
+                                </address>
                             </li>
-                            <li className="flex items-start gap-3 group">
-                                <Phone className="w-5 h-5 text-cyan shrink-0 group-hover:scale-110 transition-transform" />
-                                <div className="flex flex-col gap-1 group-hover:text-white transition-colors">
-                                    <span>33 32 60 16 57</span>
-                                    <span>33 32 60 16 58</span>
-                                </div>
-                            </li>
+                            {/* Solo WhatsApp: la línea es la misma que el teléfono
+                                y listarla dos veces se leía como un error. Enlaces
+                                wa.me y mailto: en celular, tocar abre el chat o el
+                                correo en lugar de obligar a copiarlo a mano. */}
                             <li className="flex items-center gap-3 group">
                                 <MessageCircle className="w-5 h-5 text-cyan shrink-0 group-hover:scale-110 transition-transform" />
-                                <span className="group-hover:text-white transition-colors">33 35 07 10 61 (WhatsApp)</span>
+                                <a
+                                    href={whatsappUrl(MENSAJE_COTIZACION)}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    onClick={() => trackConversion("contacto_whatsapp", { origen: "footer" })}
+                                    className="hover:text-cyan transition-colors"
+                                >
+                                    {whatsapp.display} (WhatsApp)
+                                </a>
                             </li>
                             <li className="flex items-start gap-3 group">
                                 <Mail className="w-5 h-5 text-cyan shrink-0 group-hover:scale-110 transition-transform" />
-                                <div className="flex flex-col gap-1 group-hover:text-white transition-colors">
-                                    <span>ventas@caycer.com.mx</span>
-                                    <span>ventas2@caycer.com.mx</span>
+                                <div className="flex flex-col gap-1">
+                                    {correos.map((correo) => (
+                                        <a key={correo} href={`mailto:${correo}`} className="hover:text-cyan transition-colors">
+                                            {correo}
+                                        </a>
+                                    ))}
                                 </div>
                             </li>
                         </ul>

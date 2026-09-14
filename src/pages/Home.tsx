@@ -11,6 +11,7 @@ import { ArrowRight } from "lucide-react"
 import { Link } from "react-router-dom"
 import { SEO } from "@/components/SEO"
 import { socialUrls } from "@/lib/social"
+import { direccion, telefonoPrincipal, correoPrincipal } from "@/lib/contacto"
 
 // @graph permite declarar varias entidades enlazadas entre sí. WebSite le indica
 // a Google el nombre del sitio que debe mostrar en los resultados de búsqueda.
@@ -35,15 +36,17 @@ const homeSchema = {
             "image": "https://caycer.ing/logo.png",
             "logo": "https://caycer.ing/logo.png",
             "url": "https://caycer.ing",
-            "telephone": "+523332601657",
-            "email": "ventas@caycer.com.mx",
+            // NAP desde src/lib/contacto: debe coincidir letra por letra con el
+            // footer y con el Perfil de Empresa de Google.
+            "telephone": telefonoPrincipal.e164,
+            "email": correoPrincipal,
             "address": {
                 "@type": "PostalAddress",
-                "streetAddress": "Batalla de Puebla 3643, Col. El Tapatío",
-                "addressLocality": "San Pedro Tlaquepaque",
-                "addressRegion": "JAL",
-                "postalCode": "45588",
-                "addressCountry": "MX"
+                "streetAddress": `${direccion.calle}, ${direccion.colonia}`,
+                "addressLocality": direccion.municipio,
+                "addressRegion": direccion.estadoCodigo,
+                "postalCode": direccion.codigoPostal,
+                "addressCountry": direccion.paisCodigo
             },
             "geo": {
                 "@type": "GeoCoordinates",
