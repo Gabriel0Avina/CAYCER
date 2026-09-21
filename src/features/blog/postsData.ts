@@ -83,7 +83,7 @@ export const blogPosts: BlogPost[] = [
         description:
             "Qué significa calificar un equipo, en qué se diferencia de calibrar y validar, cómo funcionan las etapas DQ, IQ, OQ y PQ, y qué hay que preparar antes.",
         datePublished: "2026-08-12",
-        dateModified: "2026-08-12",
+        dateModified: "2026-09-21",
         author: "CAYCER Ingeniería y Metrología",
         pillar: "Calificación de equipos",
         readingMinutes: 8,
@@ -101,11 +101,11 @@ export const blogPosts: BlogPost[] = [
                 },
                 {
                     name: "Calificación de operación (OQ)",
-                    text: "Se somete el equipo a sus condiciones de operación en todo el rango declarado, incluidos los extremos, para comprobar que responde según especificación y que sus alarmas y controles actúan cuando deben.",
+                    text: "Se somete el equipo a sus condiciones de operación en todo el rango declarado, incluidos los extremos, para comprobar que responde según especificación y que sus alarmas y controles actúan cuando deben. Incluye la caracterización térmica con el equipo vacío.",
                 },
                 {
                     name: "Calificación de desempeño (PQ)",
-                    text: "Se demuestra que el equipo sostiene las condiciones en uso real y con carga, durante un periodo representativo. Aquí es donde el mapeo térmico aporta la evidencia distribuida.",
+                    text: "Se demuestra que el equipo sostiene las condiciones en uso real y con carga, durante un periodo representativo. Incluye la caracterización térmica con carga, que ubica el punto más frío y el más caliente en todo el volumen útil.",
                 },
             ],
         },
