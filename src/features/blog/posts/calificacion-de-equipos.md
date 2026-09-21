@@ -24,11 +24,20 @@ Se ejecutan siempre en esta secuencia, porque cada una asume que la anterior se 
 
 2. **Calificación de instalación (IQ).** Se comprueba que el equipo llegó completo y quedó instalado según lo previsto: modelo y número de serie, ubicación conforme al plano, servicios conectados, y documentación del fabricante entregada.
 
-3. **Calificación de operación (OQ).** Se somete el equipo a sus condiciones de operación a lo largo de todo el rango declarado, **incluidos los extremos**, para comprobar que responde según especificación y que sus alarmas y controles actúan cuando deben. Un equipo que cumple en el centro de su rango y falla en el extremo no está calificado.
+3. **Calificación de operación (OQ).** Se somete el equipo a sus condiciones de operación a lo largo de todo el rango declarado, **incluidos los extremos**, para comprobar que responde según especificación y que sus alarmas y controles actúan cuando deben. Aquí se hace la primera **caracterización térmica**, con el equipo vacío. Un equipo que cumple en el centro de su rango y falla en el extremo no está calificado.
 
-4. **Calificación de desempeño (PQ).** Se demuestra que el equipo sostiene las condiciones en uso real y con carga, durante un periodo representativo. Aquí es donde entra el [mapeo térmico](/blog/mapeo-termico), que aporta la evidencia distribuida: no basta con que un punto esté en rango, hay que saber qué pasa en todo el volumen útil.
+4. **Calificación de desempeño (PQ).** Se demuestra que el equipo sostiene las condiciones en uso real y con carga, durante un periodo representativo. Aquí se repite la **caracterización térmica**, ahora con carga: sensores calibrados distribuidos en todo el volumen útil para ubicar el punto más frío y el más caliente. No basta con que un punto esté en rango, hay que saber qué pasa en todo el interior.
 
 La confusión más frecuente es entre OQ y PQ. La forma corta de distinguirlas: **OQ prueba el equipo vacío, PQ lo prueba trabajando.** Un refrigerador puede mantener 5 °C impecables sin nada dentro y salirse de rango cuando se llena de producto y se abre la puerta veinte veces al día.
+
+## ¿Caracterización térmica o mapeo térmico?
+
+Las dos usan la misma técnica —sensores calibrados distribuidos que registran durante un periodo definido—, pero se aplican a cosas distintas y conviene nombrarlas bien:
+
+- **Caracterización térmica** (también llamada perfil térmico o evaluación de distribución de temperatura): es el estudio de un **equipo**, como un refrigerador, un congelador, una cámara o un autoclave. Forma parte de su calificación, en las etapas de operación y desempeño.
+- **Mapeo térmico**: es el estudio de un **almacén, bodega o recinto completo**, que se hace antes de ponerlo en uso y después de cualquier cambio relevante. Se explica a detalle en el artículo sobre [mapeo térmico](/blog/mapeo-termico).
+
+Usar el término correcto en el expediente no es un detalle de forma: le dice al auditor que quien hizo el estudio sabe qué estaba estudiando.
 
 ## ¿Qué equipos se califican y en qué rangos?
 
@@ -85,4 +94,4 @@ Para un auditor la diferencia es sustantiva: no es lo mismo un reporte emitido p
 
 Si va a poner en marcha un equipo crítico, o si tiene uno operando sin expediente de calificación, el punto de partida es el mismo: definir para qué se va a usar y bajo qué criterios se considerará conforme. Todo lo demás se construye sobre esa definición.
 
-Puede revisar el detalle del servicio en [calificación de equipos e instalaciones](/servicios/calificacion), entender cómo se obtiene la evidencia de desempeño en el artículo sobre [mapeo térmico](/blog/mapeo-termico), o ver cómo encaja en la conservación de producto en [cadena de frío](/blog/cadena-de-frio).
+Puede revisar el detalle del servicio en [calificación de equipos e instalaciones](/servicios/calificacion), ver cómo se estudia un almacén o recinto completo en el artículo sobre [mapeo térmico](/blog/mapeo-termico), o ver cómo encaja en la conservación de producto en [cadena de frío](/blog/cadena-de-frio).
