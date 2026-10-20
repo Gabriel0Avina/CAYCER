@@ -14,7 +14,8 @@ export type Pillar =
     | "Mapeo térmico"
     | "Cadena de frío"
     | "Calificación de equipos"
-    | "Normativa FEUM";
+    | "Normativa FEUM"
+    | "Podcast";
 
 export interface BlogPost {
     slug: string;
@@ -55,6 +56,27 @@ export interface BlogPost {
 }
 
 export const blogPosts: BlogPost[] = [
+    {
+        slug: "podcast-metrologia-episodio-1",
+        title: "Podcast CAYCER, episodio 1: metrología, calibración y acreditación EMA",
+        description:
+            "Primer episodio del podcast de CAYCER: qué es la metrología, por qué un termómetro nuevo también se calibra, la acreditación EMA y la calificación de equipos.",
+        datePublished: "2026-10-19",
+        dateModified: "2026-10-19",
+        author: "CAYCER Ingeniería y Metrología",
+        pillar: "Podcast",
+        readingMinutes: 8,
+        heroImage: "/podcast-episodio-1-hero.webp",
+        youtubeId: "sCN39GzpKk0",
+        // Título limpio para el sitio: el de YouTube lleva emoji y separador
+        // por barra, que no leen bien como pie de video ni en el VideoObject.
+        youtubeTitle: "Podcast CAYCER #1: Metrología, lo que nadie ve",
+        related: [
+            { label: "Certificado de calibración: qué es y qué contiene", href: "/blog/certificado-de-calibracion" },
+            { label: "Calificación de equipos: las cuatro etapas", href: "/blog/calificacion-de-equipos" },
+            { label: "Calibración de instrumentos de medición", href: "/servicios/calibracion" },
+        ],
+    },
     {
         slug: "certificado-de-calibracion",
         title: "Certificado de calibración: qué es y qué contiene",
