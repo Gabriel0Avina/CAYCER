@@ -52,6 +52,8 @@ La validación de la cadena fría en distribución no mide el vehículo: mide el
 - **Modalidad logística**: terrestre, aérea o combinada, cada una con sus tiempos muertos característicos.
 - **Mantenimiento del rango** de 2 °C a 8 °C durante todo el trayecto, no solo al salir y al llegar.
 
+El detalle de cada elemento, del andén a la última milla, está en el artículo sobre [transporte refrigerado](/blog/transporte-refrigerado).
+
 ## ¿Por qué se hace el envío por triplicado?
 
 En trayectos largos, la validación se ejecuta con tres envíos y no con uno porque un solo viaje no distingue entre un sistema robusto y un viaje afortunado. Tres repeticiones muestran si el desempeño es consistente o si dependió del clima, del tráfico o del operador de ese día.
