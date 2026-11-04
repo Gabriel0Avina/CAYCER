@@ -57,6 +57,46 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
     {
+        slug: "transporte-refrigerado",
+        title: "Transporte refrigerado: cómo se valida una ruta, una hielera y la última milla",
+        description:
+            "Qué se valida en el transporte refrigerado, por qué se mide el sistema y no solo el camión, y qué evidencia se genera en rutas, hieleras y última milla.",
+        datePublished: "2026-11-04",
+        dateModified: "2026-11-04",
+        author: "CAYCER Ingeniería y Metrología",
+        pillar: "Cadena de frío",
+        readingMinutes: 7,
+        // La foto de la unidad de reparto ya ilustra el transporte en el
+        // artículo de cadena de frío; aquí es el tema central.
+        heroImage: "/cadena-frio-transporte.webp",
+        howTo: {
+            name: "Cómo se valida el transporte refrigerado",
+            steps: [
+                {
+                    name: "Diagnóstico",
+                    text: "Se revisa la operación: rutas, tiempos de recorrido, unidades, hieleras, refrigerantes y embalaje, para definir qué estudio corresponde.",
+                },
+                {
+                    name: "Protocolo",
+                    text: "Se define cuántos sensores se usan, dónde van, cuánto dura el estudio y cuántos envíos se instrumentan. En trayectos largos, el envío se valida por triplicado.",
+                },
+                {
+                    name: "Ejecución",
+                    text: "Se instrumentan los envíos o la unidad con sensores calibrados, trazables al CENAM, y se registra la temperatura en la ruta real, con la unidad en operación.",
+                },
+                {
+                    name: "Informe",
+                    text: "Se documentan la ubicación de cada sensor, las temperaturas registradas, la incertidumbre de medición y la conclusión sobre si el sistema mantuvo el rango.",
+                },
+            ],
+        },
+        related: [
+            { label: "Validación de procesos y sistemas", href: "/servicios/validacion" },
+            { label: "Cadena de frío: dónde se rompe y cómo se demuestra", href: "/blog/cadena-de-frio" },
+            { label: "Mapeo térmico: qué es y qué evidencia genera", href: "/blog/mapeo-termico" },
+        ],
+    },
+    {
         slug: "podcast-metrologia-episodio-1",
         title: "Podcast CAYCER, episodio 1: metrología, calibración y acreditación EMA",
         description:
@@ -143,7 +183,7 @@ export const blogPosts: BlogPost[] = [
         description:
             "Qué es la cadena de frío, en qué eslabones falla, qué rangos aplican a cada equipo y qué evidencia pide una auditoría para dar por buena la conservación.",
         datePublished: "2026-08-03",
-        dateModified: "2026-08-03",
+        dateModified: "2026-11-04",
         author: "CAYCER Ingeniería y Metrología",
         pillar: "Cadena de frío",
         readingMinutes: 8,
