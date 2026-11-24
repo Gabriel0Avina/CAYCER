@@ -57,6 +57,27 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
     {
+        slug: "podcast-metrologia-episodio-2",
+        title: "Podcast CAYCER, episodio 2: cómo leer un certificado de calibración y qué hacer con el error",
+        description:
+            "Episodio 2 del podcast de CAYCER: qué le pasa a un termómetro en el laboratorio, calibrar o calificar, cómo leer el certificado y qué hacer con el error.",
+        datePublished: "2026-11-24",
+        dateModified: "2026-11-24",
+        author: "CAYCER Ingeniería y Metrología",
+        pillar: "Podcast",
+        readingMinutes: 9,
+        heroImage: "/podcast-episodio-2-hero.webp",
+        youtubeId: "ROu3CCUnpsc",
+        // Título limpio para el sitio: el de YouTube usa separador por barra,
+        // que no lee bien como pie de video ni en el VideoObject.
+        youtubeTitle: "Podcast CAYCER #2: Tu equipo puede tener error",
+        related: [
+            { label: "Certificado de calibración: qué es y qué contiene", href: "/blog/certificado-de-calibracion" },
+            { label: "Podcast CAYCER, episodio 1: metrología y acreditación EMA", href: "/blog/podcast-metrologia-episodio-1" },
+            { label: "Calibración de instrumentos de medición", href: "/servicios/calibracion" },
+        ],
+    },
+    {
         slug: "transporte-refrigerado",
         title: "Transporte refrigerado: cómo se valida una ruta, una hielera y la última milla",
         description:
@@ -102,7 +123,7 @@ export const blogPosts: BlogPost[] = [
         description:
             "Primer episodio del podcast de CAYCER: qué es la metrología, por qué un termómetro nuevo también se calibra, la acreditación EMA y la calificación de equipos.",
         datePublished: "2026-10-19",
-        dateModified: "2026-10-19",
+        dateModified: "2026-11-24",
         author: "CAYCER Ingeniería y Metrología",
         pillar: "Podcast",
         readingMinutes: 8,
@@ -112,8 +133,8 @@ export const blogPosts: BlogPost[] = [
         // por barra, que no leen bien como pie de video ni en el VideoObject.
         youtubeTitle: "Podcast CAYCER #1: Metrología, lo que nadie ve",
         related: [
+            { label: "Podcast CAYCER, episodio 2: cómo leer un certificado de calibración", href: "/blog/podcast-metrologia-episodio-2" },
             { label: "Certificado de calibración: qué es y qué contiene", href: "/blog/certificado-de-calibracion" },
-            { label: "Calificación de equipos: las cuatro etapas", href: "/blog/calificacion-de-equipos" },
             { label: "Calibración de instrumentos de medición", href: "/servicios/calibracion" },
         ],
     },
