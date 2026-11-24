@@ -104,4 +104,4 @@ La Farmacopea de los Estados Unidos Mexicanos (FEUM) es la referencia que rige a
 
 ## ¿Dónde escuchar los siguientes episodios?
 
-El podcast se publica en el canal de YouTube de CAYCER, y cada episodio nuevo llegará también a este blog. Si hay un tema que quiera que expliquemos en un próximo episodio, déjelo en los comentarios del video o escríbanos por WhatsApp.
+El podcast se publica en el canal de YouTube de CAYCER, y cada episodio nuevo llegará también a este blog. El [episodio 2](/blog/podcast-metrologia-episodio-2) ya está disponible: qué le pasa a su termómetro en el laboratorio y cómo leer su certificado de calibración. Si hay un tema que quiera que expliquemos en un próximo episodio, déjelo en los comentarios del video o escríbanos por WhatsApp.
