@@ -4,7 +4,7 @@ Si usted es responsable sanitario, tiene una farmacia, un almacén o un laborato
 
 ## ¿Qué se platica en el episodio 1?
 
-El episodio dura poco más de 32 minutos. Puede ir directo a cualquier tema desde estos capítulos (cada enlace abre YouTube en ese minuto):
+El episodio dura poco más de 32 minutos. Puede ir directo a cualquier tema desde estos capítulos (cada capítulo reproduce el video desde ese minuto):
 
 - [00:00](https://www.youtube.com/watch?v=sCN39GzpKk0&t=0s) Apertura
 - [01:10](https://www.youtube.com/watch?v=sCN39GzpKk0&t=70s) ¿Qué es la metrología?
