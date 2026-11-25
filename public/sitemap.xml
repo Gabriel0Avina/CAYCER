@@ -62,8 +62,13 @@
   </url>
   <url>
     <loc>https://caycer.ing/blog</loc>
-    <lastmod>2026-11-24</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://caycer.ing/blog/calibracion-de-instrumentos-de-medicion</loc>
+    <lastmod>2026-11-25</lastmod>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://caycer.ing/blog/podcast-metrologia-episodio-2</loc>
