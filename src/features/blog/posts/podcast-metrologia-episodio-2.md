@@ -4,7 +4,7 @@ Si usted ya tiene un certificado de calibración en la mano y no sabe si su inst
 
 ## ¿Qué se platica en el episodio 2?
 
-El episodio dura poco menos de 41 minutos. Puede ir directo a cualquier tema desde estos capítulos (cada enlace abre YouTube en ese minuto):
+El episodio dura poco menos de 41 minutos. Puede ir directo a cualquier tema desde estos capítulos (cada capítulo reproduce el video desde ese minuto):
 
 - [00:00](https://www.youtube.com/watch?v=ROu3CCUnpsc&t=0s) Apertura
 - [01:02](https://www.youtube.com/watch?v=ROu3CCUnpsc&t=62s) Esto sí pasó

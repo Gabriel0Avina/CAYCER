@@ -53,6 +53,30 @@ export interface BlogPost {
     };
     /** Rutas internas relacionadas, para el bloque de enlaces del pie. */
     related: { label: string; href: string }[];
+    /**
+     * Solo en artículos de un episodio del podcast. Con esto el video pasa a
+     * ser lo principal del artículo y los capítulos saltan al minuto.
+     */
+    episode?: {
+        number: number;
+        /** "40:48", como lo muestra YouTube. */
+        duration: string;
+        /** Título corto del episodio para tarjetas y la franja de la temporada. */
+        shortTitle: string;
+        /** Segundos de inicio de cada capítulo, igual que en YouTube. */
+        chapters: { t: number; title: string }[];
+        /**
+         * Minuto del episodio donde se platica cada sección del artículo. Se
+         * busca el texto en el h2 y se le agrega el botón "Escúchalo".
+         */
+        moments?: { heading: string; t: number }[];
+        /** Minuto de cada cita textual, buscada por una frase que contiene. */
+        quotes?: { match: string; t: number }[];
+    };
+    /** Tres ideas clave al inicio del artículo ("En 30 segundos"). */
+    summary?: string[];
+    /** Cierre propio del artículo; si falta, se usa el del pilar. */
+    cta?: { title: string; text: string; whatsappMessage: string };
 }
 
 export const blogPosts: BlogPost[] = [
@@ -71,6 +95,44 @@ export const blogPosts: BlogPost[] = [
         // Título limpio para el sitio: el de YouTube usa separador por barra,
         // que no lee bien como pie de video ni en el VideoObject.
         youtubeTitle: "Podcast CAYCER #2: Tu equipo puede tener error",
+        episode: {
+            number: 2,
+            duration: "40:48",
+            shortTitle: "Tu equipo puede tener error",
+            chapters: [
+                { t: 0, title: "Apertura" },
+                { t: 62, title: "Esto sí pasó" },
+                { t: 231, title: "Un termómetro entra al laboratorio" },
+                { t: 466, title: "El patrón" },
+                { t: 700, title: "Calibrar o calificar" },
+                { t: 1067, title: "El certificado" },
+                { t: 1656, title: "Dos firmas" },
+                { t: 1759, title: "Decidir con el certificado" },
+                { t: 2111, title: "Lo que dice internet" },
+                { t: 2437, title: "Cierre" },
+            ],
+            moments: [
+                { heading: "Esto sí pasó", t: 62 },
+                { heading: "¿Qué le pasa a un termómetro", t: 231 },
+                { heading: "¿Qué es un patrón", t: 466 },
+                { heading: "¿Un refrigerador se calibra", t: 700 },
+                { heading: "¿Qué debe traer un certificado", t: 1067 },
+                { heading: "¿Cómo decido con el certificado", t: 1759 },
+                { heading: "Lo que dice internet", t: 2111 },
+            ],
+            // La frase abre el episodio (avance) antes de la apertura.
+            quotes: [{ match: "cartitas", t: 0 }],
+        },
+        summary: [
+            "Calibrar es conocer el error de su instrumento; ajustar es corregirlo. Siempre se calibra primero.",
+            "El refrigerador se califica y su termómetro se calibra. Para un rango de 2 a 8 °C, lo ideal es calibrar en 0, 5 y 10 °C.",
+            "Que el certificado reporte un error no significa que el instrumento no sirva: lo decide su criterio de aceptación.",
+        ],
+        cta: {
+            title: "¿Tiene un certificado y no sabe si su instrumento cumple?",
+            text: "Mándenos el informe y el rango en el que usa el instrumento. Le ayudamos a leerlo contra su criterio de aceptación.",
+            whatsappMessage: "Hola Caycer, vi el episodio 2 del podcast y quiero revisar un certificado de calibración.",
+        },
         related: [
             { label: "Certificado de calibración: qué es y qué contiene", href: "/blog/certificado-de-calibracion" },
             { label: "Podcast CAYCER, episodio 1: metrología y acreditación EMA", href: "/blog/podcast-metrologia-episodio-1" },
@@ -132,6 +194,32 @@ export const blogPosts: BlogPost[] = [
         // Título limpio para el sitio: el de YouTube lleva emoji y separador
         // por barra, que no leen bien como pie de video ni en el VideoObject.
         youtubeTitle: "Podcast CAYCER #1: Metrología, lo que nadie ve",
+        episode: {
+            number: 1,
+            duration: "32:36",
+            shortTitle: "Metrología: lo que nadie ve",
+            chapters: [
+                { t: 0, title: "Apertura" },
+                { t: 70, title: "¿Qué es la metrología?" },
+                { t: 317, title: "Calibración y trazabilidad" },
+                { t: 453, title: "Nuevo no significa calibrado" },
+                { t: 730, title: "La incertidumbre es una duda" },
+                { t: 868, title: "Acreditados ante la EMA" },
+                { t: 1108, title: "Cuando tocan la puerta" },
+                { t: 1384, title: "Calificar un equipo" },
+                { t: 1837, title: "El Suplemento de la FEUM" },
+            ],
+            moments: [
+                { heading: "¿Qué es la metrología?", t: 70 },
+                { heading: "¿Qué es calibrar y qué es la trazabilidad?", t: 317 },
+                { heading: "¿Un instrumento nuevo ya viene calibrado?", t: 453 },
+                { heading: "¿Qué es la incertidumbre de medición?", t: 730 },
+                { heading: "¿Qué significa estar acreditado ante la EMA?", t: 868 },
+                { heading: "¿Qué hacer cuando la autoridad sanitaria toca la puerta?", t: 1108 },
+                { heading: "¿Qué significa calificar un equipo?", t: 1384 },
+                { heading: "¿Qué es el Suplemento de la FEUM?", t: 1837 },
+            ],
+        },
         related: [
             { label: "Podcast CAYCER, episodio 2: cómo leer un certificado de calibración", href: "/blog/podcast-metrologia-episodio-2" },
             { label: "Certificado de calibración: qué es y qué contiene", href: "/blog/certificado-de-calibracion" },
