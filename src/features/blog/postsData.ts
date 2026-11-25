@@ -81,6 +81,58 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
     {
+        slug: "calibracion-de-instrumentos-de-medicion",
+        title: "Calibración de instrumentos de medición: qué es, qué instrumentos calibramos y cómo es el proceso",
+        description:
+            "Qué es calibrar un instrumento de medición, qué instrumentos calibra CAYCER y en qué rangos, cómo es el proceso, qué puntos pedir y qué recibe al final.",
+        datePublished: "2026-11-25",
+        dateModified: "2026-11-25",
+        author: "CAYCER Ingeniería y Metrología",
+        pillar: "Calibración",
+        readingMinutes: 8,
+        summary: [
+            "Calibrar es comparar su instrumento contra un patrón para conocer su error y su incertidumbre; no lo modifica.",
+            "CAYCER calibra termómetros, sondas, dataloggers y termohigrómetros con acreditación EMA: de -33.7 a 150 °C y de 20 a 80 % H.R.",
+            "Pida puntos que cubran todo su rango de uso con margen: para un refrigerador de 2 a 8 °C, en 0, 5 y 10 °C.",
+        ],
+        cta: {
+            title: "¿Qué instrumentos necesita calibrar?",
+            text: "Mándenos la lista de instrumentos y el rango en el que los usa. Le respondemos con los puntos recomendados y la cotización.",
+            whatsappMessage: "Hola Caycer, leí su artículo de calibración y quiero cotizar la calibración de mis instrumentos.",
+        },
+        howTo: {
+            name: "Cómo es el proceso de calibración de un instrumento en CAYCER",
+            steps: [
+                {
+                    name: "Cotización y puntos de calibración",
+                    text: "El cliente indica qué instrumentos tiene y en qué rango los usa. Si no sabe qué puntos pedir, el laboratorio recomienda puntos que cubran todo su proceso, con margen hacia afuera de los límites.",
+                },
+                {
+                    name: "Recepción",
+                    text: "Los instrumentos se recolectan o se entregan en el laboratorio y se registran en un formato de recepción: identificación, condiciones, puntos solicitados y anomalías visibles.",
+                },
+                {
+                    name: "Calibración",
+                    text: "El instrumento se compara en cada punto contra un patrón por lo menos cuatro veces más exacto, con trazabilidad al CENAM, en el medio de calibración que corresponde a su uso.",
+                },
+                {
+                    name: "Revisión",
+                    text: "El metrólogo elabora el informe y una segunda persona revisa los datos y los cálculos antes de liberarlo; por eso el informe lleva dos firmas.",
+                },
+                {
+                    name: "Entrega",
+                    text: "El cliente recibe sus instrumentos con el informe de calibración (error e incertidumbre en cada punto) y la carta de trazabilidad de los patrones.",
+                },
+            ],
+        },
+        // Sin episodios aquí: el cierre "Escuche el podcast" ya los muestra.
+        related: [
+            { label: "Certificado de calibración: qué es y qué contiene", href: "/blog/certificado-de-calibracion" },
+            { label: "Calificación de equipos: las cuatro etapas", href: "/blog/calificacion-de-equipos" },
+            { label: "Calibración de instrumentos de medición", href: "/servicios/calibracion" },
+        ],
+    },
+    {
         slug: "podcast-metrologia-episodio-2",
         title: "Podcast CAYCER, episodio 2: cómo leer un certificado de calibración y qué hacer con el error",
         description:
@@ -135,7 +187,7 @@ export const blogPosts: BlogPost[] = [
         },
         related: [
             { label: "Certificado de calibración: qué es y qué contiene", href: "/blog/certificado-de-calibracion" },
-            { label: "Podcast CAYCER, episodio 1: metrología y acreditación EMA", href: "/blog/podcast-metrologia-episodio-1" },
+            { label: "Calibración de instrumentos de medición: qué es y cómo es el proceso", href: "/blog/calibracion-de-instrumentos-de-medicion" },
             { label: "Calibración de instrumentos de medición", href: "/servicios/calibracion" },
         ],
     },
